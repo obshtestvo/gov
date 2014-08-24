@@ -2,6 +2,9 @@
 @import "html5boilerplate/base";
 @import "zeroreset";
 @import "colors";
+@import "obshtestvo.bg/buttons";
+@import "obshtestvo.bg/bits";
+@import "list";
 
 body {
   font-family: "obshtestvobg", "Myriad Pro", "Verdana", sans-serif;
@@ -9,15 +12,14 @@ body {
   color: $colorMainText;
   background: $colorContrastToMain;
 }
+
 h1, h2, h3, h4, h5, h6 {
   color: $colorMain;
 }
 
-
-
 .banner {
+  overflow: hidden;
   min-height: 300px;
-  background: url(../img/download.png);
   background-repeat: no-repeat;
   @include background-size(cover);
   position: relative;
@@ -42,11 +44,36 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2em;
   }
 }
-body {
-  font-family: "obshtestvobg", "Myriad Pro", "Verdana", sans-serif;
-  -webkit-font-smoothing: antialiased;
+.campaign-bar {
+  @extend .clearfix;
+  background: rgba($colorMainDark, 0.6);
+  color: rgba($colorContrastToMain, 0.8);
+  @include border-radius(1px);
+  margin: 4px;
+  padding: 12px 10px 12px 30px;
+  min-height: 36px;
+  .affiliation  {
+    float: left;
+    padding-top: 10px;
+    font-size: 1em;
+    a{
+      @extend %standard-link;
+      color: $colorHighlightLink;
+      &:hover {
+        color: lighten($colorHighlightLink, 25)
+      }
+      &:active {
+        color: darken($colorHighlightLink, 5)
+      }
+    }
+  }
+  .back {
+    float: right;
+    .button {
+      margin-left: 10px;
+    }
+  }
 }
-
 
 .argumentation {
   > section {
@@ -62,7 +89,6 @@ body {
     }
   }
 }
-@import "list";
 
 
 @media only screen and (max-width: 800px) {
