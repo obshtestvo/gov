@@ -2,6 +2,16 @@ $(function() {
     var $win = $(window)
     var $banner = $('.banner')
     var $header = $banner.find('header')
+    var $nav = $('nav')
+    var $navPattern = $nav.find('.pattern')
+    var menubg = new Trianglify({
+        cellsize: 400,
+        noiseIntensity: 0,
+        x_gradient: ['#42c178', '#108eba', '#162e37']
+    });
+    var menupattern = menubg.generate($navPattern.width(), $navPattern.height());
+    $navPattern.css('background-image', menupattern.dataUrl)
+
     var t = new Trianglify({
         noiseIntensity: 0,
         x_gradient: ['#42c178', '#108eba', '#162e37']
@@ -19,4 +29,5 @@ $(function() {
     });
     redrawBanner()
 
+    $nav.waypoint('sticky');
 })

@@ -13,6 +13,7 @@
     "mustache": "*",
     "spin.js": "*",
     "d3": "*",
-    "trianglify": "*"
+    "trianglify": "*",
+    "jquery-waypoints": "*"
   }
 }

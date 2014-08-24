@@ -6,6 +6,8 @@
 @import "obshtestvo.bg/bits";
 @import "list";
 
+$navHeight: 60px;
+
 body {
   font-family: "obshtestvobg", "Myriad Pro", "Verdana", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,6 +17,69 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: $colorMain;
+}
+
+section.intro {
+  text-align: center;
+  padding: 100px 0 100px 0;
+  max-width: 600px;
+  margin:0 auto;
+
+  h2 {
+    font-size: 2em;
+    color: lighten($colorMainText, 10);
+    font-weight: normal;
+  }
+}
+
+nav {
+  @extend .basic-transition-mid;
+  height: $navHeight;
+  position: relative;
+  color: $colorMain;
+  .pattern {
+    @extend .basic-transition-mid;
+    top:0;
+    left:0;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    opacity: 0;
+  }
+  ul {
+    text-align: center;
+    position: relative;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    &.list {
+      > li {
+        display: inline-block;
+        padding-left: 1.5em;
+        line-height: $navHeight;
+        &:before {
+          @extend %numbering;
+          background: $colorSecondary;
+          left:50%;
+          font-size: 1.5em;
+          top:-2em;
+          @include transform(translateX(-0.5em));
+        }
+      }
+    }
+  }
+  &.stuck {
+    background: rgba($colorMainDark, 1);
+    color: $colorContrastToMain;
+    margin-top: 0;
+    position: fixed;
+    top:0;
+    width:100%;
+    z-index: 9999;
+    .pattern {
+      opacity: 0.3;
+    }
+  }
 }
 
 .banner {
@@ -34,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
   h1 {
     color: $colorContrastToMain;
     font-weight: bold;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
     font-size: 5em;
     line-height: 0.9em;
   }
@@ -76,6 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .argumentation {
+  padding-top: 70px;
   > section {
     padding-top: 2em;
     max-width: 600px;
