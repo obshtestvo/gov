@@ -1,0 +1,38 @@
+%mark {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.3em;
+  font-weight: bold;
+  height: 1.8em;
+  width: 1.8em;
+  line-height: 1.7em;
+  position: absolute;
+  top:50%;
+  @include transform(translateY(-50%));
+  left: -2.22em;
+  color:$colorContrastToMain;
+  @include border-radius(50%);
+  background: $colorMain;
+}
+
+%numbering {
+  @extend %mark;
+  counter-increment: list;
+  content: counter(list);
+}
+
+.list {
+  counter-reset: list;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  > li {
+    position: relative;
+    margin-bottom: 2em;
+    line-height: 1.2em;
+    &:before {
+      @extend %numbering;
+    }
+  }
+}

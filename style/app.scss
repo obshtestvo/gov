@@ -1,0 +1,87 @@
+@import "compass";
+@import "html5boilerplate/base";
+@import "zeroreset";
+@import "colors";
+
+body {
+  font-family: "obshtestvobg", "Myriad Pro", "Verdana", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: $colorMainText;
+  background: $colorContrastToMain;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: $colorMain;
+}
+
+
+
+.banner {
+  min-height: 300px;
+  background: url(../img/download.png);
+  background-repeat: no-repeat;
+  @include background-size(cover);
+  position: relative;
+  header {
+    position: absolute;
+    top: 50%;
+    width:100%;
+    max-width:  80%;
+    left:10%;
+    @include transform(translateY(-30%));
+  }
+  h1 {
+    color: $colorContrastToMain;
+    font-weight: bold;
+    letter-spacing: -0.03em;
+    font-size: 5em;
+    line-height: 0.9em;
+  }
+  h2 {
+    padding-top: 0.5em;
+    color: lighten($colorMain, 50);
+    font-size: 2em;
+  }
+}
+body {
+  font-family: "obshtestvobg", "Myriad Pro", "Verdana", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.argumentation {
+  > section {
+    padding-top: 2em;
+    max-width: 600px;
+    margin:0 auto;
+    font-size: 1.5em;
+    .heading {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+  }
+}
+@import "list";
+
+
+@media only screen and (max-width: 800px) {
+  .banner {
+    header {
+      font-size: 0.8em;
+    }
+  }
+}
+
+
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+@import "html5boilerplate/optional";
+@import "html5boilerplate/almostmixins";
+@import "html5boilerplate/print";
+
+@media print {
+
+}
