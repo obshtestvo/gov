@@ -24,6 +24,20 @@ $(function() {
         $banner.css('background-image', pattern.dataUrl)
     };
 
+
+    $('viewportHeight').waypoint(function(dir) {
+        if (dir == 'down') {
+            app.nav.switchTheme('light')
+        } else {
+            app.nav.switchTheme('dark')
+        }
+        $(this).remove()
+    }, {
+        offset: function() {
+            return -$(this).height();
+        }
+    })
+
     $win.on('resize', function() {
         redrawBanner();
     });

@@ -368,8 +368,8 @@ body {
 strong {
   font-weight: bold; }
 
-.argumentation > section.pains {
-  max-width: 90%;
+nav ul.list, .argumentation > section.pains {
+  max-width: 1000px;
   margin: 0 auto; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -405,6 +405,7 @@ nav {
     nav ul.list > li {
       display: inline-block;
       padding-left: 1.5em;
+      width: 160px;
       line-height: 60px; }
       nav ul.list > li:before {
         background: #7bc142;
@@ -503,25 +504,56 @@ nav {
         top: 1.48em; }
 
 .argumentation > section.pains {
-  max-width: 1000px; }
+  position: relative; }
+  .argumentation > section.pains header {
+    z-index: 2;
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    width: 100%; }
+    .argumentation > section.pains header h2 {
+      color: #fff;
+      font-size: 1em; }
+    .argumentation > section.pains header .num {
+      position: absolute;
+      color: #fff;
+      top: -1.55em;
+      left: 50%;
+      font-weight: bold;
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%); }
+  .argumentation > section.pains:before {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 150px;
+    margin: 0 auto;
+    text-align: center;
+    width: 1em;
+    color: #fff;
+    height: 1em;
+    background: #7bc142; }
   .argumentation > section.pains .half {
     width: 50%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 4%;
+    padding-top: 3em;
     display: inline-block;
     position: relative; }
     .argumentation > section.pains .half.conclusion p:first-child {
       font-size: 1.2em; }
-    .argumentation > section.pains .half:first-child:after {
+    .argumentation > section.pains .half.conditions:after {
       content: "";
       position: absolute;
       width: 1px;
       right: 0;
       top: 0;
       bottom: 0;
-      background: #9fe0f7; }
+      background: #b1da8f; }
 
 @media only screen and (min-width: 1400px) {
   .banner header {
