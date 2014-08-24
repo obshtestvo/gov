@@ -431,18 +431,18 @@ nav {
     position: absolute;
     top: 50%;
     width: 100%;
-    max-width: 80%;
+    max-width: 70%;
     left: 10%;
-    -moz-transform: translateY(-30%);
-    -ms-transform: translateY(-30%);
-    -webkit-transform: translateY(-30%);
-    transform: translateY(-30%); }
+    -moz-transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%); }
   .banner h1 {
     color: #fff;
     font-weight: bold;
     letter-spacing: -0.01em;
     font-size: 5em;
-    line-height: 0.9em; }
+    line-height: 0.85em; }
   .banner h2 {
     padding-top: 0.5em;
     color: #ceeffb;
@@ -485,9 +485,15 @@ nav {
       font-weight: bold;
       margin-bottom: 1em; }
 
+@media only screen and (min-width: 1400px) {
+  .banner header {
+    font-size: 1.2em; } }
 @media only screen and (max-width: 800px) {
   .banner header {
     font-size: 0.8em; } }
+@media only screen and (min-width: 1800px) {
+  .banner header {
+    font-size: 1.8em; } }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================

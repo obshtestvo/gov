@@ -92,16 +92,16 @@ nav {
     position: absolute;
     top: 50%;
     width:100%;
-    max-width:  80%;
+    max-width: 70%;
     left:10%;
-    @include transform(translateY(-30%));
+    @include transform(translateY(-25%));
   }
   h1 {
     color: $colorContrastToMain;
     font-weight: bold;
     letter-spacing: -0.01em;
     font-size: 5em;
-    line-height: 0.9em;
+    line-height: 0.85em;
   }
   h2 {
     padding-top: 0.5em;
@@ -157,10 +157,28 @@ nav {
 }
 
 
+
+@media only screen and (min-width: 1400px) {
+  .banner {
+    header {
+      font-size: 1.2em;
+    }
+  }
+}
+
+
 @media only screen and (max-width: 800px) {
   .banner {
     header {
       font-size: 0.8em;
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .banner {
+    header {
+      font-size: 1.8em;
     }
   }
 }
