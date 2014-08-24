@@ -493,6 +493,14 @@ nav {
       font-size: 1.5em;
       font-weight: bold;
       margin-bottom: 1em; }
+    .argumentation > section ul.list > li {
+      font-size: 0.8em;
+      margin-bottom: 0.8em; }
+      .argumentation > section ul.list > li:before {
+        content: "";
+        font-size: 0.55em;
+        left: -3.3em;
+        top: 1.48em; }
 
 .argumentation > section.pains {
   max-width: 1000px; }
@@ -514,14 +522,6 @@ nav {
       top: 0;
       bottom: 0;
       background: #9fe0f7; }
-  .argumentation > section.pains .list > li {
-    font-size: 0.8em;
-    margin-bottom: 0.8em; }
-    .argumentation > section.pains .list > li:before {
-      content: "";
-      font-size: 0.55em;
-      left: -3.3em;
-      top: 1.48em; }
 
 @media only screen and (min-width: 1400px) {
   .banner header {
