@@ -44,7 +44,6 @@ nav {
   @extend .basic-transition-mid;
   height: $navHeight;
   position: relative;
-  color: $colorMain;
 
   .pattern {
     @extend .basic-transition-mid;
@@ -61,13 +60,25 @@ nav {
     font-size: 1em;
     text-transform: uppercase;
     font-weight: bold;
+    a {
+      @extend %standard-link;
+      color: $colorMain;
+      text-decoration: none;
+    }
     &.list {
       @extend %layout;
+      max-width: 1200px;
       > li {
         display: inline-block;
         padding-left: 1.5em;
-        width: 160px;
+        width: 180px;
         line-height: $navHeight;
+        a {
+          @extend .round;
+          display: inline-block;
+          padding: 0 10px;
+          line-height: 40px;
+        }
         &:before {
           @extend %numbering;
           background: $colorSecondary;
@@ -77,16 +88,23 @@ nav {
           @include transform(translateX(-0.5em));
         }
       }
+      > li.active {
+        a {
+          background: rgba($colorSecondary, 0.2);
+        }
+      }
     }
   }
   &.stuck {
     background: rgba($colorMainDark, 1);
-    color: $colorContrastToMain;
     margin-top: 0;
     position: fixed;
     top:0;
     width:100%;
     z-index: 9999;
+    a {
+      color: $colorContrastToMain;
+    }
     .pattern {
       opacity: 0.3;
     }
@@ -182,7 +200,7 @@ nav {
   }
 }
 
-.argumentation > section.pains {
+.argumentation > section#pains {
   @extend .clearfix;
   @extend %layout;
   position: relative;

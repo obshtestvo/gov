@@ -25,17 +25,32 @@ $(function() {
     };
 
 
-    $('viewportHeight').waypoint(function(dir) {
-        if (dir == 'down') {
-            app.nav.switchTheme('light')
-        } else {
-            app.nav.switchTheme('dark')
-        }
-        $(this).remove()
-    }, {
-        offset: function() {
-            return -$(this).height();
-        }
+    $nav.find('a').each(function() {
+        var $a = $(this);
+        var $item = $a.parent();
+        var selector = $a.attr('href');
+        var $section = $(selector)
+
+        $section.waypoint(function(dir) {
+            console.log($section)
+            if (dir == 'down') {
+                $item.removeClass('active')
+            } else {
+                $item.addClass('active')
+            }
+        }, {
+            offset: function() {
+                return -$(this).height();
+            }
+        })
+
+        $section.waypoint(function(dir) {
+            if (dir == 'down') {
+                $item.addClass('active')
+            } else {
+                $item.removeClass('active')
+            }
+        })
     })
 
     $win.on('resize', function() {

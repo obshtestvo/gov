@@ -289,7 +289,7 @@ button.button.small, input.button.small {
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out; }
 
-.basic-transition-2x, .button:after, .campaign-bar .affiliation a {
+.basic-transition-2x, .button:after, nav ul a, .campaign-bar .affiliation a {
   -moz-transition: all 150ms ease-in-out;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out; }
@@ -304,21 +304,21 @@ button.button.small, input.button.small {
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out; }
 
-.round, .button {
+.round, .button, nav ul.list > li a {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
   background-clip: padding-box; }
 
-.campaign-bar .affiliation a {
+nav ul a, .campaign-bar .affiliation a {
   color: #0498cc;
   position: relative;
   cursor: pointer;
   top: 0; }
-  .campaign-bar .affiliation a:hover {
+  nav ul a:hover, .campaign-bar .affiliation a:hover {
     text-decoration: none;
     color: #03beff; }
-  .campaign-bar .affiliation a:active {
+  nav ul a:active, .campaign-bar .affiliation a:active {
     text-decoration: none;
     color: #519cb6;
     top: 1px; }
@@ -368,7 +368,7 @@ body {
 strong {
   font-weight: bold; }
 
-nav ul.list, .argumentation > section.pains {
+nav ul.list, .argumentation > section#pains {
   max-width: 1000px;
   margin: 0 auto; }
 
@@ -387,8 +387,7 @@ section.intro {
 
 nav {
   height: 60px;
-  position: relative;
-  color: #108eba; }
+  position: relative; }
   nav .pattern {
     top: 0;
     left: 0;
@@ -402,28 +401,40 @@ nav {
     font-size: 1em;
     text-transform: uppercase;
     font-weight: bold; }
-    nav ul.list > li {
-      display: inline-block;
-      padding-left: 1.5em;
-      width: 160px;
-      line-height: 60px; }
-      nav ul.list > li:before {
-        background: #7bc142;
-        left: 50%;
-        font-size: 1.5em;
-        top: -2em;
-        -moz-transform: translateX(-0.5em);
-        -ms-transform: translateX(-0.5em);
-        -webkit-transform: translateX(-0.5em);
-        transform: translateX(-0.5em); }
+    nav ul a {
+      color: #108eba;
+      text-decoration: none; }
+    nav ul.list {
+      max-width: 1200px; }
+      nav ul.list > li {
+        display: inline-block;
+        padding-left: 1.5em;
+        width: 180px;
+        line-height: 60px; }
+        nav ul.list > li a {
+          display: inline-block;
+          padding: 0 10px;
+          line-height: 40px; }
+        nav ul.list > li:before {
+          background: #7bc142;
+          left: 50%;
+          font-size: 1.5em;
+          top: -2em;
+          -moz-transform: translateX(-0.5em);
+          -ms-transform: translateX(-0.5em);
+          -webkit-transform: translateX(-0.5em);
+          transform: translateX(-0.5em); }
+      nav ul.list > li.active a {
+        background: rgba(123, 193, 66, 0.2); }
   nav.stuck {
     background: #10303c;
-    color: #fff;
     margin-top: 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 9999; }
+    nav.stuck a {
+      color: #fff; }
     nav.stuck .pattern {
       opacity: 0.3; }
 
@@ -503,18 +514,18 @@ nav {
         left: -3.3em;
         top: 1.48em; }
 
-.argumentation > section.pains {
+.argumentation > section#pains {
   position: relative; }
-  .argumentation > section.pains header {
+  .argumentation > section#pains header {
     z-index: 2;
     text-align: center;
     font-size: 3em;
     position: absolute;
     width: 100%; }
-    .argumentation > section.pains header h2 {
+    .argumentation > section#pains header h2 {
       color: #fff;
       font-size: 1em; }
-    .argumentation > section.pains header .num {
+    .argumentation > section#pains header .num {
       position: absolute;
       color: #fff;
       top: -1.55em;
@@ -524,7 +535,7 @@ nav {
       -ms-transform: translateX(-50%);
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%); }
-  .argumentation > section.pains:before {
+  .argumentation > section#pains:before {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -535,7 +546,7 @@ nav {
     color: #fff;
     height: 1em;
     background: #7bc142; }
-  .argumentation > section.pains .half {
+  .argumentation > section#pains .half {
     width: 50%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -544,9 +555,9 @@ nav {
     padding-top: 3em;
     display: inline-block;
     position: relative; }
-    .argumentation > section.pains .half.conclusion p:first-child {
+    .argumentation > section#pains .half.conclusion p:first-child {
       font-size: 1.2em; }
-    .argumentation > section.pains .half.conditions:after {
+    .argumentation > section#pains .half.conditions:after {
       content: "";
       position: absolute;
       width: 1px;
@@ -630,13 +641,13 @@ nav {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .campaign-bar:before, .argumentation > section.pains:before, .clearfix:after, .campaign-bar:after, .argumentation > section.pains:after {
+.clearfix:before, .campaign-bar:before, .argumentation > section#pains:before, .clearfix:after, .campaign-bar:after, .argumentation > section#pains:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .campaign-bar:after, .argumentation > section.pains:after {
+.clearfix:after, .campaign-bar:after, .argumentation > section#pains:after {
   clear: both; }
 
 /* ==========================================================================
