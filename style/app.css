@@ -365,6 +365,13 @@ body {
   color: #607d89;
   background: #fff; }
 
+strong {
+  font-weight: bold; }
+
+.argumentation > section.pains {
+  max-width: 90%;
+  margin: 0 auto; }
+
 h1, h2, h3, h4, h5, h6 {
   color: #108eba; }
 
@@ -479,11 +486,42 @@ nav {
     max-width: 600px;
     margin: 0 auto;
     font-size: 1.5em; }
+    .argumentation > section p {
+      margin-bottom: 1.2em; }
     .argumentation > section .heading {
-      text-align: center;
+      text-align: left;
       font-size: 1.5em;
       font-weight: bold;
       margin-bottom: 1em; }
+
+.argumentation > section.pains {
+  max-width: 1000px; }
+  .argumentation > section.pains .half {
+    width: 50%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 4%;
+    display: inline-block;
+    position: relative; }
+    .argumentation > section.pains .half.conclusion p:first-child {
+      font-size: 1.2em; }
+    .argumentation > section.pains .half:first-child:after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: #9fe0f7; }
+  .argumentation > section.pains .list > li {
+    font-size: 0.8em;
+    margin-bottom: 0.8em; }
+    .argumentation > section.pains .list > li:before {
+      content: "";
+      font-size: 0.55em;
+      left: -3.3em;
+      top: 1.48em; }
 
 @media only screen and (min-width: 1400px) {
   .banner header {
@@ -560,13 +598,13 @@ nav {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .campaign-bar:before, .clearfix:after, .campaign-bar:after {
+.clearfix:before, .campaign-bar:before, .argumentation > section.pains:before, .clearfix:after, .campaign-bar:after, .argumentation > section.pains:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .campaign-bar:after {
+.clearfix:after, .campaign-bar:after, .argumentation > section.pains:after {
   clear: both; }
 
 /* ==========================================================================
