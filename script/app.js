@@ -32,7 +32,6 @@ $(function() {
         var $section = $(selector)
 
         $section.waypoint(function(dir) {
-            console.log($section)
             if (dir == 'down') {
                 $item.removeClass('active')
             } else {

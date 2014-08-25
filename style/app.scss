@@ -5,6 +5,7 @@
 @import "obshtestvo.bg/buttons";
 @import "obshtestvo.bg/bits";
 @import "list";
+@import "html5boilerplate/almostmixins";
 
 $navHeight: 60px;
 
@@ -22,6 +23,13 @@ strong {
   max-width: 1000px;
   margin: 0 auto;
 }
+
+%layout-column {
+  @include box-sizing(border-box);
+  padding: 4%;
+  padding-top: 3em;
+}
+
 %banner-link {
   @extend %standard-link;
   color: $colorHighlightLink;
@@ -117,7 +125,7 @@ nav {
       color: $colorContrastToMain;
     }
     .pattern {
-      opacity: 0.3;
+      opacity: 0.4;
     }
   }
 }
@@ -292,6 +300,24 @@ nav {
         }
       }
     }
+    .half {
+      @extend %layout-column;
+      width:50%;
+      display: inline-block;
+      position: relative;
+      &.conclusion p:first-child {
+        font-size: 1.2em;
+      }
+      &.conditions:after {
+        content: "";
+        position: absolute;
+        width:1px;
+        right:0;
+        top: 0;
+        bottom:0;
+        background: lighten($colorSecondary, 20);
+      }
+    }
   }
 }
 
@@ -328,24 +354,86 @@ nav {
     height:1em;
     background: $colorSecondary;
   }
-  .half {
-    width:50%;
-    @include box-sizing(border-box);
-    padding: 4%;
-    padding-top: 3em;
-    display: inline-block;
+}
+
+.argumentation > section#solution {
+  @extend .clearfix;
+  @extend %layout;
+  position: relative;
+  max-width: 900px;
+  h2 {
+    background: $colorSecondary;
+    width:6em;
+    height:6em;
+    line-height: 6em;
+    margin:2em auto;
+    @include border-radius(50%);
+    color:$colorContrastToMain;
+    text-align: center;
     position: relative;
-    &.conclusion p:first-child {
-      font-size: 1.2em;
+  }
+  .requirements {
+    border-right: none;
+    font-size: 2em;
+    color: $colorMain;
+    position: relative;
+    margin-bottom: 0.2em;
+  }
+  span.checklist {
+    display: block;
+    @include box-sizing(border-box);
+    width:15%;
+    float:right;
+    font-size: 0.6em;
+    text-align: left;
+    margin: -1em 0 1em 0;
+    color: lighten($colorMainText, 10);
+  }
+  table {
+    clear:both;
+    border-collapse:separate;
+    %cell {
+      padding: 2%;
     }
-    &.conditions:after {
-      content: "";
-      position: absolute;
-      width:1px;
-      right:0;
-      top: 0;
-      bottom:0;
-      background: lighten($colorSecondary, 20);
+    td {
+      @extend %cell;
+      font-size: 0.8em;
+      position: relative;
+      &:first-child{
+        padding-left: 3em;
+        background: url('../img/chevron15.svg') no-repeat -0.7em 50%;
+        background-size: 4.5em ;
+      }
+    }
+    .checklist {
+      &:before {display: none;}
+      width: 15%;
+      border: 1px solid lighten($colorMainText, 40);
+      border-top:none;
+      background: lighten($colorMainText, 50) ;
+      font-size: 1.5em;
+      vertical-align: middle;
+      text-align: center;
+      svg {
+        height:1em;
+        width:1em;
+        path {
+          fill: $colorSecondary;
+        }
+      }
+    }
+    tr:first-child {
+      .checklist {
+        border-top: 1px solid  lighten($colorMainText, 40);
+        @include border-top-left-radius(0.1em);
+        @include border-top-right-radius(0.1em);
+      }
+    }
+    tr:last-child {
+      .checklist {
+        @include border-bottom-left-radius(0.1em);
+        @include border-bottom-right-radius(0.1em);
+      }
     }
   }
 }
@@ -377,7 +465,6 @@ nav {
 }
 
 @import "html5boilerplate/optional";
-@import "html5boilerplate/almostmixins";
 @import "html5boilerplate/print";
 
 @media print {

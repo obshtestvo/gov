@@ -359,6 +359,26 @@ button.button.small, input.button.small {
     margin-bottom: 2em;
     line-height: 1.2em; }
 
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before, .banner .target:before, .campaign-bar:before, .argumentation > section#pains:before, .argumentation > section#solution:before, .clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after, .argumentation > section#solution:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after, .argumentation > section#solution:after {
+  clear: both; }
+
 body {
   font-family: "obshtestvobg", "Myriad Pro", "Verdana", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -368,9 +388,16 @@ body {
 strong {
   font-weight: bold; }
 
-nav ul.list, .argumentation > section#pains {
+nav ul.list, .argumentation > section#pains, .argumentation > section#solution {
   max-width: 1000px;
   margin: 0 auto; }
+
+.argumentation > section .half {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4%;
+  padding-top: 3em; }
 
 .banner .target .info .alternatives a, .campaign-bar .affiliation a {
   color: #00c2ff; }
@@ -443,7 +470,7 @@ nav {
     nav.stuck a {
       color: #fff; }
     nav.stuck .pattern {
-      opacity: 0.3; }
+      opacity: 0.4; }
 
 .banner {
   overflow: hidden;
@@ -591,6 +618,20 @@ nav {
         font-size: 0.55em;
         left: -3.3em;
         top: 1.48em; }
+    .argumentation > section .half {
+      width: 50%;
+      display: inline-block;
+      position: relative; }
+      .argumentation > section .half.conclusion p:first-child {
+        font-size: 1.2em; }
+      .argumentation > section .half.conditions:after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #b1da8f; }
 
 .argumentation > section#pains {
   position: relative; }
@@ -624,25 +665,81 @@ nav {
     color: #fff;
     height: 1em;
     background: #7bc142; }
-  .argumentation > section#pains .half {
-    width: 50%;
+
+.argumentation > section#solution {
+  position: relative;
+  max-width: 900px; }
+  .argumentation > section#solution h2 {
+    background: #7bc142;
+    width: 6em;
+    height: 6em;
+    line-height: 6em;
+    margin: 2em auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    position: relative; }
+  .argumentation > section#solution .requirements {
+    border-right: none;
+    font-size: 2em;
+    color: #108eba;
+    position: relative;
+    margin-bottom: 0.2em; }
+  .argumentation > section#solution span.checklist {
+    display: block;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 4%;
-    padding-top: 3em;
-    display: inline-block;
-    position: relative; }
-    .argumentation > section#pains .half.conclusion p:first-child {
-      font-size: 1.2em; }
-    .argumentation > section#pains .half.conditions:after {
-      content: "";
-      position: absolute;
-      width: 1px;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: #b1da8f; }
+    width: 15%;
+    float: right;
+    font-size: 0.6em;
+    text-align: left;
+    margin: -1em 0 1em 0;
+    color: #7a96a2; }
+  .argumentation > section#solution table {
+    clear: both;
+    border-collapse: separate; }
+    .argumentation > section#solution table td {
+      padding: 2%; }
+    .argumentation > section#solution table td {
+      font-size: 0.8em;
+      position: relative; }
+      .argumentation > section#solution table td:first-child {
+        padding-left: 3em;
+        background: url("../img/chevron15.svg") no-repeat -0.7em 50%;
+        background-size: 4.5em; }
+    .argumentation > section#solution table .checklist {
+      width: 15%;
+      border: 1px solid #d4dde1;
+      border-top: none;
+      background: #f2f5f6;
+      font-size: 1.5em;
+      vertical-align: middle;
+      text-align: center; }
+      .argumentation > section#solution table .checklist:before {
+        display: none; }
+      .argumentation > section#solution table .checklist svg {
+        height: 1em;
+        width: 1em; }
+        .argumentation > section#solution table .checklist svg path {
+          fill: #7bc142; }
+    .argumentation > section#solution table tr:first-child .checklist {
+      border-top: 1px solid #d4dde1;
+      -moz-border-radius-topleft: 0.1em;
+      -webkit-border-top-left-radius: 0.1em;
+      border-top-left-radius: 0.1em;
+      -moz-border-radius-topright: 0.1em;
+      -webkit-border-top-right-radius: 0.1em;
+      border-top-right-radius: 0.1em; }
+    .argumentation > section#solution table tr:last-child .checklist {
+      -moz-border-radius-bottomleft: 0.1em;
+      -webkit-border-bottom-left-radius: 0.1em;
+      border-bottom-left-radius: 0.1em;
+      -moz-border-radius-bottomright: 0.1em;
+      -webkit-border-bottom-right-radius: 0.1em;
+      border-bottom-right-radius: 0.1em; }
 
 @media only screen and (min-width: 1400px) {
   .banner {
@@ -707,26 +804,6 @@ nav {
  */
 .invisible {
   visibility: hidden; }
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.clearfix:before, .banner .target:before, .campaign-bar:before, .argumentation > section#pains:before, .clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-
-.clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after {
-  clear: both; }
 
 /* ==========================================================================
    Print styles.
