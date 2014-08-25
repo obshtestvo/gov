@@ -50,6 +50,8 @@ $(function() {
             } else {
                 $item.removeClass('active')
             }
+        }, {
+            offset: 210
         })
     })
 

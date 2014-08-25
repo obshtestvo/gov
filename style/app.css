@@ -512,7 +512,7 @@ nav {
         left: 0; }
         .banner .target .badge .bookmark polygon {
           fill: #194a5c; }
-      .banner .target .badge .coatofarms {
+      .banner .target .badge .logo {
         display: inline-block;
         position: relative;
         z-index: 2;
@@ -520,7 +520,7 @@ nav {
         height: 8em;
         margin-top: 0.35em;
         font-size: 1.1em; }
-        .banner .target .badge .coatofarms path {
+        .banner .target .badge .logo path {
           fill: #fff; }
     .banner .target .info {
       float: left;
