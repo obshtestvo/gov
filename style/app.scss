@@ -109,7 +109,7 @@ nav {
       }
       > li.active {
         a {
-          background: rgba($colorSecondary, 0.2);
+          background: rgba($colorSecondary, 0.4);
         }
       }
     }
@@ -142,7 +142,7 @@ nav {
     width:100%;
     max-width: 70%;
     left:10%;
-    @include transform(translateY(-25%));
+    @include transform(translateY(-15%));
   }
   h1 {
     color: $colorContrastToMain;
@@ -304,10 +304,12 @@ nav {
       @extend %layout-column;
       width:50%;
       display: inline-block;
+      padding-bottom: 10em;
       position: relative;
       &.conclusion p:first-child {
         font-size: 1.2em;
       }
+      &.conclusion:before,
       &.conditions:after {
         content: "";
         position: absolute;
@@ -316,6 +318,10 @@ nav {
         top: 0;
         bottom:0;
         background: lighten($colorSecondary, 20);
+      }
+      &.conclusion:before {
+        right:auto;
+        left:-1px;
       }
     }
   }
@@ -361,12 +367,13 @@ nav {
   @extend %layout;
   position: relative;
   max-width: 900px;
+  padding-top: 0;
   h2 {
     background: $colorSecondary;
     width:6em;
     height:6em;
     line-height: 6em;
-    margin:2em auto;
+    margin:0 auto 2em auto;
     @include border-radius(50%);
     color:$colorContrastToMain;
     text-align: center;
@@ -377,21 +384,23 @@ nav {
     font-size: 2em;
     color: $colorMain;
     position: relative;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.8em;
   }
   span.checklist {
     display: block;
     @include box-sizing(border-box);
-    width:15%;
+    width:20%;
     float:right;
     font-size: 0.6em;
     text-align: left;
-    margin: -1em 0 1em 0;
+    margin: -1em -1.6% 1em 0;
     color: lighten($colorMainText, 10);
   }
   table {
     clear:both;
     border-collapse:separate;
+    max-width: 90%;
+    margin: 0 auto;
     %cell {
       padding: 2%;
     }
@@ -433,6 +442,81 @@ nav {
       .checklist {
         @include border-bottom-left-radius(0.1em);
         @include border-bottom-right-radius(0.1em);
+      }
+    }
+  }
+}
+
+
+
+
+.argumentation > section#steps {
+  @extend .clearfix;
+  max-width: 90%;
+  padding-top: 7em;
+  position: relative;
+  .subtitle {
+    max-width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 3em;
+  }
+  h2 {
+    text-align: center;
+  }
+  ul {
+    @extend .clearfix;
+  }
+  li {
+    @extend %layout-column;
+    max-width: 30em;
+    margin:0 auto;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    padding: 2%;
+    padding-bottom: 3em;
+    img{
+      width: 100% ;
+      max-width: 280px;
+      display:block;
+      margin: 0 auto 2em auto;
+    }
+  }
+  li.requirements  {
+    p {
+      position: relative;
+      text-align: left;
+      left:50%;
+      width:80%;
+      margin-left: -5em;
+    }
+    img {
+      margin-bottom: 1em;
+    }
+  }
+  li.data {
+    text-align: left;
+    p {
+      position: relative;
+      left:50%;
+      width: 50%;
+      padding: 5% 0 0 7%;
+      margin-top: -9.5em;
+    }
+  }
+  li.process {
+    @extend .clearfix;
+    p {
+      @include box-sizing(border-box);
+      position: relative;
+      left:-15%;
+      text-align: right;
+      padding: 1.5%;
+      width: 70%;
+      float:left;
+      &:last-child {
+        width: 30%;
+        text-align: left;
       }
     }
   }
