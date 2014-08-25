@@ -34,3 +34,12 @@
 	     url('../fonts/obshtestvobg-italic.svg#obshtestvobg-italic') format('svg');
     font-style: italic;
 }
+
+
+@font-face {
+    font-family: 'obshtestvobg';
+    src: url('../fonts/obshtestvo-bold-italic.eot?#iefix') format('embedded-opentype'),  url('../fonts/obshtestvo-bold-italic.otf')  format('opentype'),
+    url('../fonts/obshtestvo-bold-italic.woff') format('woff'), url('../fonts/obshtestvo-bold-italic.ttf')  format('truetype'), url('../fonts/obshtestvo-bold-italic.svg#../fonts/obshtestvo-bold-italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}

@@ -289,12 +289,12 @@ button.button.small, input.button.small {
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out; }
 
-.basic-transition-2x, .button:after, nav ul a, .campaign-bar .affiliation a {
+.basic-transition-2x, .button:after, .banner .target .info .alternatives a, .campaign-bar .affiliation a, nav ul a {
   -moz-transition: all 150ms ease-in-out;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out; }
 
-.basic-transition-mid, nav, nav .pattern {
+.basic-transition-mid, nav, nav .pattern, nav ul.list > li a {
   -moz-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out; }
@@ -310,15 +310,15 @@ button.button.small, input.button.small {
   border-radius: 2px;
   background-clip: padding-box; }
 
-nav ul a, .campaign-bar .affiliation a {
+.banner .target .info .alternatives a, .campaign-bar .affiliation a, nav ul a {
   color: #0498cc;
   position: relative;
   cursor: pointer;
   top: 0; }
-  nav ul a:hover, .campaign-bar .affiliation a:hover {
+  .banner .target .info .alternatives a:hover, .campaign-bar .affiliation a:hover, nav ul a:hover {
     text-decoration: none;
     color: #03beff; }
-  nav ul a:active, .campaign-bar .affiliation a:active {
+  .banner .target .info .alternatives a:active, .campaign-bar .affiliation a:active, nav ul a:active {
     text-decoration: none;
     color: #519cb6;
     top: 1px; }
@@ -371,6 +371,13 @@ strong {
 nav ul.list, .argumentation > section#pains {
   max-width: 1000px;
   margin: 0 auto; }
+
+.banner .target .info .alternatives a, .campaign-bar .affiliation a {
+  color: #00c2ff; }
+  .banner .target .info .alternatives a:hover, .campaign-bar .affiliation a:hover {
+    color: #80e0ff; }
+  .banner .target .info .alternatives a:active, .campaign-bar .affiliation a:active {
+    color: #00afe6; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #108eba; }
@@ -466,6 +473,83 @@ nav {
     padding-top: 0.5em;
     color: #ceeffb;
     font-size: 2em; }
+  .banner .target {
+    font-size: 0.8em;
+    float: right;
+    font-style: italic;
+    margin: 4px 10px;
+    color: #fff; }
+    .banner .target > .prompt {
+      float: left;
+      position: relative;
+      width: 18.75em;
+      height: 10.62em;
+      text-align: right;
+      padding-right: 1em; }
+      .banner .target > .prompt p {
+        font-size: 1.55em;
+        position: relative;
+        top: 50%;
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%); }
+        .banner .target > .prompt p strong {
+          font-weight: 700;
+          font-size: 1.29em; }
+    .banner .target .badge {
+      margin-left: -0.2em;
+      float: left;
+      z-index: 1;
+      width: 9.5em;
+      position: relative;
+      text-align: center; }
+      .banner .target .badge .bookmark {
+        position: absolute;
+        top: 0;
+        height: 15.56em;
+        width: 9.5em;
+        left: 0; }
+        .banner .target .badge .bookmark polygon {
+          fill: #194a5c; }
+      .banner .target .badge .coatofarms {
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        width: 5em;
+        height: 8em;
+        margin-top: 0.35em;
+        font-size: 1.1em; }
+        .banner .target .badge .coatofarms path {
+          fill: #fff; }
+    .banner .target .info {
+      float: left;
+      margin-left: -0.2em; }
+      .banner .target .info .name {
+        background: rgba(25, 74, 92, 0.7);
+        height: 10.62em;
+        width: 17.87em; }
+        .banner .target .info .name p {
+          font-size: 1.47em;
+          line-height: 1.13em;
+          position: relative;
+          padding-left: 0.78em;
+          top: 50%;
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+      .banner .target .info .alternatives {
+        font-size: 1.2em;
+        font-style: normal;
+        padding-top: 0.8em;
+        text-align: right; }
+        .banner .target .info .alternatives p {
+          margin: 0 0 0.5em 0; }
+        .banner .target .info .alternatives li {
+          padding-top: 0.3em; }
+        .banner .target .info .alternatives .prompt {
+          font-weight: bold; }
 
 .campaign-bar {
   background: rgba(16, 48, 60, 0.6);
@@ -480,12 +564,6 @@ nav {
     float: left;
     padding-top: 10px;
     font-size: 1em; }
-    .campaign-bar .affiliation a {
-      color: #00c2ff; }
-      .campaign-bar .affiliation a:hover {
-        color: #80e0ff; }
-      .campaign-bar .affiliation a:active {
-        color: #00afe6; }
   .campaign-bar .back {
     float: right; }
     .campaign-bar .back .button {
@@ -567,13 +645,13 @@ nav {
       background: #b1da8f; }
 
 @media only screen and (min-width: 1400px) {
-  .banner header {
+  .banner {
     font-size: 1.2em; } }
 @media only screen and (max-width: 800px) {
-  .banner header {
+  .banner {
     font-size: 0.8em; } }
 @media only screen and (min-width: 1800px) {
-  .banner header {
+  .banner {
     font-size: 1.8em; } }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
@@ -641,13 +719,13 @@ nav {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .campaign-bar:before, .argumentation > section#pains:before, .clearfix:after, .campaign-bar:after, .argumentation > section#pains:after {
+.clearfix:before, .banner .target:before, .campaign-bar:before, .argumentation > section#pains:before, .clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .campaign-bar:after, .argumentation > section#pains:after {
+.clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after {
   clear: both; }
 
 /* ==========================================================================
