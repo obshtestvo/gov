@@ -698,7 +698,8 @@ nav {
 
 
 .argumentation > section#myths {
-  max-width: 900px;
+  max-width: 700px;
+  font-size: 1.1em;
   %handle {
     font-size: 0.6em;
     display: block;
@@ -712,7 +713,7 @@ nav {
     @include box-sizing(border-box);
     @include border-radius(0.5em);
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
     width: 80%;
     padding: 3%;
     margin-bottom: 0.5em;
@@ -729,6 +730,7 @@ nav {
   p {
     @include box-sizing(border-box);
     @include border-radius(0.5em);
+    line-height: 1.2em;
     width:80%;
     margin-left: 20%;
     padding: 3%;
