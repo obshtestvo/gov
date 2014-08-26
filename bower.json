@@ -14,6 +14,8 @@
     "spin.js": "*",
     "d3": "*",
     "trianglify": "*",
-    "jquery-waypoints": "*"
+    "jquery-waypoints": "*",
+    "wireit": "https://github.com/neyric/wireit.git#c50ba49765d04341f453bf83b88509dcd7f2231d",
+    "yui3": "*"
   }
 }
