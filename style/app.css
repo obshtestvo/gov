@@ -179,9 +179,9 @@ table {
     padding-right: 15px;
     padding-left: 15px; }
   .button.standard, header.masthead .project-actions li.see .button {
-    padding: 10px 10px 9px 10px;
-    font-size: 15px;
-    line-height: 15px; }
+    font-size: 0.94em;
+    padding: 0.66em 0.66em 0.6em 0.66em;
+    line-height: 1em; }
   header.masthead .project-actions li.see:first-child .button.standard {
     padding-left: 0; }
   header.masthead .project-actions li.see .button {
@@ -289,7 +289,7 @@ button.button.small, input.button.small {
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out; }
 
-.basic-transition-2x, .button:after, .banner .target .info .alternatives a, .campaign-bar .affiliation a, nav ul a {
+.basic-transition-2x, .button:after, .banner .target .info .alternatives a, .campaign-bar .affiliation a, nav ul a, .argumentation > section a {
   -moz-transition: all 150ms ease-in-out;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out; }
@@ -310,15 +310,15 @@ button.button.small, input.button.small {
   border-radius: 2px;
   background-clip: padding-box; }
 
-.banner .target .info .alternatives a, .campaign-bar .affiliation a, nav ul a {
+.banner .target .info .alternatives a, .campaign-bar .affiliation a, nav ul a, .argumentation > section a {
   color: #0498cc;
   position: relative;
   cursor: pointer;
   top: 0; }
-  .banner .target .info .alternatives a:hover, .campaign-bar .affiliation a:hover, nav ul a:hover {
+  .banner .target .info .alternatives a:hover, .campaign-bar .affiliation a:hover, nav ul a:hover, .argumentation > section a:hover {
     text-decoration: none;
     color: #03beff; }
-  .banner .target .info .alternatives a:active, .campaign-bar .affiliation a:active, nav ul a:active {
+  .banner .target .info .alternatives a:active, .campaign-bar .affiliation a:active, nav ul a:active, .argumentation > section a:active {
     text-decoration: none;
     color: #519cb6;
     top: 1px; }
@@ -585,11 +585,11 @@ nav {
   -webkit-border-radius: 1px;
   border-radius: 1px;
   margin: 4px;
-  padding: 12px 10px 12px 30px;
-  min-height: 36px; }
+  padding: 0.75em 0.62em 0.75em 1.85em;
+  min-height: 2.25em; }
   .campaign-bar .affiliation {
     float: left;
-    padding-top: 10px;
+    padding-top: 0.62em;
     font-size: 1em; }
   .campaign-bar .back {
     float: right; }
@@ -686,6 +686,15 @@ nav {
     color: #fff;
     text-align: center;
     position: relative; }
+    .argumentation > section#solution h2:before {
+      content: "2";
+      font-size: 1.5em;
+      position: absolute;
+      left: 0;
+      top: -4em;
+      color: #7bc142;
+      text-align: center;
+      width: 100%; }
   .argumentation > section#solution .requirements {
     border-right: none;
     font-size: 2em;
@@ -809,7 +818,10 @@ nav {
     font-size: 0.8em; } }
 @media only screen and (min-width: 1800px) {
   .banner {
-    font-size: 1.8em; } }
+    font-size: 1.3em; } }
+@media only screen and (min-width: 2000px) {
+  .banner {
+    font-size: 1.5em; } }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================

@@ -254,11 +254,11 @@ nav {
   color: rgba($colorContrastToMain, 0.8);
   @include border-radius(1px);
   margin: 4px;
-  padding: 12px 10px 12px 30px;
-  min-height: 36px;
+  padding: 0.75em 0.62em 0.75em 1.85em;
+  min-height: 2.25em;
   .affiliation  {
     float: left;
-    padding-top: 10px;
+    padding-top: 0.62em;
     font-size: 1em;
     a{
       @extend %banner-link;
@@ -281,6 +281,9 @@ nav {
     font-size: 1.5em;
     p {
       margin-bottom: 1.2em;
+    }
+    a {
+      @extend %standard-link;
     }
     .heading {
       text-align: left;
@@ -378,6 +381,16 @@ nav {
     color:$colorContrastToMain;
     text-align: center;
     position: relative;
+    &:before {
+      content: "2";
+      font-size: 1.5em;
+      position: absolute;
+      left:0;
+      top: -4em;
+      color:$colorSecondary;
+      text-align: center;
+      width:100%;
+    }
   }
   .requirements {
     border-right: none;
@@ -539,7 +552,13 @@ nav {
 
 @media only screen and (min-width: 1800px) {
   .banner {
-      font-size: 1.8em;
+      font-size: 1.3em;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .banner {
+      font-size: 1.5em;
   }
 }
 
