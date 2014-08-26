@@ -191,21 +191,19 @@ nav {
       .bookmark {
         position: absolute;
         top:0;
-        height:15.56em ;
-        width:9.5em ;
+        width:100%;
         left:0;
         polygon {
           fill: lighten($colorMainDark, 8);
         }
       }
       .logo {
+        font-size: 1.1em;
         display: inline-block;
         position: relative;
         z-index: 2;
-        width:5em;
-        height:8em;
-        margin-top: 0.35em;
-        font-size: 1.1em;
+        width:52%;
+        margin-top: 2em;
         path {
           fill: $colorContrastToMain;
         }

@@ -534,19 +534,17 @@ nav {
       .banner .target .badge .bookmark {
         position: absolute;
         top: 0;
-        height: 15.56em;
-        width: 9.5em;
+        width: 100%;
         left: 0; }
         .banner .target .badge .bookmark polygon {
           fill: #194a5c; }
       .banner .target .badge .logo {
+        font-size: 1.1em;
         display: inline-block;
         position: relative;
         z-index: 2;
-        width: 5em;
-        height: 8em;
-        margin-top: 0.35em;
-        font-size: 1.1em; }
+        width: 52%;
+        margin-top: 2em; }
         .banner .target .badge .logo path {
           fill: #fff; }
     .banner .target .info {
