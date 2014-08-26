@@ -7,7 +7,7 @@
 @import "list";
 @import "html5boilerplate/almostmixins";
 
-$navHeight: 60px;
+$navHeight: 3.75em;
 
 body {
   font-family: "obshtestvobg", "Myriad Pro", "Verdana", sans-serif;
@@ -75,35 +75,51 @@ nav {
   ul {
     text-align: center;
     position: relative;
-    font-size: 1em;
     text-transform: uppercase;
     font-weight: bold;
     a {
       @extend %standard-link;
+      @extend .round;
+      @extend .basic-transition-mid;
       color: $colorMain;
       text-decoration: none;
+      display: inline-block;
+      padding: 0 0.625em;
+      line-height: 2.5em;
+      .sub {
+        display: block;
+        color: lighten(desaturate($colorMain, 40), 20);
+        position: absolute;
+        line-height: 1.2em;
+        white-space: nowrap;
+        text-transform: none;
+        font-weight: normal;
+        text-align: center;
+        top: $navHeight/1.6;
+        left:50%;
+        @include transform(translateX(-50%));
+        &:first-letter {
+          text-transform: uppercase;
+        }
+      }
     }
     &.list {
       @extend %layout;
       max-width: 1200px;
       > li {
         display: inline-block;
+        vertical-align: top;
         padding-left: 1.5em;
+        position: relative;
         width: 180px;
         line-height: $navHeight;
-        a {
-          @extend .basic-transition-mid;
-          @extend .round;
-          display: inline-block;
-          padding: 0 10px;
-          line-height: 40px;
-        }
         &:before {
           @extend %numbering;
           background: $colorSecondary;
           left:50%;
           font-size: 1.5em;
           top:-2em;
+          opacity: 1;
           @include transform(translateX(-0.5em));
         }
       }
@@ -123,6 +139,9 @@ nav {
     z-index: 9999;
     a {
       color: $colorContrastToMain;
+      .sub {
+        opacity: 0;
+      }
     }
     .pattern {
       opacity: 0.4;
@@ -221,6 +240,7 @@ nav {
           line-height: 1.13em;
           position: relative;
           padding-left: 0.78em;
+          padding-right: 0.78em;
           top:50%;
           @include transform(translateY(-50%));
         }
