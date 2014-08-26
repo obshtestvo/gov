@@ -962,6 +962,7 @@ nav {
     font-size: 1.5em;
     width: 80%;
     padding: 3%;
+    margin-top: 2em;
     margin-bottom: 0.5em;
     background: #108eba;
     color: #fff;
@@ -977,6 +978,7 @@ nav {
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     border-radius: 0.5em;
+    margin-bottom: 0.5em;
     line-height: 1.2em;
     width: 80%;
     margin-left: 20%;
@@ -989,6 +991,9 @@ nav {
       right: -0.5em;
       background: url("../img/bubble-right.svg") no-repeat right top;
       background-size: 100%; }
+  .argumentation > section#myths p + p:after {
+    display: none;
+    margin-bottom: 1.2em; }
 
 @media only screen and (min-width: 1400px) {
   .banner {

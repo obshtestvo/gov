@@ -716,6 +716,7 @@ nav {
     font-size: 1.5em;
     width: 80%;
     padding: 3%;
+    margin-top: 2em;
     margin-bottom: 0.5em;
     background: $colorMain;
     color:$colorContrastToMain;
@@ -730,6 +731,7 @@ nav {
   p {
     @include box-sizing(border-box);
     @include border-radius(0.5em);
+    margin-bottom: 0.5em;
     line-height: 1.2em;
     width:80%;
     margin-left: 20%;
@@ -743,6 +745,12 @@ nav {
       right:-0.5em;
       background: url("../img/bubble-right.svg") no-repeat right top;
       background-size: 100%;
+    }
+  }
+  p + p {
+    &:after {
+      display: none;
+      margin-bottom: 1.2em
     }
   }
 }
