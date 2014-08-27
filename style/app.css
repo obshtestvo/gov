@@ -289,7 +289,7 @@ button.button.small, input.button.small {
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out; }
 
-.basic-transition-2x, .button:after, .banner .target .info .alternatives a, .campaign-bar .affiliation a, nav ul a, .argumentation > section a {
+.basic-transition-2x, .button:after, .banner .target .info .alternatives a, .campaign-bar .affiliation a, nav ul a, .argumentation > section a:not(.button) {
   -moz-transition: all 150ms ease-in-out;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out; }
@@ -310,15 +310,15 @@ button.button.small, input.button.small {
   border-radius: 2px;
   background-clip: padding-box; }
 
-.banner .target .info .alternatives a, .campaign-bar .affiliation a, nav ul a, .argumentation > section a {
+.banner .target .info .alternatives a, .campaign-bar .affiliation a, nav ul a, .argumentation > section a:not(.button) {
   color: #0498cc;
   position: relative;
   cursor: pointer;
   top: 0; }
-  .banner .target .info .alternatives a:hover, .campaign-bar .affiliation a:hover, nav ul a:hover, .argumentation > section a:hover {
+  .banner .target .info .alternatives a:hover, .campaign-bar .affiliation a:hover, nav ul a:hover, .argumentation > section a:hover:not(.button) {
     text-decoration: none;
     color: #03beff; }
-  .banner .target .info .alternatives a:active, .campaign-bar .affiliation a:active, nav ul a:active, .argumentation > section a:active {
+  .banner .target .info .alternatives a:active, .campaign-bar .affiliation a:active, nav ul a:active, .argumentation > section a:active:not(.button) {
     text-decoration: none;
     color: #519cb6;
     top: 1px; }
@@ -392,7 +392,7 @@ nav ul.list, .argumentation > section#pains, .argumentation > section#solution {
   max-width: 1000px;
   margin: 0 auto; }
 
-.argumentation > section .half, .argumentation > section#steps li {
+.argumentation > section .half, .argumentation > section#steps .half, .argumentation > section#steps li {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -784,6 +784,17 @@ nav {
   margin-top: 6em;
   padding-top: 0;
   position: relative; }
+  .argumentation > section#steps h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em; }
+  .argumentation > section#steps .half {
+    font-size: 1.2em;
+    width: 50%;
+    float: left;
+    padding-top: 1em; }
+    .argumentation > section#steps .half.first {
+      text-align: right; }
   .argumentation > section#steps header .line1, .argumentation > section#steps li .line1, .argumentation > section#steps header:after, .argumentation > section#steps li:after, .argumentation > section#steps header:before, .argumentation > section#steps li:before {
     display: block;
     z-index: 1;

@@ -308,7 +308,7 @@ nav {
     p {
       margin-bottom: 1.2em;
     }
-    a {
+    a:not(.button) {
       @extend %standard-link;
     }
     .heading {
@@ -492,6 +492,21 @@ nav {
   margin-top: 6em;
   padding-top: 0;
   position: relative;
+  h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+  }
+  .half {
+    @extend %layout-column;
+    font-size: 1.2em;
+    width:50%;
+    float:left;
+    padding-top: 1em;
+    &.first {
+      text-align: right;
+    }
+  }
   %line {
     display: block;
     z-index: 1;
