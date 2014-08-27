@@ -25,6 +25,8 @@ $(function() {
     };
 
 
+    var menuOffset = 150;
+
     $nav.find('a').each(function() {
         var $a = $(this);
         var $item = $a.parent();
@@ -39,7 +41,7 @@ $(function() {
             }
         }, {
             offset: function() {
-                return -$(this).height();
+                return -$(this).height()+menuOffset;
             }
         })
 
@@ -50,7 +52,7 @@ $(function() {
                 $item.removeClass('active')
             }
         }, {
-            offset: 210
+            offset: menuOffset
         })
     })
 

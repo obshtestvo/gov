@@ -49,6 +49,37 @@ strong {
   font-weight: normal;
 }
 
+$headinerCircleSize: 3em;
+%section-header {
+  padding-left:50%;
+  z-index: 2;
+  h2 {
+    position: relative;
+    padding-left: $headinerCircleSize*0.7;
+    text-transform: lowercase;
+    letter-spacing: -0.03em;
+    text-align: left;
+    color:$colorSecondary;
+    height: $headinerCircleSize;
+    line-height: $headinerCircleSize*0.9;
+    font-size: 2em;
+    &:before {
+      width:$headinerCircleSize;
+      height:$headinerCircleSize;
+      line-height: $headinerCircleSize;
+      text-align: center;
+      content: "1";
+      background: $colorSecondary;
+      color:$colorContrastToMain;
+      font-weight: bold;
+      position: absolute;
+      top:0;
+      left:-$headinerCircleSize/2;
+      @include border-radius(50%);
+    }
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: $colorMain;
 }
@@ -333,7 +364,7 @@ nav {
       @extend %layout-column;
       width:50%;
       display: inline-block;
-      padding-bottom: 10em;
+      padding-bottom: 4em;
       position: relative;
       &.conclusion p:first-child {
         font-size: 1.2em;
@@ -346,7 +377,7 @@ nav {
         right:0;
         top: 0;
         bottom:0;
-        background: lighten($colorSecondary, 20);
+        background: $colorSecondaryThinPixel;
       }
       &.conclusion:before {
         right:auto;
@@ -356,38 +387,14 @@ nav {
   }
 }
 
+
 .argumentation > section#pains {
   @extend .clearfix;
   @extend %layout;
+  padding-top: 4em;
   position: relative;
   header {
-    h2 {
-      color: $colorContrastToMain;
-      font-size: 1em;
-    }
-    z-index: 2;
-    text-align: center;
-    font-size: 3em;
-    position: absolute;
-    width: 100%;
-    .num {
-      position: absolute;
-      color: $colorContrastToMain;
-      top: -1.55em;
-      left:50%;
-      font-weight: bold;
-      @include transform(translateX(-50%))
-    }
-  }
-  &:before {
-    @include border-radius(50%);
-    font-size: 150px;
-    margin:0 auto;
-    text-align: center;
-    width:1em;
-    color:$colorContrastToMain;
-    height:1em;
-    background: $colorSecondary;
+    @extend %section-header;
   }
 }
 
@@ -396,29 +403,26 @@ nav {
   @extend %layout;
   position: relative;
   max-width: 37.5em;
-  padding-top: 0;
-  h2 {
-    background: $colorSecondary;
-    width:6em;
-    height:6em;
-    line-height: 6em;
-    margin:0 auto 2em auto;
-    @include border-radius(50%);
-    color:$colorContrastToMain;
-    text-align: center;
-    position: relative;
-    &:before {
-      content: "2";
-      font-size: 1.5em;
-      position: absolute;
-      left:0;
-      top: -4em;
-      color:$colorSecondary;
-      text-align: center;
-      width:100%;
-    }
+  padding-top: 4em;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left:50%;
+    top:0em;
+    width: 1px;
+    @include transform(translateX(-1px));
+    height: 4em;
+    background: $colorSecondaryThinPixel;
   }
-  .requirements {
+  > header {
+    @extend %section-header;
+    h2:before {
+      content:"2";
+    }
+    padding-bottom: 3em;
+  }
+  > .requirements {
     @extend %big-message;
     border-right: none;
   }
@@ -486,26 +490,14 @@ nav {
 
 
 
-.argumentation > section#steps {
+.argumentation section#steps {
   @extend .clearfix;
-  max-width: 37.5em;
   margin-top: 6em;
   padding-top: 0;
   position: relative;
-  h3 {
-    text-align: center;
-    font-weight: bold;
+  .act {
     font-size: 2em;
-  }
-  .half {
-    @extend %layout-column;
-    font-size: 1.2em;
-    width:50%;
-    float:left;
-    padding-top: 1em;
-    &.first {
-      text-align: right;
-    }
+    text-align: center;
   }
   %line {
     display: block;
@@ -513,7 +505,7 @@ nav {
     content: '';
     position: absolute;
     width:1px;
-    background: $colorSecondary;
+    background: $colorSecondaryThinPixel;
     top:0;
     bottom:0;
     right:12%;
@@ -533,7 +525,7 @@ nav {
     content: '';
     position: absolute;
     width:1px;
-    background: $colorSecondary;
+    background: $colorSecondaryThinPixel;
     top:-6em;
     height:6em;
     bottom:auto;
@@ -617,7 +609,7 @@ nav {
         height: 3.15em;
         content: "";
         display: block;
-        border:1px solid $colorSecondary;
+        border:1px solid $colorSecondaryThinPixel;
         border-top:0;
         border-left:0;
         @include border-bottom-right-radius(1em);
@@ -647,7 +639,7 @@ nav {
         top:0.65em;
         right:-0.3em;
         height:1px;
-        border-bottom:1px solid $colorSecondary;
+        border-bottom:1px solid $colorSecondaryThinPixel;
         width:0.3em;
       }
     }
@@ -743,6 +735,13 @@ nav {
 
 .argumentation > section#myths {
   max-width: 37.5em;
+  margin-top: 2em;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  .content {
+    max-width: 28em;
+    margin: 0 auto;
+  }
   .opposition {
     max-width: 32em;
     font-size: 0.7em;
@@ -757,11 +756,20 @@ nav {
     padding-top: 0.2em;
     color: ligten($colorMainText, 30)
   }
-  h2 {
+  header {
+    @extend %section-header;
+    h2:before {
+      content: "3";
+    }
+    padding-bottom: 3em;
+  }
+  h2.heading {
     @extend %big-message;
+    padding-bottom: 1em;
   }
   h3 {
     text-align: center;
+    margin-top: 3em;
     font-weight: bold;
     font-size: 1.5em;
   }
@@ -807,6 +815,9 @@ nav {
     width: 1em;
     bottom: -0.2em;
   }
+  .myths {
+    padding-bottom: 2em;
+  }
   .myth {
     @include box-sizing(border-box);
     @include border-radius(0.5em);
@@ -850,6 +861,22 @@ nav {
       display: none;
       margin-bottom: 1.2em
     }
+  }
+}
+
+.argumentation > section#experience {
+  header {
+    @extend %section-header;
+    h2 {
+      white-space: nowrap;
+      line-height: 0.7em;
+      padding-top: 0.6em;
+      height: $headinerCircleSize - 0.6em;
+    }
+    h2:before {
+      content: "4";
+    }
+    padding-bottom: 3em;
   }
 }
 

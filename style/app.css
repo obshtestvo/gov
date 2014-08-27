@@ -370,13 +370,13 @@ button.button.small, input.button.small {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .banner .target:before, .campaign-bar:before, .argumentation > section#pains:before, .argumentation > section#solution:before, .argumentation > section#steps:before, .argumentation > section#steps header:before, .argumentation > section#steps ul:before, .argumentation > section#steps li .content:before, .clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after, .argumentation > section#solution:after, .argumentation > section#steps:after, .argumentation > section#steps header:after, .argumentation > section#steps ul:after, .argumentation > section#steps li .content:after {
+.clearfix:before, .banner .target:before, .campaign-bar:before, .argumentation > section#pains:before, .argumentation > section#solution:before, .argumentation section#steps:before, .argumentation section#steps header:before, .argumentation section#steps ul:before, .argumentation section#steps li .content:before, .clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after, .argumentation > section#solution:after, .argumentation section#steps:after, .argumentation section#steps header:after, .argumentation section#steps ul:after, .argumentation section#steps li .content:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after, .argumentation > section#solution:after, .argumentation > section#steps:after, .argumentation > section#steps header:after, .argumentation > section#steps ul:after, .argumentation > section#steps li .content:after {
+.clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after, .argumentation > section#solution:after, .argumentation section#steps:after, .argumentation section#steps header:after, .argumentation section#steps ul:after, .argumentation section#steps li .content:after {
   clear: both; }
 
 body {
@@ -392,7 +392,7 @@ nav ul.list, .argumentation > section#pains, .argumentation > section#solution {
   max-width: 1000px;
   margin: 0 auto; }
 
-.argumentation > section .half, .argumentation > section#steps .half, .argumentation > section#steps li {
+.argumentation > section .half, .argumentation section#steps li {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -406,12 +406,41 @@ nav ul.list, .argumentation > section#pains, .argumentation > section#solution {
   .banner .target .info .alternatives a:active, .campaign-bar .affiliation a:active {
     color: #00afe6; }
 
-.argumentation > section#solution .requirements, .argumentation > section#myths h2 {
+.argumentation > section#solution > .requirements, .argumentation > section#myths h2.heading {
   font-size: 2em;
   color: #108eba;
   position: relative;
   margin-bottom: 0.8em;
   font-weight: normal; }
+
+.argumentation > section#pains header, .argumentation > section#solution > header, .argumentation > section#myths header, .argumentation > section#experience header {
+  padding-left: 50%;
+  z-index: 2; }
+  .argumentation > section#pains header h2, .argumentation > section#solution > header h2, .argumentation > section#myths header h2, .argumentation > section#experience header h2 {
+    position: relative;
+    padding-left: 2.1em;
+    text-transform: lowercase;
+    letter-spacing: -0.03em;
+    text-align: left;
+    color: #7bc142;
+    height: 3em;
+    line-height: 2.7em;
+    font-size: 2em; }
+    .argumentation > section#pains header h2:before, .argumentation > section#solution > header h2:before, .argumentation > section#myths header h2:before, .argumentation > section#experience header h2:before {
+      width: 3em;
+      height: 3em;
+      line-height: 3em;
+      text-align: center;
+      content: "1";
+      background: #7bc142;
+      color: #fff;
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      left: -1.5em;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #108eba; }
@@ -647,7 +676,7 @@ nav {
     .argumentation > section .half {
       width: 50%;
       display: inline-block;
-      padding-bottom: 10em;
+      padding-bottom: 4em;
       position: relative; }
       .argumentation > section .half.conclusion p:first-child {
         font-size: 1.2em; }
@@ -664,64 +693,31 @@ nav {
         left: -1px; }
 
 .argumentation > section#pains {
+  padding-top: 4em;
   position: relative; }
-  .argumentation > section#pains header {
-    z-index: 2;
-    text-align: center;
-    font-size: 3em;
-    position: absolute;
-    width: 100%; }
-    .argumentation > section#pains header h2 {
-      color: #fff;
-      font-size: 1em; }
-    .argumentation > section#pains header .num {
-      position: absolute;
-      color: #fff;
-      top: -1.55em;
-      left: 50%;
-      font-weight: bold;
-      -moz-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%); }
-  .argumentation > section#pains:before {
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    font-size: 150px;
-    margin: 0 auto;
-    text-align: center;
-    width: 1em;
-    color: #fff;
-    height: 1em;
-    background: #7bc142; }
 
 .argumentation > section#solution {
   position: relative;
   max-width: 37.5em;
-  padding-top: 0; }
-  .argumentation > section#solution h2 {
-    background: #7bc142;
-    width: 6em;
-    height: 6em;
-    line-height: 6em;
-    margin: 0 auto 2em auto;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    position: relative; }
-    .argumentation > section#solution h2:before {
-      content: "2";
-      font-size: 1.5em;
-      position: absolute;
-      left: 0;
-      top: -4em;
-      color: #7bc142;
-      text-align: center;
-      width: 100%; }
-  .argumentation > section#solution .requirements {
+  padding-top: 4em; }
+  .argumentation > section#solution:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0em;
+    width: 1px;
+    -moz-transform: translateX(-1px);
+    -ms-transform: translateX(-1px);
+    -webkit-transform: translateX(-1px);
+    transform: translateX(-1px);
+    height: 4em;
+    background: #b1da8f; }
+  .argumentation > section#solution > header {
+    padding-bottom: 3em; }
+    .argumentation > section#solution > header h2:before {
+      content: "2"; }
+  .argumentation > section#solution > .requirements {
     border-right: none; }
   .argumentation > section#solution span.checklist {
     display: block;
@@ -779,53 +775,44 @@ nav {
       -webkit-border-bottom-right-radius: 0.1em;
       border-bottom-right-radius: 0.1em; }
 
-.argumentation > section#steps {
-  max-width: 37.5em;
+.argumentation section#steps {
   margin-top: 6em;
   padding-top: 0;
   position: relative; }
-  .argumentation > section#steps h3 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 2em; }
-  .argumentation > section#steps .half {
-    font-size: 1.2em;
-    width: 50%;
-    float: left;
-    padding-top: 1em; }
-    .argumentation > section#steps .half.first {
-      text-align: right; }
-  .argumentation > section#steps header .line1, .argumentation > section#steps li .line1, .argumentation > section#steps header:after, .argumentation > section#steps li:after, .argumentation > section#steps header:before, .argumentation > section#steps li:before {
+  .argumentation section#steps .act {
+    font-size: 2em;
+    text-align: center; }
+  .argumentation section#steps header .line1, .argumentation section#steps li .line1, .argumentation section#steps header:after, .argumentation section#steps li:after, .argumentation section#steps header:before, .argumentation section#steps li:before {
     display: block;
     z-index: 1;
     content: '';
     position: absolute;
     width: 1px;
-    background: #7bc142;
+    background: #b1da8f;
     top: 0;
     bottom: 0;
     right: 12%; }
-  .argumentation > section#steps header .line1, .argumentation > section#steps li .line1 {
+  .argumentation section#steps header .line1, .argumentation section#steps li .line1 {
     right: 13%; }
-  .argumentation > section#steps header:after, .argumentation > section#steps li:after {
+  .argumentation section#steps header:after, .argumentation section#steps li:after {
     right: 11%; }
-  .argumentation > section#steps:before {
+  .argumentation section#steps:before {
     display: block;
     z-index: 1;
     background: red;
     content: '';
     position: absolute;
     width: 1px;
-    background: #7bc142;
+    background: #b1da8f;
     top: -6em;
     height: 6em;
     bottom: auto;
     right: 12%; }
-  .argumentation > section#steps header {
+  .argumentation section#steps header {
     position: relative; }
-    .argumentation > section#steps header:before, .argumentation > section#steps header:after {
+    .argumentation section#steps header:before, .argumentation section#steps header:after {
       top: 50%; }
-  .argumentation > section#steps h2 {
+  .argumentation section#steps h2 {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -846,22 +833,22 @@ nav {
     line-height: 1em;
     padding-top: 2.5em;
     background: #7bc142; }
-  .argumentation > section#steps .subtitle {
+  .argumentation section#steps .subtitle {
     max-width: 26em;
     padding-bottom: 4.2em;
     margin-right: 2%;
     text-align: right;
     margin-bottom: 0; }
-  .argumentation > section#steps li {
+  .argumentation section#steps li {
     font-size: 0.8em;
     line-height: 1.3em;
     position: relative;
     text-align: center;
     padding: 0 0 3em 0; }
-    .argumentation > section#steps li .content {
+    .argumentation section#steps li .content {
       max-width: 30em;
       margin: 0 auto; }
-    .argumentation > section#steps li .connect {
+    .argumentation section#steps li .connect {
       display: block;
       z-index: 1;
       content: '';
@@ -870,19 +857,19 @@ nav {
       bottom: 101%;
       position: absolute;
       padding-bottom: 2px; }
-      .argumentation > section#steps li .connect:after {
+      .argumentation section#steps li .connect:after {
         position: relative;
         top: 1.575em;
         height: 3.15em;
         content: "";
         display: block;
-        border: 1px solid #7bc142;
+        border: 1px solid #b1da8f;
         border-top: 0;
         border-left: 0;
         -moz-border-radius-bottomright: 1em;
         -webkit-border-bottom-right-radius: 1em;
         border-bottom-right-radius: 1em; }
-    .argumentation > section#steps li .point {
+    .argumentation section#steps li .point {
       display: block;
       z-index: 1;
       right: 2%;
@@ -899,41 +886,41 @@ nav {
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
       border-radius: 50%; }
-      .argumentation > section#steps li .point:after {
+      .argumentation section#steps li .point:after {
         content: "";
         display: block;
         position: absolute;
         top: 0.65em;
         right: -0.3em;
         height: 1px;
-        border-bottom: 1px solid #7bc142;
+        border-bottom: 1px solid #b1da8f;
         width: 0.3em; }
-    .argumentation > section#steps li .cover {
+    .argumentation section#steps li .cover {
       position: relative;
       margin-bottom: 2em; }
-    .argumentation > section#steps li .img {
+    .argumentation section#steps li .img {
       display: inline-block;
       z-index: 2;
       position: relative; }
-    .argumentation > section#steps li img {
+    .argumentation section#steps li img {
       width: 100%;
       max-width: 280px;
       display: block;
       position: relative;
       z-index: 1; }
-  .argumentation > section#steps li.requirements .connect {
+  .argumentation section#steps li.requirements .connect {
     right: 13%; }
-  .argumentation > section#steps li.requirements p {
+  .argumentation section#steps li.requirements p {
     position: relative;
     text-align: left;
     left: 50%;
     width: 70%;
     margin-left: -5em; }
-  .argumentation > section#steps li.requirements .cover {
+  .argumentation section#steps li.requirements .cover {
     margin-bottom: 1em; }
-  .argumentation > section#steps li.process:before {
+  .argumentation section#steps li.process:before {
     display: none; }
-  .argumentation > section#steps li.process p {
+  .argumentation section#steps li.process p {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -943,20 +930,20 @@ nav {
     padding: 1.5%;
     width: 70%;
     float: left; }
-    .argumentation > section#steps li.process p:last-child {
+    .argumentation section#steps li.process p:last-child {
       width: 30%;
       text-align: left; }
-  .argumentation > section#steps li.data:before, .argumentation > section#steps li.data:after {
+  .argumentation section#steps li.data:before, .argumentation section#steps li.data:after {
     display: none; }
-  .argumentation > section#steps li.data .point {
+  .argumentation section#steps li.data .point {
     top: -6%;
     right: 0; }
-  .argumentation > section#steps li.data .connect {
+  .argumentation section#steps li.data .connect {
     bottom: 106%;
     width: 30%;
     padding-bottom: 1px;
     right: 11%; }
-    .argumentation > section#steps li.data .connect:before {
+    .argumentation section#steps li.data .connect:before {
       z-index: 0;
       content: "";
       position: absolute;
@@ -965,7 +952,7 @@ nav {
       bottom: -1.6em;
       width: 1px;
       background: #fff; }
-  .argumentation > section#steps li.data p {
+  .argumentation section#steps li.data p {
     text-align: left;
     position: relative;
     left: 50%;
@@ -974,7 +961,13 @@ nav {
     margin-top: -9.5em; }
 
 .argumentation > section#myths {
-  max-width: 37.5em; }
+  max-width: 37.5em;
+  margin-top: 2em;
+  padding-top: 4em;
+  padding-bottom: 4em; }
+  .argumentation > section#myths .content {
+    max-width: 28em;
+    margin: 0 auto; }
   .argumentation > section#myths .opposition {
     max-width: 32em;
     font-size: 0.7em;
@@ -986,8 +979,15 @@ nav {
     font-size: 0.8em;
     padding-top: 0.2em;
     color: ligten(#607d89, 30); }
+  .argumentation > section#myths header {
+    padding-bottom: 3em; }
+    .argumentation > section#myths header h2:before {
+      content: "3"; }
+  .argumentation > section#myths h2.heading {
+    padding-bottom: 1em; }
   .argumentation > section#myths h3 {
     text-align: center;
+    margin-top: 3em;
     font-weight: bold;
     font-size: 1.5em; }
   .argumentation > section#myths .open-browser {
@@ -1028,6 +1028,8 @@ nav {
     height: 1.55em;
     width: 1em;
     bottom: -0.2em; }
+  .argumentation > section#myths .myths {
+    padding-bottom: 2em; }
   .argumentation > section#myths .myth {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1071,6 +1073,16 @@ nav {
   .argumentation > section#myths .answer + .answer:after {
     display: none;
     margin-bottom: 1.2em; }
+
+.argumentation > section#experience header {
+  padding-bottom: 3em; }
+  .argumentation > section#experience header h2 {
+    white-space: nowrap;
+    line-height: 0.7em;
+    padding-top: 0.6em;
+    height: 2.4em; }
+  .argumentation > section#experience header h2:before {
+    content: "4"; }
 
 @media only screen and (min-width: 1400px) {
   .banner {
