@@ -1123,7 +1123,8 @@ nav {
     margin-bottom: 1.2em; }
 
 .argumentation > section#experience {
-  padding-bottom: 4em; }
+  padding-top: 4em;
+  padding-bottom: 5em; }
   .argumentation > section#experience header {
     padding-bottom: 3em; }
     .argumentation > section#experience header h2 {
