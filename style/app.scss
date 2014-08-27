@@ -342,7 +342,7 @@ nav {
       &.conditions:after {
         content: "";
         position: absolute;
-        width:0.041666667em;
+        width:1px;
         right:0;
         top: 0;
         bottom:0;
@@ -350,7 +350,7 @@ nav {
       }
       &.conclusion:before {
         right:auto;
-        left:-0.041666667em;
+        left:-1px;
       }
     }
   }
@@ -453,7 +453,7 @@ nav {
     .checklist {
       &:before {display: none;}
       width: 15%;
-      border: 0.041666667em solid $colorMainTextLighten40;
+      border: 1px solid $colorMainTextLighten40;
       border-top:none;
       background: $colorMainTextLighten50 ;
       font-size: 1.5em;
@@ -469,7 +469,7 @@ nav {
     }
     tr:first-child {
       .checklist {
-        border-top: 0.041666667em solid $colorMainTextLighten40;
+        border-top: 1px solid $colorMainTextLighten40;
         @include border-top-left-radius(0.1em);
         @include border-top-right-radius(0.1em);
       }
@@ -512,7 +512,7 @@ nav {
     z-index: 1;
     content: '';
     position: absolute;
-    width:0.041666667em;
+    width:1px;
     background: $colorSecondary;
     top:0;
     bottom:0;
@@ -532,7 +532,7 @@ nav {
     background: red;
     content: '';
     position: absolute;
-    width:0.041666667em;
+    width:1px;
     background: $colorSecondary;
     top:-6em;
     height:6em;
@@ -605,36 +605,49 @@ nav {
       display: block;
       z-index: 1;
       content: '';
-      width:40%;
+      width:25%;
       right:12%;
-      top:0;
+      bottom:101%;
       position: absolute;
-      height: 8%;
-      padding-top: 0.7375em;
-      border:0.0625em solid $colorSecondary;
-      border-top:0;
-      border-left:0;
-      @include border-bottom-right-radius(1em)
+      padding-bottom: 2px;
+
+      &:after {
+        position: relative;
+        top: 1.575em;
+        height: 3.15em;
+        content: "";
+        display: block;
+        border:1px solid $colorSecondary;
+        border-top:0;
+        border-left:0;
+        @include border-bottom-right-radius(1em);
+        //      padding-top: 0.7375em;
+        //      padding-bottom: 1px;
+      }
     }
     .point {
       display: block;
       z-index: 1;
-      right:12%;
+      right:2%;
+      color: $colorContrastToMain;
+      font-weight: bold;
       background: $colorSecondary;
-      top:8%;
+      top:-1%;
       position: absolute;
-      height: 1em;
-      width: 1em;
+      font-size: 1.5em;
+      height: 1.5em;
+      width: 1.5em;
+      line-height: 1.5em;
       border: 0.3em solid $white;
       @include border-radius(50%);
       &:after {
         content: "";
         display: block;
         position: absolute;
-        top:0.4375em;
+        top:0.65em;
         right:-0.3em;
-        height:0.0625em;
-        border-bottom:0.0625em solid $colorSecondary;
+        height:1px;
+        border-bottom:1px solid $colorSecondary;
         width:0.3em;
       }
     }
@@ -696,13 +709,24 @@ nav {
       display: none;
     }
     .point {
-      top:0;
-      right: 4%;
+      top:-6%;
+      right: 0;
     }
     .connect {
-      top:-8%;
+      bottom:106%;
       width:30%;
+      padding-bottom: 1px;
       right: 11%;
+      &:before {
+        z-index: 0;
+        content: "";
+        position: absolute;
+        height:100%;
+        right: 0;
+        bottom:-1.6em;
+        width: 1px;
+        background: $white;
+      }
     }
     p {
       text-align: left;

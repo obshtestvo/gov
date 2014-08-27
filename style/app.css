@@ -654,14 +654,14 @@ nav {
       .argumentation > section .half.conclusion:before, .argumentation > section .half.conditions:after {
         content: "";
         position: absolute;
-        width: 0.041666667em;
+        width: 1px;
         right: 0;
         top: 0;
         bottom: 0;
         background: #b1da8f; }
       .argumentation > section .half.conclusion:before {
         right: auto;
-        left: -0.041666667em; }
+        left: -1px; }
 
 .argumentation > section#pains {
   position: relative; }
@@ -750,7 +750,7 @@ nav {
         background-size: 4.5em; }
     .argumentation > section#solution table .checklist {
       width: 15%;
-      border: 0.04167em solid #d4dde1;
+      border: 1px solid #d4dde1;
       border-top: none;
       background: #f2f5f6;
       font-size: 1.5em;
@@ -764,7 +764,7 @@ nav {
         .argumentation > section#solution table .checklist svg path {
           fill: #7bc142; }
     .argumentation > section#solution table tr:first-child .checklist {
-      border-top: 0.04167em solid #d4dde1;
+      border-top: 1px solid #d4dde1;
       -moz-border-radius-topleft: 0.1em;
       -webkit-border-top-left-radius: 0.1em;
       border-top-left-radius: 0.1em;
@@ -800,7 +800,7 @@ nav {
     z-index: 1;
     content: '';
     position: absolute;
-    width: 0.041666667em;
+    width: 1px;
     background: #7bc142;
     top: 0;
     bottom: 0;
@@ -815,7 +815,7 @@ nav {
     background: red;
     content: '';
     position: absolute;
-    width: 0.041666667em;
+    width: 1px;
     background: #7bc142;
     top: -6em;
     height: 6em;
@@ -865,27 +865,36 @@ nav {
       display: block;
       z-index: 1;
       content: '';
-      width: 40%;
+      width: 25%;
       right: 12%;
-      top: 0;
+      bottom: 101%;
       position: absolute;
-      height: 8%;
-      padding-top: 0.7375em;
-      border: 0.0625em solid #7bc142;
-      border-top: 0;
-      border-left: 0;
-      -moz-border-radius-bottomright: 1em;
-      -webkit-border-bottom-right-radius: 1em;
-      border-bottom-right-radius: 1em; }
+      padding-bottom: 2px; }
+      .argumentation > section#steps li .connect:after {
+        position: relative;
+        top: 1.575em;
+        height: 3.15em;
+        content: "";
+        display: block;
+        border: 1px solid #7bc142;
+        border-top: 0;
+        border-left: 0;
+        -moz-border-radius-bottomright: 1em;
+        -webkit-border-bottom-right-radius: 1em;
+        border-bottom-right-radius: 1em; }
     .argumentation > section#steps li .point {
       display: block;
       z-index: 1;
-      right: 12%;
+      right: 2%;
+      color: #fff;
+      font-weight: bold;
       background: #7bc142;
-      top: 8%;
+      top: -1%;
       position: absolute;
-      height: 1em;
-      width: 1em;
+      font-size: 1.5em;
+      height: 1.5em;
+      width: 1.5em;
+      line-height: 1.5em;
       border: 0.3em solid #fff;
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
@@ -894,10 +903,10 @@ nav {
         content: "";
         display: block;
         position: absolute;
-        top: 0.4375em;
+        top: 0.65em;
         right: -0.3em;
-        height: 0.0625em;
-        border-bottom: 0.0625em solid #7bc142;
+        height: 1px;
+        border-bottom: 1px solid #7bc142;
         width: 0.3em; }
     .argumentation > section#steps li .cover {
       position: relative;
@@ -940,12 +949,22 @@ nav {
   .argumentation > section#steps li.data:before, .argumentation > section#steps li.data:after {
     display: none; }
   .argumentation > section#steps li.data .point {
-    top: 0;
-    right: 4%; }
+    top: -6%;
+    right: 0; }
   .argumentation > section#steps li.data .connect {
-    top: -8%;
+    bottom: 106%;
     width: 30%;
+    padding-bottom: 1px;
     right: 11%; }
+    .argumentation > section#steps li.data .connect:before {
+      z-index: 0;
+      content: "";
+      position: absolute;
+      height: 100%;
+      right: 0;
+      bottom: -1.6em;
+      width: 1px;
+      background: #fff; }
   .argumentation > section#steps li.data p {
     text-align: left;
     position: relative;
