@@ -692,6 +692,16 @@ nav {
         right: auto;
         left: -1px; }
 
+.argumentation > section#pains ul li, .argumentation > section#experience ul li {
+  font-size: 0.8em;
+  line-height: 1.2em;
+  position: relative;
+  padding: 2%;
+  padding-left: 2.7em;
+  margin-left: -2.7em;
+  background: url("../img/chevron15.svg") no-repeat -0.7em 50%;
+  background-size: 3.5em; }
+
 .argumentation > section#pains {
   padding-top: 4em;
   position: relative; }
@@ -1112,15 +1122,17 @@ nav {
     display: none;
     margin-bottom: 1.2em; }
 
-.argumentation > section#experience header {
-  padding-bottom: 3em; }
-  .argumentation > section#experience header h2 {
-    white-space: nowrap;
-    line-height: 0.7em;
-    padding-top: 0.6em;
-    height: 2.4em; }
-  .argumentation > section#experience header h2:before {
-    content: "4"; }
+.argumentation > section#experience {
+  padding-bottom: 4em; }
+  .argumentation > section#experience header {
+    padding-bottom: 3em; }
+    .argumentation > section#experience header h2 {
+      white-space: nowrap;
+      line-height: 0.7em;
+      padding-top: 0.6em;
+      height: 2.4em; }
+    .argumentation > section#experience header h2:before {
+      content: "4"; }
 
 @media only screen and (min-width: 1400px) {
   .banner {

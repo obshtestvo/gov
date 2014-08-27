@@ -387,6 +387,19 @@ nav {
   }
 }
 
+%arrow-list {
+  li {
+    font-size: 0.8em;
+    line-height: 1.2em;
+    position: relative;
+    padding: 2%;
+    padding-left: 2.7em;
+    margin-left:-2.7em;
+    background: url('../img/chevron15.svg') no-repeat -0.7em 50%;
+    background-size: 3.5em ;
+  }
+}
+
 
 .argumentation > section#pains {
   @extend .clearfix;
@@ -395,6 +408,9 @@ nav {
   position: relative;
   header {
     @extend %section-header;
+  }
+  ul {
+    @extend %arrow-list;
   }
 }
 
@@ -902,6 +918,7 @@ nav {
 }
 
 .argumentation > section#experience {
+  padding-bottom: 4em;
   header {
     @extend %section-header;
     h2 {
@@ -914,6 +931,9 @@ nav {
       content: "4";
     }
     padding-bottom: 3em;
+  }
+  ul {
+    @extend %arrow-list;
   }
 }
 
