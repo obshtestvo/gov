@@ -1,7 +1,9 @@
 $white: #fff;
-$colorMainDark: #10303c;
 $colorSecondary: #7bc142;
 $colorMain: #108eba;
 $colorHighlightLink: #00c2ff;
+$colorMainDark: #10303c;
 $colorContrastToMain: $white;
 $colorMainText: #607d89;
+$colorMainTextLighten40: lighten($colorMainText, 40);
+$colorMainTextLighten50: lighten($colorMainText, 50) ;

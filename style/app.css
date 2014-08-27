@@ -304,7 +304,7 @@ button.button.small, input.button.small {
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out; }
 
-.round, .button, nav ul a {
+.round, .button, nav ul a, .argumentation > section#myths .open-browser {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -405,6 +405,13 @@ nav ul.list, .argumentation > section#pains, .argumentation > section#solution {
     color: #80e0ff; }
   .banner .target .info .alternatives a:active, .campaign-bar .affiliation a:active {
     color: #00afe6; }
+
+.argumentation > section#solution .requirements, .argumentation > section#myths h2 {
+  font-size: 2em;
+  color: #108eba;
+  position: relative;
+  margin-bottom: 0.8em;
+  font-weight: normal; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #108eba; }
@@ -715,11 +722,7 @@ nav {
       text-align: center;
       width: 100%; }
   .argumentation > section#solution .requirements {
-    border-right: none;
-    font-size: 2em;
-    color: #108eba;
-    position: relative;
-    margin-bottom: 0.8em; }
+    border-right: none; }
   .argumentation > section#solution span.checklist {
     display: block;
     -moz-box-sizing: border-box;
@@ -941,9 +944,53 @@ nav {
     margin-top: -9.5em; }
 
 .argumentation > section#myths {
-  max-width: 700px;
-  font-size: 1.1em; }
-  .argumentation > section#myths h4:before, .argumentation > section#myths p:after {
+  max-width: 37.5em; }
+  .argumentation > section#myths .opposition {
+    max-width: 32em;
+    font-size: 0.7em;
+    margin: 0 auto; }
+  .argumentation > section#myths p {
+    line-height: 1.2em; }
+  .argumentation > section#myths .help {
+    display: block;
+    font-size: 0.8em;
+    padding-top: 0.2em;
+    color: ligten(#607d89, 30); }
+  .argumentation > section#myths h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em; }
+  .argumentation > section#myths .open-browser {
+    margin-bottom: 1.2em;
+    position: relative;
+    font-size: 0.6em;
+    padding: 2.2%;
+    background: #f2f5f6;
+    border: 1px solid #d4dde1; }
+    .argumentation > section#myths .open-browser img {
+      float: left;
+      position: absolute;
+      top: 50%;
+      left: 2.2%;
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      margin-right: 3%; }
+    .argumentation > section#myths .open-browser h4 {
+      margin-left: 100px;
+      padding-left: 3%;
+      margin-bottom: 0.3em;
+      font-weight: bold;
+      font-size: 1.4em; }
+    .argumentation > section#myths .open-browser p {
+      padding-left: 3%;
+      margin-left: 100px;
+      line-height: 1.2em;
+      margin-bottom: 0.8em; }
+      .argumentation > section#myths .open-browser p:last-child {
+        margin-bottom: 0.4em; }
+  .argumentation > section#myths .myth:before, .argumentation > section#myths .answer:after {
     font-size: 0.6em;
     display: block;
     content: "";
@@ -951,7 +998,7 @@ nav {
     height: 1.55em;
     width: 1em;
     bottom: -0.2em; }
-  .argumentation > section#myths h4 {
+  .argumentation > section#myths .myth {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -967,11 +1014,11 @@ nav {
     background: #108eba;
     color: #fff;
     position: relative; }
-    .argumentation > section#myths h4:before {
+    .argumentation > section#myths .myth:before {
       left: -0.5em;
       background: url("../img/bubble-left.svg") no-repeat right top;
       background-size: 100%; }
-  .argumentation > section#myths p {
+  .argumentation > section#myths .answer {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -986,12 +1033,12 @@ nav {
     background: #7bc142;
     color: #fff;
     position: relative; }
-    .argumentation > section#myths p:after {
+    .argumentation > section#myths .answer:after {
       font-size: 0.9em;
       right: -0.5em;
       background: url("../img/bubble-right.svg") no-repeat right top;
       background-size: 100%; }
-  .argumentation > section#myths p + p:after {
+  .argumentation > section#myths .answer + .answer:after {
     display: none;
     margin-bottom: 1.2em; }
 

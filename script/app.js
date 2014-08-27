@@ -60,4 +60,19 @@ $(function() {
     redrawBanner()
 
     $nav.waypoint('sticky');
+
+
+    var $openSourceBrowserAlert = $('.open-browser');
+    var $browserName = $openSourceBrowserAlert.find('.browser')
+    if (bowser.firefox || bowser.chrome) {
+        $openSourceBrowserAlert.removeClass('hidden')
+        $browserName.text($browserName.data('firefox'))
+        if (bowser.firefox) {
+            $openSourceBrowserAlert.find('.firefox').removeClass('hidden')
+        }
+        if (bowser.chrome) {
+            $openSourceBrowserAlert.find('.chrome').removeClass('hidden')
+        }
+    }
+
 })

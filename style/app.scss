@@ -41,6 +41,14 @@ strong {
   }
 }
 
+%big-message {
+  font-size: 2em;
+  color: $colorMain;
+  position: relative;
+  margin-bottom: 0.8em;
+  font-weight: normal;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: $colorMain;
 }
@@ -411,11 +419,8 @@ nav {
     }
   }
   .requirements {
+    @extend %big-message;
     border-right: none;
-    font-size: 2em;
-    color: $colorMain;
-    position: relative;
-    margin-bottom: 0.8em;
   }
   span.checklist {
     display: block;
@@ -448,9 +453,9 @@ nav {
     .checklist {
       &:before {display: none;}
       width: 15%;
-      border: 0.041666667em solid lighten($colorMainText, 40);
+      border: 0.041666667em solid $colorMainTextLighten40;
       border-top:none;
-      background: lighten($colorMainText, 50) ;
+      background: $colorMainTextLighten50 ;
       font-size: 1.5em;
       vertical-align: middle;
       text-align: center;
@@ -464,7 +469,7 @@ nav {
     }
     tr:first-child {
       .checklist {
-        border-top: 0.041666667em solid  lighten($colorMainText, 40);
+        border-top: 0.041666667em solid $colorMainTextLighten40;
         @include border-top-left-radius(0.1em);
         @include border-top-right-radius(0.1em);
       }
@@ -698,8 +703,62 @@ nav {
 
 
 .argumentation > section#myths {
-  max-width: 700px;
-  font-size: 1.1em;
+  max-width: 37.5em;
+  .opposition {
+    max-width: 32em;
+    font-size: 0.7em;
+    margin: 0 auto;
+  }
+  p {
+    line-height: 1.2em;
+  }
+  .help {
+    display: block;
+    font-size: 0.8em;
+    padding-top: 0.2em;
+    color: ligten($colorMainText, 30)
+  }
+  h2 {
+    @extend %big-message;
+  }
+  h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  .open-browser {
+    margin-bottom: 1.2em;
+    @extend .round;
+    position: relative;
+    font-size: 0.6em;
+    padding: 2.2%;
+    background: $colorMainTextLighten50;
+    border: 1px solid $colorMainTextLighten40;
+    img {
+      float:left;
+      position: absolute;
+      top:50%;
+      left: 2.2%;
+      @include transform(translateY(-50%));
+      margin-right: 3%;
+    }
+    h4 {
+      margin-left: 100px;
+      padding-left: 3%;
+      margin-bottom: 0.3em;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+    p {
+      padding-left: 3%;
+      margin-left: 100px;
+      line-height: 1.2em;
+      margin-bottom: 0.8em;
+      &:last-child {
+        margin-bottom: 0.4em;
+      }
+    }
+  }
   %handle {
     font-size: 0.6em;
     display: block;
@@ -709,7 +768,7 @@ nav {
     width: 1em;
     bottom: -0.2em;
   }
-  h4 {
+  .myth {
     @include box-sizing(border-box);
     @include border-radius(0.5em);
     font-weight: bold;
@@ -728,7 +787,7 @@ nav {
       background-size: 100%;
     }
   }
-  p {
+  .answer {
     @include box-sizing(border-box);
     @include border-radius(0.5em);
     margin-bottom: 0.5em;
@@ -747,7 +806,7 @@ nav {
       background-size: 100%;
     }
   }
-  p + p {
+  .answer + .answer {
     &:after {
       display: none;
       margin-bottom: 1.2em
