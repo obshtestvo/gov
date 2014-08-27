@@ -429,59 +429,80 @@ nav {
   span.checklist {
     display: block;
     @include box-sizing(border-box);
-    width:20%;
+    width:24%;
     float:right;
     font-size: 0.6em;
     text-align: left;
-    margin: -1em -1.6% 1em 0;
+    margin: -1em 2% 1em 0;
     color: lighten($colorMainText, 10);
   }
-  table {
+  > ul {
     clear:both;
-    border-collapse:separate;
     max-width: 90%;
-    margin: 0 auto;
-    %cell {
+    font-size: 0.8em;
+    margin-left: 3%;
+    margin-right: 22%;
+    position: relative;
+    $connectorWidth: 13.4%;
+    &:after {
+      width:1px;
+      z-index: 1;
+      background: $colorSecondaryThinPixel;
+      display: block;
+      position: absolute;
+      content: '';
+      top:0;
+      bottom:0;
+      right:-$connectorWidth;
+    }
+    li {
       padding: 2%;
-    }
-    td {
-      @extend %cell;
       font-size: 0.8em;
+      line-height: 1.2em;
       position: relative;
-      &:first-child{
-        padding-left: 3em;
-        background: url('../img/chevron15.svg') no-repeat -0.7em 50%;
-        background-size: 4.5em ;
+      padding-right: 10%;
+      padding-left: 3em;
+      background: url('../img/chevron15.svg') no-repeat -0.7em 50%;
+      background-size: 3.5em ;
+      $connectorRadius: 1em;
+      &:after {
+        display: block;
+        z-index: 3;
+        content: '';
+        width:$connectorWidth;
+        right:-$connectorWidth;
+        padding-left: 0.7em;
+        position: absolute;
+        top: 50%;
+        margin-top:-0.4em;
+        height: 100%;
+        @include border-top-right-radius($connectorRadius);
+        border:1px solid $colorSecondaryThinPixel;
+        border-bottom:0;
+        border-left:0;
+      }
+      &:first-child:before {
+        width:1px;
+        content: "";
+        position: absolute;
+        display: block;
+        z-index: 2;
+        right:-$connectorWidth;
+        background: $white;
+        bottom:-1em;
+        top:0;
       }
     }
-    .checklist {
-      &:before {display: none;}
-      width: 15%;
-      border: 1px solid $colorMainTextLighten40;
-      border-top:none;
-      background: $colorMainTextLighten50 ;
+    .check {
       font-size: 1.5em;
-      vertical-align: middle;
-      text-align: center;
-      svg {
-        height:1em;
-        width:1em;
-        path {
-          fill: $colorSecondary;
-        }
-      }
-    }
-    tr:first-child {
-      .checklist {
-        border-top: 1px solid $colorMainTextLighten40;
-        @include border-top-left-radius(0.1em);
-        @include border-top-right-radius(0.1em);
-      }
-    }
-    tr:last-child {
-      .checklist {
-        @include border-bottom-left-radius(0.1em);
-        @include border-bottom-right-radius(0.1em);
+      height:1em;
+      width:1em;
+      position: absolute;
+      top:50%;
+      right: 2%;
+      margin-top:-0.7em;
+      path {
+        fill: $colorSecondary;
       }
     }
   }
@@ -545,7 +566,7 @@ nav {
       @extend %line1;
     }
   }
-  h2 {
+  h3 {
     @include border-radius(50%);
     font-size: 1em;
     float:right;

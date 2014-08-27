@@ -724,56 +724,75 @@ nav {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 20%;
+    width: 24%;
     float: right;
     font-size: 0.6em;
     text-align: left;
-    margin: -1em -1.6% 1em 0;
+    margin: -1em 2% 1em 0;
     color: #7a96a2; }
-  .argumentation > section#solution table {
+  .argumentation > section#solution > ul {
     clear: both;
-    border-collapse: separate;
     max-width: 90%;
-    margin: 0 auto; }
-    .argumentation > section#solution table td {
-      padding: 2%; }
-    .argumentation > section#solution table td {
+    font-size: 0.8em;
+    margin-left: 3%;
+    margin-right: 22%;
+    position: relative; }
+    .argumentation > section#solution > ul:after {
+      width: 1px;
+      z-index: 1;
+      background: #b1da8f;
+      display: block;
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      right: -13.4%; }
+    .argumentation > section#solution > ul li {
+      padding: 2%;
       font-size: 0.8em;
-      position: relative; }
-      .argumentation > section#solution table td:first-child {
-        padding-left: 3em;
-        background: url("../img/chevron15.svg") no-repeat -0.7em 50%;
-        background-size: 4.5em; }
-    .argumentation > section#solution table .checklist {
-      width: 15%;
-      border: 1px solid #d4dde1;
-      border-top: none;
-      background: #f2f5f6;
+      line-height: 1.2em;
+      position: relative;
+      padding-right: 10%;
+      padding-left: 3em;
+      background: url("../img/chevron15.svg") no-repeat -0.7em 50%;
+      background-size: 3.5em; }
+      .argumentation > section#solution > ul li:after {
+        display: block;
+        z-index: 3;
+        content: '';
+        width: 13.4%;
+        right: -13.4%;
+        padding-left: 0.7em;
+        position: absolute;
+        top: 50%;
+        margin-top: -0.4em;
+        height: 100%;
+        -moz-border-radius-topright: 1em;
+        -webkit-border-top-right-radius: 1em;
+        border-top-right-radius: 1em;
+        border: 1px solid #b1da8f;
+        border-bottom: 0;
+        border-left: 0; }
+      .argumentation > section#solution > ul li:first-child:before {
+        width: 1px;
+        content: "";
+        position: absolute;
+        display: block;
+        z-index: 2;
+        right: -13.4%;
+        background: #fff;
+        bottom: -1em;
+        top: 0; }
+    .argumentation > section#solution > ul .check {
       font-size: 1.5em;
-      vertical-align: middle;
-      text-align: center; }
-      .argumentation > section#solution table .checklist:before {
-        display: none; }
-      .argumentation > section#solution table .checklist svg {
-        height: 1em;
-        width: 1em; }
-        .argumentation > section#solution table .checklist svg path {
-          fill: #7bc142; }
-    .argumentation > section#solution table tr:first-child .checklist {
-      border-top: 1px solid #d4dde1;
-      -moz-border-radius-topleft: 0.1em;
-      -webkit-border-top-left-radius: 0.1em;
-      border-top-left-radius: 0.1em;
-      -moz-border-radius-topright: 0.1em;
-      -webkit-border-top-right-radius: 0.1em;
-      border-top-right-radius: 0.1em; }
-    .argumentation > section#solution table tr:last-child .checklist {
-      -moz-border-radius-bottomleft: 0.1em;
-      -webkit-border-bottom-left-radius: 0.1em;
-      border-bottom-left-radius: 0.1em;
-      -moz-border-radius-bottomright: 0.1em;
-      -webkit-border-bottom-right-radius: 0.1em;
-      border-bottom-right-radius: 0.1em; }
+      height: 1em;
+      width: 1em;
+      position: absolute;
+      top: 50%;
+      right: 2%;
+      margin-top: -0.7em; }
+      .argumentation > section#solution > ul .check path {
+        fill: #7bc142; }
 
 .argumentation section#steps {
   margin-top: 6em;
@@ -812,7 +831,7 @@ nav {
     position: relative; }
     .argumentation section#steps header:before, .argumentation section#steps header:after {
       top: 50%; }
-  .argumentation section#steps h2 {
+  .argumentation section#steps h3 {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
