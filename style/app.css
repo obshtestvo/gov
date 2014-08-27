@@ -406,7 +406,7 @@ nav ul.list, .argumentation > section#pains, .argumentation > section#solution {
   .banner .target .info .alternatives a:active, .campaign-bar .affiliation a:active {
     color: #00afe6; }
 
-.argumentation > section#solution > .requirements, .argumentation > section#myths h2.heading {
+.argumentation section#steps .subtitle, .argumentation > section#myths h2.heading {
   font-size: 2em;
   color: #108eba;
   position: relative;
@@ -714,24 +714,37 @@ nav {
     height: 4em;
     background: #b1da8f; }
   .argumentation > section#solution > header {
-    padding-bottom: 3em; }
+    padding-bottom: 4em; }
     .argumentation > section#solution > header h2:before {
       content: "2"; }
   .argumentation > section#solution > .requirements {
-    border-right: none; }
-  .argumentation > section#solution span.checklist {
-    display: block;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 24%;
-    float: right;
+    border-right: none;
+    font-size: 1em;
+    margin-bottom: 0.6em;
+    position: relative;
+    left: 0.2em;
+    display: inline-block;
+    width: 68%;
+    margin-left: 2.5%;
+    padding-left: 1.875em;
+    padding-right: 2%; }
+  .argumentation > section#solution span.checklist {
+    vertical-align: bottom;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 23%;
     font-size: 0.6em;
     text-align: left;
-    margin: -1em 2% 1em 0;
+    margin: 0 2% 1em 3%;
     color: #7a96a2; }
   .argumentation > section#solution > ul {
     clear: both;
+    margin-top: 1em;
     max-width: 90%;
     font-size: 0.8em;
     margin-left: 3%;
@@ -795,9 +808,21 @@ nav {
         fill: #7bc142; }
 
 .argumentation section#steps {
-  margin-top: 6em;
+  margin-top: 4em;
   padding-top: 0;
   position: relative; }
+  .argumentation section#steps:before {
+    display: block;
+    z-index: 1;
+    background: red;
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: #b1da8f;
+    top: -4em;
+    height: 8em;
+    bottom: auto;
+    right: 12%; }
   .argumentation section#steps .act {
     font-size: 2em;
     text-align: center; }
@@ -815,31 +840,23 @@ nav {
     right: 13%; }
   .argumentation section#steps header:after, .argumentation section#steps li:after {
     right: 11%; }
-  .argumentation section#steps:before {
-    display: block;
-    z-index: 1;
-    background: red;
-    content: '';
-    position: absolute;
-    width: 1px;
-    background: #b1da8f;
-    top: -6em;
-    height: 6em;
-    bottom: auto;
-    right: 12%; }
   .argumentation section#steps header {
-    position: relative; }
+    position: relative;
+    text-align: right;
+    padding-bottom: 5em; }
     .argumentation section#steps header:before, .argumentation section#steps header:after {
-      top: 50%; }
+      top: 10em; }
+    .argumentation section#steps header .line1 {
+      top: 3em; }
   .argumentation section#steps h3 {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     font-size: 1em;
-    float: right;
-    position: relative;
+    position: absolute;
     z-index: 2;
-    top: -1em;
+    right: 0;
+    top: 3em;
     margin-right: 12%;
     -moz-transform: translateX(50%);
     -ms-transform: translateX(50%);
@@ -853,11 +870,13 @@ nav {
     padding-top: 2.5em;
     background: #7bc142; }
   .argumentation section#steps .subtitle {
+    text-align: left;
     max-width: 26em;
-    padding-bottom: 4.2em;
-    margin-right: 2%;
-    text-align: right;
-    margin-bottom: 0; }
+    margin-right: 8em;
+    margin-bottom: 0;
+    font-size: 1.6em;
+    line-height: 1.2em;
+    left: 4%; }
   .argumentation section#steps li {
     font-size: 0.8em;
     line-height: 1.3em;
