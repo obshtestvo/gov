@@ -456,10 +456,10 @@ nav {
     vertical-align: bottom;
     display: inline-block;
     @include box-sizing(border-box);
-    width:23%;
+    width:17%;
     font-size: 0.6em;
     text-align: left;
-    margin: 0 2% 1em 3%;
+    margin: 0 2% 1em 7.5%;
     color: lighten($colorMainText, 10);
   }
   > ul {
@@ -485,6 +485,7 @@ nav {
     li {
       padding: 2%;
       font-size: 0.8em;
+//      font-size: 0.9em;
       line-height: 1.2em;
       position: relative;
       padding-right: 10%;
