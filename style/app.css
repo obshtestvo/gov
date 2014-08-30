@@ -370,13 +370,13 @@ button.button.small, input.button.small {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .banner .target:before, .campaign-bar:before, .argumentation > section#pains:before, .argumentation > section#solution:before, .argumentation section#steps:before, .argumentation section#steps header:before, .argumentation section#steps ul:before, .argumentation section#steps li .content:before, .clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after, .argumentation > section#solution:after, .argumentation section#steps:after, .argumentation section#steps header:after, .argumentation section#steps ul:after, .argumentation section#steps li .content:after {
+.clearfix:before, .banner .target:before, .campaign-bar:before, .argumentation > section#pains:before, .argumentation > section#solution:before, .argumentation section#steps:before, .argumentation section#steps header:before, .argumentation section#steps ul.points:before, .argumentation section#steps ul.points > li .content:before, .clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after, .argumentation > section#solution:after, .argumentation section#steps:after, .argumentation section#steps header:after, .argumentation section#steps ul.points:after, .argumentation section#steps ul.points > li .content:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after, .argumentation > section#solution:after, .argumentation section#steps:after, .argumentation section#steps header:after, .argumentation section#steps ul:after, .argumentation section#steps li .content:after {
+.clearfix:after, .banner .target:after, .campaign-bar:after, .argumentation > section#pains:after, .argumentation > section#solution:after, .argumentation section#steps:after, .argumentation section#steps header:after, .argumentation section#steps ul.points:after, .argumentation section#steps ul.points > li .content:after {
   clear: both; }
 
 body {
@@ -392,7 +392,7 @@ nav ul.list, .argumentation > section#pains, .argumentation > section#solution {
   max-width: 1000px;
   margin: 0 auto; }
 
-.argumentation > section .half, .argumentation section#steps li {
+.argumentation > section .half, .argumentation section#steps ul.points > li {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -837,7 +837,7 @@ nav {
   .argumentation section#steps .act {
     font-size: 2em;
     text-align: center; }
-  .argumentation section#steps header .line1, .argumentation section#steps li .line1, .argumentation section#steps header:after, .argumentation section#steps li:after, .argumentation section#steps header:before, .argumentation section#steps li:before {
+  .argumentation section#steps header .line1, .argumentation section#steps ul.points > li .line1, .argumentation section#steps header:after, .argumentation section#steps ul.points > li:after, .argumentation section#steps header:before, .argumentation section#steps ul.points > li:before {
     display: block;
     z-index: 1;
     content: '';
@@ -847,9 +847,9 @@ nav {
     top: 0;
     bottom: 0;
     right: 12%; }
-  .argumentation section#steps header .line1, .argumentation section#steps li .line1 {
+  .argumentation section#steps header .line1, .argumentation section#steps ul.points > li .line1 {
     right: 13%; }
-  .argumentation section#steps header:after, .argumentation section#steps li:after {
+  .argumentation section#steps header:after, .argumentation section#steps ul.points > li:after {
     right: 11%; }
   .argumentation section#steps header {
     position: relative;
@@ -888,16 +888,16 @@ nav {
     font-size: 1.6em;
     line-height: 1.2em;
     left: 4%; }
-  .argumentation section#steps li {
+  .argumentation section#steps ul.points > li {
     font-size: 0.8em;
     line-height: 1.3em;
     position: relative;
     text-align: center;
     padding: 0 0 3em 0; }
-    .argumentation section#steps li .content {
+    .argumentation section#steps ul.points > li .content {
       max-width: 30em;
       margin: 0 auto; }
-    .argumentation section#steps li .connect {
+    .argumentation section#steps ul.points > li .connect {
       display: block;
       z-index: 1;
       content: '';
@@ -906,7 +906,7 @@ nav {
       bottom: 101%;
       position: absolute;
       padding-bottom: 2px; }
-      .argumentation section#steps li .connect:after {
+      .argumentation section#steps ul.points > li .connect:after {
         position: relative;
         top: 1.575em;
         height: 3.15em;
@@ -918,7 +918,7 @@ nav {
         -moz-border-radius-bottomright: 1em;
         -webkit-border-bottom-right-radius: 1em;
         border-bottom-right-radius: 1em; }
-    .argumentation section#steps li .point {
+    .argumentation section#steps ul.points > li .point {
       display: block;
       z-index: 1;
       right: 2%;
@@ -935,7 +935,7 @@ nav {
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
       border-radius: 50%; }
-      .argumentation section#steps li .point:after {
+      .argumentation section#steps ul.points > li .point:after {
         content: "";
         display: block;
         position: absolute;
@@ -944,70 +944,96 @@ nav {
         height: 1px;
         border-bottom: 1px solid #b1da8f;
         width: 0.3em; }
-    .argumentation section#steps li .cover {
+    .argumentation section#steps ul.points > li .cover {
       position: relative;
       margin-bottom: 2em; }
-    .argumentation section#steps li .img {
+    .argumentation section#steps ul.points > li .img {
       display: inline-block;
       z-index: 2;
       position: relative; }
-    .argumentation section#steps li img {
+    .argumentation section#steps ul.points > li img {
       width: 100%;
       max-width: 280px;
       display: block;
       position: relative;
       z-index: 1; }
-  .argumentation section#steps li.requirements .connect {
-    right: 13%; }
-  .argumentation section#steps li.requirements p {
-    position: relative;
-    text-align: left;
-    left: 50%;
-    width: 70%;
-    margin-left: -5em; }
-  .argumentation section#steps li.requirements .cover {
-    margin-bottom: 1em; }
-  .argumentation section#steps li.process:before {
-    display: none; }
-  .argumentation section#steps li.process p {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    position: relative;
-    left: -15%;
-    text-align: right;
-    padding: 1.5%;
-    width: 70%;
-    float: left; }
-    .argumentation section#steps li.process p:last-child {
-      width: 30%;
-      text-align: left; }
-  .argumentation section#steps li.data:before, .argumentation section#steps li.data:after {
-    display: none; }
-  .argumentation section#steps li.data .point {
-    top: -6%;
-    right: 0; }
-  .argumentation section#steps li.data .connect {
-    bottom: 106%;
-    width: 30%;
-    padding-bottom: 1px;
-    right: 11%; }
-    .argumentation section#steps li.data .connect:before {
-      z-index: 0;
-      content: "";
+    .argumentation section#steps ul.points > li.requirements .connect {
+      right: 13%; }
+    .argumentation section#steps ul.points > li.requirements .content {
+      position: relative; }
+    .argumentation section#steps ul.points > li.requirements .quick-info {
+      white-space: nowrap;
       position: absolute;
-      height: 100%;
-      right: 0;
-      bottom: -1.6em;
-      width: 1px;
-      background: #fff; }
-  .argumentation section#steps li.data p {
-    text-align: left;
-    position: relative;
-    left: 50%;
-    width: 50%;
-    padding: 5% 0 0 7%;
-    margin-top: -9.5em; }
+      top: 0;
+      right: 70%;
+      width: 40%;
+      font-size: 0.7em;
+      text-align: right;
+      padding-right: 4em; }
+      .argumentation section#steps ul.points > li.requirements .quick-info h4 {
+        font-size: 0.8em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #7b939c; }
+      .argumentation section#steps ul.points > li.requirements .quick-info:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0.2em;
+        right: 0;
+        background: url("../img/info4.svg") no-repeat 0 0;
+        width: 3em;
+        height: 3em;
+        background-size: 3em; }
+    .argumentation section#steps ul.points > li.requirements .essence {
+      position: relative;
+      text-align: left;
+      width: 70%;
+      left: 50%;
+      margin-left: -5em; }
+    .argumentation section#steps ul.points > li.requirements .cover {
+      margin-bottom: 1em; }
+    .argumentation section#steps ul.points > li.process:before {
+      display: none; }
+    .argumentation section#steps ul.points > li.process p {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      position: relative;
+      left: -15%;
+      text-align: right;
+      padding: 1.5%;
+      width: 70%;
+      float: left; }
+      .argumentation section#steps ul.points > li.process p:last-child {
+        width: 30%;
+        text-align: left; }
+    .argumentation section#steps ul.points > li.data:before, .argumentation section#steps ul.points > li.data:after {
+      display: none; }
+    .argumentation section#steps ul.points > li.data .point {
+      top: -6%;
+      right: 0; }
+    .argumentation section#steps ul.points > li.data .connect {
+      bottom: 106%;
+      width: 30%;
+      padding-bottom: 1px;
+      right: 11%; }
+      .argumentation section#steps ul.points > li.data .connect:before {
+        z-index: 0;
+        content: "";
+        position: absolute;
+        height: 100%;
+        right: 0;
+        bottom: -1.6em;
+        width: 1px;
+        background: #fff; }
+    .argumentation section#steps ul.points > li.data p {
+      text-align: left;
+      position: relative;
+      left: 50%;
+      width: 50%;
+      padding: 5% 0 0 7%;
+      margin-top: -9.5em; }
 
 .argumentation > section#myths {
   max-width: 37.5em;
