@@ -748,18 +748,18 @@ nav {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 23%;
+    width: 17%;
     font-size: 0.6em;
     text-align: left;
-    margin: 0 2% 1em 3%;
+    margin: 0 2% 1em 7.5%;
     color: #7a96a2; }
   .argumentation > section#solution > ul {
     clear: both;
     margin-top: 1em;
     max-width: 90%;
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-left: 3%;
-    margin-right: 22%;
+    margin-right: 15%;
     position: relative; }
     .argumentation > section#solution > ul:after {
       width: 1px;
@@ -770,7 +770,7 @@ nav {
       content: '';
       top: 0;
       bottom: 0;
-      right: -13.4%; }
+      right: -3.7%; }
     .argumentation > section#solution > ul li {
       padding: 2%;
       font-size: 0.8em;
@@ -784,8 +784,8 @@ nav {
         display: block;
         z-index: 3;
         content: '';
-        width: 13.4%;
-        right: -13.4%;
+        width: 3.7%;
+        right: -3.7%;
         padding-left: 0.7em;
         position: absolute;
         top: 50%;
@@ -803,7 +803,7 @@ nav {
         position: absolute;
         display: block;
         z-index: 2;
-        right: -13.4%;
+        right: -3.7%;
         background: #fff;
         bottom: -1em;
         top: 0; }
@@ -896,7 +896,38 @@ nav {
     padding: 0 0 3em 0; }
     .argumentation section#steps ul.points > li .content {
       max-width: 30em;
-      margin: 0 auto; }
+      margin: 0 auto;
+      position: relative; }
+    .argumentation section#steps ul.points > li .quick-info {
+      white-space: nowrap;
+      position: absolute;
+      top: 0;
+      right: 70%;
+      width: 40%;
+      font-size: 0.7em;
+      text-align: right;
+      padding-right: 4em; }
+      .argumentation section#steps ul.points > li .quick-info h4 {
+        font-size: 0.8em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #7b939c; }
+      .argumentation section#steps ul.points > li .quick-info:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0.2em;
+        right: 0;
+        background: url("../img/info4.svg") no-repeat 0 0;
+        width: 3em;
+        height: 3em;
+        background-size: 3em; }
+    .argumentation section#steps ul.points > li .essence {
+      position: relative;
+      text-align: left;
+      width: 70%;
+      left: 50%;
+      margin-left: -5em; }
     .argumentation section#steps ul.points > li .connect {
       display: block;
       z-index: 1;
@@ -959,55 +990,10 @@ nav {
       z-index: 1; }
     .argumentation section#steps ul.points > li.requirements .connect {
       right: 13%; }
-    .argumentation section#steps ul.points > li.requirements .content {
-      position: relative; }
-    .argumentation section#steps ul.points > li.requirements .quick-info {
-      white-space: nowrap;
-      position: absolute;
-      top: 0;
-      right: 70%;
-      width: 40%;
-      font-size: 0.7em;
-      text-align: right;
-      padding-right: 4em; }
-      .argumentation section#steps ul.points > li.requirements .quick-info h4 {
-        font-size: 0.8em;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: #7b939c; }
-      .argumentation section#steps ul.points > li.requirements .quick-info:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0.2em;
-        right: 0;
-        background: url("../img/info4.svg") no-repeat 0 0;
-        width: 3em;
-        height: 3em;
-        background-size: 3em; }
-    .argumentation section#steps ul.points > li.requirements .essence {
-      position: relative;
-      text-align: left;
-      width: 70%;
-      left: 50%;
-      margin-left: -5em; }
     .argumentation section#steps ul.points > li.requirements .cover {
       margin-bottom: 1em; }
     .argumentation section#steps ul.points > li.process:before {
       display: none; }
-    .argumentation section#steps ul.points > li.process p {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      position: relative;
-      left: -15%;
-      text-align: right;
-      padding: 1.5%;
-      width: 70%;
-      float: left; }
-      .argumentation section#steps ul.points > li.process p:last-child {
-        width: 30%;
-        text-align: left; }
     .argumentation section#steps ul.points > li.data:before, .argumentation section#steps ul.points > li.data:after {
       display: none; }
     .argumentation section#steps ul.points > li.data .point {
@@ -1027,13 +1013,17 @@ nav {
         bottom: -1.6em;
         width: 1px;
         background: #fff; }
-    .argumentation section#steps ul.points > li.data p {
+    .argumentation section#steps ul.points > li.data .quick-info {
+      top: -11em;
+      right: 58%; }
+    .argumentation section#steps ul.points > li.data .essence {
       text-align: left;
       position: relative;
       left: 50%;
       width: 50%;
       padding: 5% 0 0 7%;
-      margin-top: -9.5em; }
+      margin-top: -9.5em;
+      margin-left: 0; }
 
 .argumentation > section#myths {
   max-width: 37.5em;

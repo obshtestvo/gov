@@ -456,21 +456,21 @@ nav {
     vertical-align: bottom;
     display: inline-block;
     @include box-sizing(border-box);
-    width:23%;
+    width:17%;
     font-size: 0.6em;
     text-align: left;
-    margin: 0 2% 1em 3%;
+    margin: 0 2% 1em 7.5%;
     color: lighten($colorMainText, 10);
   }
   > ul {
     clear:both;
     margin-top: 1em;
     max-width: 90%;
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-left: 3%;
-    margin-right: 22%;
+    margin-right: 15%;
     position: relative;
-    $connectorWidth: 13.4%;
+    $connectorWidth: 3.7%;
     &:after {
       width:1px;
       z-index: 1;
@@ -485,6 +485,7 @@ nav {
     li {
       padding: 2%;
       font-size: 0.8em;
+//      font-size: 0.9em;
       line-height: 1.2em;
       position: relative;
       padding-right: 10%;
@@ -623,6 +624,7 @@ nav {
     line-height: 1.2em;
     left: 4%;
   }
+
   ul.points {
     @extend .clearfix;
   }
@@ -637,6 +639,42 @@ nav {
       @extend .clearfix;
       max-width: 30em;
       margin: 0 auto;
+      position: relative;
+    }
+    .quick-info {
+      white-space: nowrap;
+      position: absolute;
+      top:0;
+      right: 70%;
+      width:40%;
+      font-size: 0.7em;
+      text-align: right;
+      padding-right: 4em;
+      h4 {
+        font-size: 0.8em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: lighten(desaturate($colorMain, 70), 15%);
+      }
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top:0.2em;
+        right:0;
+        background: url('../img/info4.svg') no-repeat 0 0;
+        $diameter: 3em;
+        width:$diameter;
+        height:$diameter;
+        background-size: $diameter;
+      }
+    }
+    .essence {
+      position: relative;
+      text-align: left;
+      width: 70%;
+      left: 50%;
+      margin-left: -5em;
     }
     &:before, &:after {
       @extend %line;
@@ -714,49 +752,8 @@ nav {
       z-index: 1;
     }
     &.requirements {
-      .point {
-        //      right:35%;
-      }
       .connect {
-        right: 13%;
-      }
-      .content {
-        position: relative;
-      }
-      .quick-info {
-        white-space: nowrap;
-        position: absolute;
-        top:0;
-        right: 70%;
-        width:40%;
-        font-size: 0.7em;
-        text-align: right;
-        padding-right: 4em;
-        h4 {
-          font-size: 0.8em;
-          font-weight: bold;
-          text-transform: uppercase;
-          color: lighten(desaturate($colorMain, 70), 15%);
-        }
-        &:after {
-          content: "";
-          display: block;
-          position: absolute;
-          top:0.2em;
-          right:0;
-          background: url('../img/info4.svg') no-repeat 0 0;
-          $diameter: 3em;
-          width:$diameter;
-          height:$diameter;
-          background-size: $diameter;
-        }
-      }
-      .essence {
-        position: relative;
-        text-align: left;
-        width: 70%;
-        left: 50%;
-        margin-left: -5em;
+        right:13%;
       }
       .cover {
         margin-bottom: 1em;
@@ -765,19 +762,6 @@ nav {
     &.process {
       &:before {
         display: none;
-      }
-      p {
-        @include box-sizing(border-box);
-        position: relative;
-        left: -15%;
-        text-align: right;
-        padding: 1.5%;
-        width: 70%;
-        float: left;
-        &:last-child {
-          width: 30%;
-          text-align: left;
-        }
       }
     }
     &.data {
@@ -804,13 +788,18 @@ nav {
           background: $white;
         }
       }
-      p {
+      .quick-info {
+        top:-11em;
+        right: 58%
+      }
+      .essence {
         text-align: left;
         position: relative;
         left: 50%;
         width: 50%;
         padding: 5% 0 0 7%;
         margin-top: -9.5em;
+        margin-left:0;
       }
     }
   }
