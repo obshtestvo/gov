@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    I18n.locale = :administration
+    @type = "citizens"
   end
 end
