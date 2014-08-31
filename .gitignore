@@ -17,5 +17,6 @@
 
 .sass-cache/*
 config/database.yml
+config/secrets.yml
 .DS_Store
 TODO.txt
