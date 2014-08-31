@@ -10,3 +10,6 @@ gem 'therubyracer',  platforms: :ruby
 gem 'jquery-rails'
 gem 'rails-i18n'
 gem 'spring', group: :development
+gem 'spinjs-rails'
+gem 'normalize-rails'
+gem 'modernizr-rails'

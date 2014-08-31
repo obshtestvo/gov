@@ -2,13 +2,13 @@
 <html>
 <head>
   <title>Gov</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'modernizr' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <%= yield %>
+  <%= javascript_include_tag 'application' %>
 </body>
 </html>
