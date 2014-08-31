@@ -5,12 +5,13 @@ Devise.setup do |config|
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # config.secret_key = 'bbad866f76ff0e842832508acdbd10b30459cb124dfd60c73600a7790df1db7e8f752c6ea28882c843e93d6b5a7bacb98a6b1d9698a55673193cf01ee48eaeb6'
+  config.secret_key = Rails.application.secrets.secret_key_base
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'info@obshtestvo.bg'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -98,6 +99,7 @@ Devise.setup do |config|
 
   # Setup a pepper to generate the encrypted password.
   # config.pepper = '5f4da69f40b5646d05ff6757fc7f07053472bedce129371383118d17fa1c9249dd0b3ee8b2848dde1c7ec73b27767708ed021a7eaa3fd5422545c4ac82127728'
+  config.pepper = Rails.application.secrets.secret_key_base
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -126,7 +128,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
-  # config.remember_for = 2.weeks
+  config.remember_for = 6.months
 
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
@@ -137,7 +139,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
-  config.password_length = 8..128
+  config.password_length = 8..200
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
