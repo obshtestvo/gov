@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'obshtestvobg';
+    src: font-url('obshtestvobg-bold.eot');
+    src: font-url('obshtestvobg-bold.eot?#iefix') format('embedded-opentype'), font-url('obshtestvobg-bold.woff') format('woff'), font-url('obshtestvobg-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'obshtestvobg';
+    src: font-url('obshtestvobg-regular.eot');
+    src: font-url('obshtestvobg-regular.eot?#iefix') format('embedded-opentype'), font-url('obshtestvobg-regular.woff') format('woff'), font-url('obshtestvobg-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'obshtestvobg';
+    src: font-url('obshtestvobg-black.eot');
+    src: font-url('obshtestvobg-black.eot?#iefix') format('embedded-opentype'), font-url('obshtestvobg-black.woff') format('woff'), font-url('obshtestvobg-black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'obshtestvobg';
+	src: font-url('obshtestvobg-italic.eot') format('eot'),
+	     font-url('obshtestvobg-italic.woff') format('woff'),
+	     font-url('obshtestvobg-italic.ttf')  format('truetype'),
+	     font-url('obshtestvobg-italic.svg#obshtestvobg-italic') format('svg');
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'obshtestvobg';
+    src: font-url('obshtestvo-bold-italic.eot?#iefix') format('embedded-opentype'),  font-url('obshtestvo-bold-italic.otf')  format('opentype'),
+    font-url('obshtestvo-bold-italic.woff') format('woff'), font-url('obshtestvo-bold-italic.ttf')  format('truetype'), font-url('obshtestvo-bold-italic.svg#../fonts/obshtestvo-bold-italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
