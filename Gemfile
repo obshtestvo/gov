@@ -13,3 +13,4 @@ gem 'spring', group: :development
 gem 'spinjs-rails'
 gem 'normalize-rails'
 gem 'modernizr-rails'
+gem 'compass-rails'
