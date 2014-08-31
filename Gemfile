@@ -14,6 +14,8 @@ gem 'spinjs-rails'
 gem 'normalize-rails'
 gem 'modernizr-rails'
 gem 'compass-rails'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
 
 group :development do
   gem 'spring'
