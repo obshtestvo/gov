@@ -12,8 +12,11 @@
   <%= javascript_include_tag 'modernizr' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <%= yield %>
+<body class="opensource">
+  <div class="container">
+    <%= yield %>
+  </div>
+
   <%= javascript_include_tag 'application' %>
 </body>
 </html>
