@@ -39,3 +39,12 @@
     }
   }
 }
+.menu-list {
+  @extend .list;
+  > li:before {
+    display: none;
+  }
+  > li > a:before {
+    @extend %numbering;
+  }
+}

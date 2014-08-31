@@ -1,7 +1,7 @@
 //= require normalize-rails
-//= require_tree .
 //= require_self
 
+@import "fonts";
 @import "compass";
 @import "html5boilerplate/base";
 @import "zeroreset";
@@ -106,8 +106,31 @@ nav {
   height: $navHeight;
   position: relative;
 
+  .handle {
+    @extend .basic-transition-mid;
+    display: none;
+    position: absolute;
+    top:0;
+    cursor: pointer;
+    left:0;
+    width:$navHeight;
+    height: $navHeight;
+    z-index: 9;
+    svg {
+      fill: $white;
+      width:100%;
+      position: relative;
+      top:3%;
+      height: 100%;
+    }
+    &:hover svg {
+      fill:$colorHighlightLink;
+    }
+  }
+
   .pattern {
     @extend .basic-transition-mid;
+    background-size: cover;
     top:0;
     left:0;
     position: absolute;
@@ -116,6 +139,8 @@ nav {
     opacity: 0;
   }
   ul {
+    @extend %layout;
+    max-width: 1200px;
     text-align: center;
     position: relative;
     text-transform: uppercase;
@@ -129,6 +154,10 @@ nav {
       display: inline-block;
       padding: 0 0.625em;
       line-height: 2.5em;
+      .va {
+        position: relative;
+        display: block;
+      }
       .sub {
         display: block;
         color: lighten(desaturate($colorMain, 40), 20);
@@ -146,48 +175,58 @@ nav {
         }
       }
     }
-    &.list {
-      @extend %layout;
-      max-width: 1200px;
-      > li {
-        display: inline-block;
-        vertical-align: top;
-        padding-left: 1.5em;
-        position: relative;
-        width: 180px;
-        line-height: $navHeight;
-        &:before {
-          @extend %numbering;
-          background: $colorSecondary;
-          left:50%;
-          font-size: 1.5em;
-          top:-2em;
-          opacity: 1;
-          @include transform(translateX(-0.5em));
-        }
+    > li.pains a:before { content: "1" }
+    > li.solution a:before { content: "2" }
+    > li.myths a:before { content: "3" }
+    > li.experience a:before { content: "4" }
+    > li {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 1.5em;
+      position: relative;
+      width: 180px;
+      line-height: $navHeight;
+      > a:before {
+        @extend %numbering;
+        background: $colorSecondary;
+        left:50%;
+        font-size: 1.5em;
+        top:-2em;
+        opacity: 1;
+        @include transform(translateX(-50%));
       }
-      > li.active {
-        a {
-          background: rgba($colorSecondary, 0.4);
-        }
+    }
+    > li.active {
+      a {
+        background: rgba($colorSecondary, 0.4);
       }
     }
   }
-  &.stuck {
-    background: rgba($colorMainDark, 1);
-    margin-top: 0;
+  &.fixed {
+    display: none;
     position: fixed;
-    top:0;
     width:100%;
-    z-index: 9999;
-    a {
-      color: $colorContrastToMain;
-      .sub {
-        opacity: 0;
+    ul {
+      min-width: 850px;
+      > li > a:before {
+        display: none;
       }
     }
-    .pattern {
-      opacity: 0.4;
+    &.on {
+      display: block;
+      background: $colorMainDark;
+      margin-top: 0;
+      top:0;
+      z-index: 9999;
+      a {
+        color: $colorContrastToMain;
+        .sub {
+          opacity: 0;
+        }
+      }
+      .pattern {
+        opacity: 0.4;
+      }
     }
   }
 }
@@ -339,7 +378,7 @@ nav {
   font-size: 1.5em;
   > section {
     padding-top: 2em;
-    max-width: 600px;
+    max-width: 28em;
     margin:0 auto;
     p {
       margin-bottom: 1.2em;
@@ -835,7 +874,9 @@ nav {
   padding-top: 4em;
   padding-bottom: 4em;
   .content {
-    max-width: 28em;
+    max-width: 30em;
+    padding-left: 10%;
+    padding-right: 5%;
     margin: 0 auto;
   }
   .opposition {
@@ -979,15 +1020,12 @@ nav {
   }
   ul {
     @extend %arrow-list;
+    padding-left: 10%;
+    padding-right: 5%;
   }
 }
 
 @import "responsive";
-
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
 @import "html5boilerplate/optional";
 @import "html5boilerplate/print";
 

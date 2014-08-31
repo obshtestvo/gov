@@ -6,13 +6,6 @@
   }
 }
 
-
-@media only screen and (max-width: 800px) {
-  .banner {
-    font-size: 0.8em;
-  }
-}
-
 @media only screen and (min-width: 1800px) {
   .banner {
     font-size: 1.3em;
@@ -25,12 +18,200 @@
   }
 }
 
+@media only screen and (max-width: 1080px) {
+  .campaign-bar .affiliation {
+    float:none;
+  }
+  .campaign-bar .back {
+    margin-top: 0.5em;
+    float:none;
+    clear:left;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .banner {
+    font-size: 0.8em;
+    header {
+      max-width: 80%;
+    }
+    header h1{
+      padding: 0.1em 0 0 0;
+    }
+    header h2{
+      padding: 0 0 2em 0;
+    }
+  }
+}
+@media only screen and (max-width: 850px) {
+  nav.main {
+    height: auto;
+    ul > li {
+      padding-left: 0;
+      text-align: left;
+      display: block;
+      width:20em;
+      margin:0 auto;
+      margin-bottom: 2em;
+      a {
+        line-height: 1em;
+        display: block;
+        height: 3.8em;
+        @include box-sizing(border-box);
+        padding-left: 0;
+        width:auto;
+        .va {
+          top:50%;
+          @include transform(translateY(-50%))
+        }
+        &:before {
+          @include box-sizing(border-box);
+          @include transform(none);
+          display: block;
+          font-size: 2em;
+          position: static;
+          line-height: 2em;
+          margin:0;
+          margin-right: 0.5em;
+          top:0;
+          left:0;
+          float:left;
+          width:2em;
+          height:2em;
+        }
+        .sub {
+          padding-top: 0.2em;
+        }
+      }
+    }
+    ul a .sub {
+      position: static;
+      text-align: left;
+      @include transform(none)
+    }
+  }
+  nav.fixed {
+    min-width:0;
+    width: $navHeight;
+    @extend .round;
+    @include border-bottom-left-radius(0);
+    @include border-top-left-radius(0);
+    @include border-top-right-radius(0);
+    .handle {
+      display: block;
+    }
+    ul {
+      text-align: left;
+      padding-top: 5em;
+      height: 100%;
+      display: none;
+      overflow: hidden;
+    }
+    ul > li {
+      padding-left: 0;
+      height: 20%;
+      display: block;
+      width:auto;
+      margin-bottom: 0;
+      a {
+        display: block;
+        @include box-sizing(border-box);
+        line-height: 4em;
+        padding-left: 5%;
+        width:auto;
+        &:before {
+          @include box-sizing(border-box);
+          @include transform(none);
+          display: block;
+          font-size: 2em;
+          position: static;
+          line-height: 2em;
+          margin:0;
+          margin-right: 3%;
+          top:0;
+          left:0;
+          float:left;
+          width:2em;
+          height:2em;
+        }
+      }
+    }
+    &.active {
+      height: 100%;
+      width:50%;
+      min-width:300px;
+      .handle {
+        padding-left: 5%;
+        padding-top: 2%;
+      }
+      ul {
+        min-width: 0;
+        display: block;
+      }
+    }
+  }
+}
+
 
 // Body
 
 @media only screen and (max-width: 850px) {
+  section.intro h2 {
+    padding: 0 4%;
+  }
+  %section-header-override {
+    padding-left: 0;
+    h2 {
+      margin-left: 10%;
+      padding-left: 3.4em;
+      &:before {
+        left:0;
+      }
+    }
+  }
   .argumentation {
-    section#solution:before,
+    padding-top: 0;
+    > section .half {
+      display: block;
+      margin-left: 10%;
+      width:auto;
+      padding-left: 0;
+      padding-bottom: 0;
+      &.conditions:after, &.conclusion:before {
+        display: none;
+      }
+    }
+    section#pains {
+      header {
+        @extend %section-header-override;
+        .heading {
+          background: red;
+          padding-left: 3%;
+        }
+      }
+      ul {
+        padding-left: 3%;
+      }
+    }
+    section#solution {
+      &:before {
+        display: none;
+      }
+      header {
+        @extend %section-header-override;
+      }
+      > ul {
+        &:after {
+          display: none;
+        }
+        li:after {
+          display: none;
+        }
+        li:first-child:before {
+          display: none;
+        }
+      }
+    }
     section#steps {
       &:before {
         display: none;
@@ -55,15 +236,17 @@
         left: 0;
       }
     }
-    section#solution > ul {
-      &:after {
-        display: none;
+    section#myths {
+      header {
+        @extend %section-header-override;
       }
-      li:after {
-        display: none;
+      h2.heading {
+        padding-left: 10%;
       }
-      li:first-child:before {
-        display: none;
+    }
+    section#experience {
+      header {
+        @extend %section-header-override;
       }
     }
   }

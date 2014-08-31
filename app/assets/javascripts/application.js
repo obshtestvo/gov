@@ -22,27 +22,27 @@ $(function() {
   var $win    = $(window);
   var $banner = $('.banner');
   var $header = $banner.find('header');
-  var $nav    = $('nav');
+  var $nav = $('nav')
+  var $fixedNav = $nav.clone()
+
 
   function resizeBanner() {
     var minHeight = Math.max($win.height(), $header.height() * 1.8);
     $banner.css('min-height', minHeight + 'px');
-  };
+  }
+
+  $fixedNav.removeClass('main').addClass('fixed').insertAfter($nav);
 
   var menuOffset = 150;
 
-  $nav.find('a').each(function() {
+  $fixedNav.find('a').each(function() {
     var $a       = $(this);
     var $item    = $a.parent();
     var selector = $a.attr('href');
     var $section = $(selector);
 
     $section.waypoint(function(dir) {
-      if (dir == 'down') {
-        $item.removeClass('active');
-      } else {
-        $item.addClass('active');
-      }
+      $item.toggleClass('active', dir === 'up');
     }, {
       offset: function() {
         return -$(this).height() + menuOffset;
@@ -50,11 +50,7 @@ $(function() {
     })
 
     $section.waypoint(function(dir) {
-      if (dir == 'down') {
-        $item.addClass('active');
-      } else {
-        $item.removeClass('active');
-      }
+      $item.toggleClass('active', dir === 'down');
     }, {
       offset: menuOffset
     })
@@ -62,7 +58,28 @@ $(function() {
 
   $win.resize(resizeBanner);
   resizeBanner();
-  $nav.waypoint('sticky');
+
+  $nav.waypoint(function(dir) {
+    if (dir=='up') {
+      $fixedNav.removeClass('on')
+    }
+  }, {
+    offset: function() {
+      return -$(this).height();
+    }
+  }).waypoint(function(dir) {
+    if (dir=='down') {
+      $fixedNav.addClass('on')
+    }
+  }, {
+    offset: function() {
+      return -$(this).height();
+    }
+  });
+  $fixedNav.find('.handle').click(function() {
+    $fixedNav.toggleClass('active')
+  })
+
 
   var $openSourceBrowserAlert = $('.open-browser');
   var $browserName = $openSourceBrowserAlert.find('.browser');
