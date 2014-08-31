@@ -18,3 +18,4 @@
 .sass-cache/*
 config/database.yml
 .DS_Store
+TODO.txt
