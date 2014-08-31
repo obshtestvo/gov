@@ -12,6 +12,8 @@ Bundler.require(*Rails.groups)
 module Gov
   class Application < Rails::Application
     config.time_zone = 'Sofia'
+    config.site_domain = 'gov.obshtestvo.bg'
+    config.i18n.available_locales = [:bg]
     config.i18n.default_locale = :bg
   end
 end
