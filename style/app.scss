@@ -331,12 +331,12 @@ nav {
 }
 
 .argumentation {
-  padding-top: 70px;
+  padding-top: 2em;
+  font-size: 1.5em;
   > section {
     padding-top: 2em;
     max-width: 600px;
     margin:0 auto;
-    font-size: 1.5em;
     p {
       margin-bottom: 1.2em;
     }
@@ -368,7 +368,8 @@ nav {
       padding-bottom: 4em;
       position: relative;
       &.conclusion p:first-child {
-        font-size: 1.2em;
+        font-size: 1.4em;
+        color:$colorMain;
       }
       &.conclusion:before,
       &.conditions:after {
@@ -386,11 +387,33 @@ nav {
       }
     }
   }
+  .act {
+    margin-top: 2em;
+    text-align: center;
+    .prompt, .button {
+      font-size: 1.6em;
+    }
+    .button {
+      margin: 0.5em 0 1.5em 0;
+    }
+    p {
+      max-width: 16em;
+      text-align: left;
+      font-size: 0.9em;
+      margin: 0 auto 1em auto;
+    }
+    .prompt {
+      max-width: 20em;
+      margin: 0 auto 1em auto;
+      color:$colorMain;
+      text-align: center;
+    }
+  }
 }
 
 %arrow-list {
   li {
-    font-size: 0.8em;
+    font-size: 0.75em;
     line-height: 1.2em;
     position: relative;
     padding: 2%;
@@ -557,10 +580,6 @@ nav {
     bottom:auto;
     right:12%;
   }
-  .act {
-    font-size: 2em;
-    text-align: center;
-  }
   %line {
     display: block;
     z-index: 1;
@@ -583,7 +602,6 @@ nav {
   header {
     @extend .clearfix;
     position: relative;
-    text-align: right;
     padding-bottom: 5em;
     &:before, &:after {
       @extend %line;
@@ -960,33 +978,7 @@ nav {
   }
 }
 
-
-
-@media only screen and (min-width: 1400px) {
-  .banner {
-      font-size: 1.2em;
-  }
-}
-
-
-@media only screen and (max-width: 800px) {
-  .banner {
-      font-size: 0.8em;
-  }
-}
-
-@media only screen and (min-width: 1800px) {
-  .banner {
-      font-size: 1.3em;
-  }
-}
-
-@media only screen and (min-width: 2000px) {
-  .banner {
-      font-size: 1.5em;
-  }
-}
-
+@import "responsive";
 
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */

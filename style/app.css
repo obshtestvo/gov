@@ -128,7 +128,7 @@ table {
     -webkit-border-radius: 1px;
     border-radius: 1px; }
     .button:active b {
-      top: 1px; }
+      top: 0.07em; }
   .button.small {
     font-weight: 900;
     font-size: 14px;
@@ -653,12 +653,12 @@ nav {
       margin-left: 10px; }
 
 .argumentation {
-  padding-top: 70px; }
+  padding-top: 2em;
+  font-size: 1.5em; }
   .argumentation > section {
     padding-top: 2em;
     max-width: 600px;
-    margin: 0 auto;
-    font-size: 1.5em; }
+    margin: 0 auto; }
     .argumentation > section p {
       margin-bottom: 1.2em; }
     .argumentation > section .heading {
@@ -680,7 +680,8 @@ nav {
       padding-bottom: 4em;
       position: relative; }
       .argumentation > section .half.conclusion p:first-child {
-        font-size: 1.2em; }
+        font-size: 1.4em;
+        color: #108eba; }
       .argumentation > section .half.conclusion:before, .argumentation > section .half.conditions:after {
         content: "";
         position: absolute;
@@ -692,9 +693,26 @@ nav {
       .argumentation > section .half.conclusion:before {
         right: auto;
         left: -1px; }
+  .argumentation .act {
+    margin-top: 2em;
+    text-align: center; }
+    .argumentation .act .prompt, .argumentation .act .button {
+      font-size: 1.6em; }
+    .argumentation .act .button {
+      margin: 0.5em 0 1.5em 0; }
+    .argumentation .act p {
+      max-width: 16em;
+      text-align: left;
+      font-size: 0.9em;
+      margin: 0 auto 1em auto; }
+    .argumentation .act .prompt {
+      max-width: 20em;
+      margin: 0 auto 1em auto;
+      color: #108eba;
+      text-align: center; }
 
 .argumentation > section#pains ul li, .argumentation > section#experience ul li {
-  font-size: 0.8em;
+  font-size: 0.75em;
   line-height: 1.2em;
   position: relative;
   padding: 2%;
@@ -834,9 +852,6 @@ nav {
     height: 8em;
     bottom: auto;
     right: 12%; }
-  .argumentation section#steps .act {
-    font-size: 2em;
-    text-align: center; }
   .argumentation section#steps header .line1, .argumentation section#steps ul.points > li .line1, .argumentation section#steps header:after, .argumentation section#steps ul.points > li:after, .argumentation section#steps header:before, .argumentation section#steps ul.points > li:before {
     display: block;
     z-index: 1;
@@ -853,7 +868,6 @@ nav {
     right: 11%; }
   .argumentation section#steps header {
     position: relative;
-    text-align: right;
     padding-bottom: 5em; }
     .argumentation section#steps header:before, .argumentation section#steps header:after {
       top: 10em; }
@@ -1164,6 +1178,36 @@ nav {
 @media only screen and (min-width: 2000px) {
   .banner {
     font-size: 1.5em; } }
+@media only screen and (max-width: 850px) {
+  .argumentation section#solution:before:before,
+  .argumentation section#steps:before {
+    display: none; }
+  .argumentation section#solution:before header:before, .argumentation section#solution:before header:after, .argumentation section#solution:before header .line1,
+  .argumentation section#steps header:before,
+  .argumentation section#steps header:after,
+  .argumentation section#steps header .line1 {
+    display: none; }
+  .argumentation section#solution:before ul.points > li:before, .argumentation section#solution:before ul.points > li:after, .argumentation section#solution:before ul.points > li .connect, .argumentation section#solution:before ul.points > li .point:after,
+  .argumentation section#steps ul.points > li:before,
+  .argumentation section#steps ul.points > li:after,
+  .argumentation section#steps ul.points > li .connect,
+  .argumentation section#steps ul.points > li .point:after {
+    display: none; }
+  .argumentation section#solution:before h3,
+  .argumentation section#steps h3 {
+    display: none; }
+  .argumentation section#solution:before .subtitle,
+  .argumentation section#steps .subtitle {
+    text-align: center;
+    max-width: none;
+    margin-right: 0;
+    left: 0; }
+  .argumentation section#solution > ul:after {
+    display: none; }
+  .argumentation section#solution > ul li:after {
+    display: none; }
+  .argumentation section#solution > ul li:first-child:before {
+    display: none; } }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================

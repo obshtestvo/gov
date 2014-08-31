@@ -1,0 +1,70 @@
+
+// Header
+@media only screen and (min-width: 1400px) {
+  .banner {
+    font-size: 1.2em;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .banner {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .banner {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .banner {
+    font-size: 1.5em;
+  }
+}
+
+
+// Body
+
+@media only screen and (max-width: 850px) {
+  .argumentation {
+    section#solution:before,
+    section#steps {
+      &:before {
+        display: none;
+      }
+      header {
+        &:before, &:after, .line1{
+          display: none;
+        }
+      }
+      ul.points > li{
+        &:before, &:after, .connect, .point:after {
+          display: none;
+        }
+      }
+      h3 {
+        display: none;
+      }
+      .subtitle {
+        text-align: center;
+        max-width: none;
+        margin-right: 0;
+        left: 0;
+      }
+    }
+    section#solution > ul {
+      &:after {
+        display: none;
+      }
+      li:after {
+        display: none;
+      }
+      li:first-child:before {
+        display: none;
+      }
+    }
+  }
+}
