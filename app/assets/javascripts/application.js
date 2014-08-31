@@ -19,10 +19,10 @@
 //= require_tree .
 
 $(function() {
-  var $win = $(window)
-  var $banner = $('.banner')
-  var $header = $banner.find('header')
-  var $nav = $('nav')
+  var $win    = $(window);
+  var $banner = $('.banner');
+  var $header = $banner.find('header');
+  var $nav    = $('nav');
 
   function resizeBanner() {
     var minHeight = Math.max($win.height(), $header.height() * 1.8);
@@ -32,28 +32,28 @@ $(function() {
   var menuOffset = 150;
 
   $nav.find('a').each(function() {
-    var $a = $(this);
-    var $item = $a.parent();
+    var $a       = $(this);
+    var $item    = $a.parent();
     var selector = $a.attr('href');
-    var $section = $(selector)
+    var $section = $(selector);
 
     $section.waypoint(function(dir) {
       if (dir == 'down') {
-        $item.removeClass('active')
+        $item.removeClass('active');
       } else {
-        $item.addClass('active')
+        $item.addClass('active');
       }
     }, {
       offset: function() {
-        return -$(this).height()+menuOffset;
+        return -$(this).height() + menuOffset;
       }
     })
 
     $section.waypoint(function(dir) {
       if (dir == 'down') {
-        $item.addClass('active')
+        $item.addClass('active');
       } else {
-        $item.removeClass('active')
+        $item.removeClass('active');
       }
     }, {
       offset: menuOffset
@@ -65,15 +65,15 @@ $(function() {
   $nav.waypoint('sticky');
 
   var $openSourceBrowserAlert = $('.open-browser');
-  var $browserName = $openSourceBrowserAlert.find('.browser')
+  var $browserName = $openSourceBrowserAlert.find('.browser');
   if (bowser.firefox || bowser.chrome) {
-    $openSourceBrowserAlert.removeClass('hidden')
-    $browserName.text($browserName.data('firefox'))
+    $openSourceBrowserAlert.removeClass('hidden');
+    $browserName.text($browserName.data('firefox'));
     if (bowser.firefox) {
-      $openSourceBrowserAlert.find('.firefox').removeClass('hidden')
+      $openSourceBrowserAlert.find('.firefox').removeClass('hidden');
     }
     if (bowser.chrome) {
-      $openSourceBrowserAlert.find('.chrome').removeClass('hidden')
+      $openSourceBrowserAlert.find('.chrome').removeClass('hidden');
     }
   }
 });
