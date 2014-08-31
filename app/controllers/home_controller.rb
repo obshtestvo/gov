@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @type = "citizens"
+    @type = "administration"
   end
 end
