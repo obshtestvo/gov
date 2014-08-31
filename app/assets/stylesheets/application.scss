@@ -423,7 +423,7 @@ nav {
     padding: 2%;
     padding-left: 2.7em;
     margin-left:-2.7em;
-    background: url('../img/chevron15.svg') no-repeat -0.7em 50%;
+    background: image-url('chevron15.svg') no-repeat -0.7em 50%;
     background-size: 3.5em ;
   }
 }
@@ -517,7 +517,7 @@ nav {
       position: relative;
       padding-right: 10%;
       padding-left: 3em;
-      background: url('../img/chevron15.svg') no-repeat -0.7em 50%;
+      background: image-url('chevron15.svg') no-repeat -0.7em 50%;
       background-size: 3.5em ;
       $connectorRadius: 1em;
       &:after {
@@ -684,7 +684,7 @@ nav {
         position: absolute;
         top:0.2em;
         right:0;
-        background: url('../img/info4.svg') no-repeat 0 0;
+        background: image-url('info4.svg') no-repeat 0 0;
         $diameter: 3em;
         width:$diameter;
         height:$diameter;
@@ -929,7 +929,7 @@ nav {
     &:before {
       @extend %handle;
       left:-0.5em;
-      background: url("../img/bubble-left.svg") no-repeat right top;
+      background: image-url("bubble-left.svg") no-repeat right top;
       background-size: 100%;
     }
   }
@@ -948,7 +948,7 @@ nav {
       @extend %handle;
       font-size: 0.9em;
       right:-0.5em;
-      background: url("../img/bubble-right.svg") no-repeat right top;
+      background: image-url("bubble-right.svg") no-repeat right top;
       background-size: 100%;
     }
   }
