@@ -889,6 +889,7 @@ nav {
   }
   .help {
     display: block;
+    font-style: italic;
     font-size: 0.8em;
     padding-top: 0.2em;
     color: ligten($colorMainText, 30)
@@ -996,8 +997,14 @@ nav {
   .answer + .answer {
     &:after {
       display: none;
-      margin-bottom: 1.2em
+      margin-bottom: 1.2em;
     }
+  }
+  hr.separator {
+    width: 50%;
+    text-align:center;
+    margin: 0 auto;
+    margin-bottom: 1.2em;
   }
 }
 
