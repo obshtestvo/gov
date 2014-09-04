@@ -81,7 +81,7 @@
         им период,
         <svg class="check" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" xml:space="preserve"><path d="M7.5,0C3.357,0,0,3.357,0,7.5S3.357,15,7.5,15S15,11.643,15,7.5S11.643,0,7.5,0z M6.439,11.035 L2.904,7.5l1.414-1.414l2.121,2.121l4.242-4.242l1.414,1.414L6.439,11.035z"/></svg>
       </li>
-      <li>предотвратяване на ситуации на „vendor lock-in“, в който фирмата-изпълнител на даден
+      <li>предотвратяване на ситуации на „vendor lock-in“, в който компанията-изпълнител на даден
         продукт поставя невъзможни или пазарно-неоправдани условия за поддръжка и доработка, тъй като
         държавата няма алтернатива,
         <svg class="check" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" xml:space="preserve"><path d="M7.5,0C3.357,0,0,3.357,0,7.5S3.357,15,7.5,15S15,11.643,15,7.5S11.643,0,7.5,0z M6.439,11.035 L2.904,7.5l1.414-1.414l2.121,2.121l4.242-4.242l1.414,1.414L6.439,11.035z"/></svg>
@@ -213,15 +213,20 @@
     <p>Бихте могли и да подкрепите инициативата, като <a href="#">подпишете декларацията.</a></p>
 
     <p>Ако все още имате въпрос, на който не сме отговорили - пишете ни.</p>
+<section id="created-by">
 
-    <form action="/contact-us" method="post">
-      <input type="hidden" name="page" id="" value="<%= @type %>" />
-      <input type="text" name="title" id="contact-us-title" value="" placeholder="Заглавие" /><br>
-      <textarea name="content" id="contact-us-content" rows="8" cols="40" placeholder="Тук напиши твоето мъдро писмо."></textarea><br>
+  <p>Измислено и изработено от:</p>
 
-      <input type="submit" name="submit" id="" value="Изпрати!" />
-    </form>
+  <br>
 
-  </div>
+  <%= link_to "http://obshtestvo.bg" do image_tag "obshtestvo_logo.png" end %>
+
+  <br />
+  <br />
+
+  <p>Независими създатели на електронни инструменти<br /> за бърза и удобна връзка
+   държава гражданин</p>
+
+</section>
 
 </div>
