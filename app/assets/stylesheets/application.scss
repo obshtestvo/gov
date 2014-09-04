@@ -179,11 +179,9 @@ nav {
     > li.solution a:before { content: "2" }
     > li.myths a:before { content: "3" }
     > li.experience a:before { content: "4" }
-    > li.act a:before { content: "5" }
     > li {
       display: inline-block;
       vertical-align: top;
-      padding-left: 1.5em;
       position: relative;
       width: 180px;
       line-height: $navHeight;
@@ -1055,19 +1053,6 @@ nav {
 }
 
 section#created-by {
-  header {
-    @extend %section-header;
-    h2 {
-      white-space: nowrap;
-      line-height: 0.7em;
-      padding-top: 0.6em;
-      height: $headinerCircleSize - 0.6em;
-    }
-    h2:before {
-      content: "4";
-    }
-    padding-bottom: 3em;
-  }
   margin-top: 6em;
   margin-bottom: 6em;
   text-align: center;
