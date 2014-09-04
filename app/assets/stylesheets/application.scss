@@ -235,26 +235,24 @@ nav {
   min-height: 300px;
   background-color: #2f4d51;
   @include background-size(cover);
-  position: relative;
   header {
     text-align: center;
-    position: absolute;
-    top: 25%;
+    padding: 10% 5%;
   }
   h1 {
     color: $colorContrastToMain;
     letter-spacing: -0.01em;
     font-size: 4.5em;
-    line-height: 0.85em;
+    line-height: 1.05em;
   }
   h2 {
     padding-top: 0.5em;
     color: lighten($colorMain, 50);
     font-size: 1.5em;
-    margin-top: 2em;
+    margin: 2em 0;
+    line-height: 1.45em;
   }
   a.orange {
-    margin: 1.4em;
     font-size: 2em;
   }
 }
