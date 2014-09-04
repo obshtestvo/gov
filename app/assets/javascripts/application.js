@@ -19,17 +19,8 @@
 //= require_tree .
 
 $(function() {
-  var $win    = $(window);
-  var $banner = $('.banner');
-  var $header = $banner.find('header');
   var $nav = $('nav')
   var $fixedNav = $nav.clone()
-
-
-  function resizeBanner() {
-    var minHeight = Math.max($win.height(), $header.height() * 1.8);
-    $banner.css('min-height', minHeight + 'px');
-  }
 
   $fixedNav.removeClass('main').addClass('fixed').insertAfter($nav);
 
@@ -55,9 +46,6 @@ $(function() {
       offset: menuOffset
     })
   })
-
-  $win.resize(resizeBanner);
-  resizeBanner();
 
   $nav.waypoint(function(dir) {
     if (dir=='up') {
