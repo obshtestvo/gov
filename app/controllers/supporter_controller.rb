@@ -1,7 +1,7 @@
 class SupporterController < ApplicationController
   def create
+
     @supporter = Supporter.new(supporter_params)
-    @supporter.kind = supporter_params[:kind].blank? ? "person" : "organization"
 
     respond_to do |format|
       if @supporter.save
@@ -18,6 +18,6 @@ class SupporterController < ApplicationController
   private
 
   def supporter_params
-    params.require(:supporter).permit(:first_name, :last_name, :email, :area, :organization, :kind)
+    params.require(:supporter).permit(:first_name, :last_name, :email, :area, :organization, :is_organization)
   end
 end
