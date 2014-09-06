@@ -338,23 +338,22 @@ nav {
     }
   }
   .act {
-    input#title, textarea {
-      width: 20em;
-      margin-bottom: 1em;
-    }
-    textarea {
-      height: 10em;
-    }
     margin-top: 2em;
     text-align: center;
-    .prompt, .button {
-      font-size: 1.6em;
-    }
     .button {
+      width: 10em;
+      font-size: 1.6em;
       margin: 0.5em 0 1.5em 0;
+      padding: 0.3em;
     }
-    .send {
-      padding: 0.2em;
+    form {
+      input {
+        width: 15em;
+        margin: 0.2em;
+      }
+      input#supporter_kind, {
+        width: 0.6em;
+      }
     }
     p {
       max-width: 16em;
@@ -362,14 +361,10 @@ nav {
       font-size: 0.9em;
       margin: 0 auto 1em auto;
     }
-    .prompt {
-      max-width: 20em;
-      margin: 0 auto 1em auto;
-      color: $colorMain;
-      text-align: center;
-    }
-    form {
-      display: none;
+    div.field_with_errors {
+      display: inline;
+      padding: 0.3em;
+      background: $colorMain;
     }
   }
 }

@@ -180,7 +180,31 @@
   </section>
 
   <div class="act" id="sign">
-    <a href="/sign" class="button standard blue"><b>Подпишете декларацията</b></a>
+
+  <%= form_for :supporter do |f| %>
+
+  <% if @supporter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@supporter.errors.count, "error") %> prohibited this test from being saved:</h2>
+
+      <ul>
+      <% @supporter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :area %>
+    <%= f.text_field :first_name, placeholder: "Име" %><br />
+    <%= f.text_field :last_name, placeholder: "Фамилия" %><br />
+    <%= f.email_field :email, placeholder: "Имейл" %><br />
+    <%= f.text_field :organization, placeholder: "Организация/фирма" %><br />
+    <%= f.check_box :kind %>
+    <%= f.label :supporter_kind, "Подкрепи като организация" %><br>
+    <%= f.submit "Подпиши", class: "button standart blue" %>
+  <% end %>
+
   </div>
 
 </div>
