@@ -1,12 +1,11 @@
 class SupporterController < ApplicationController
   def create
     @supporter = Supporter.new(supporter_params)
-
+    @supporter.kind = supporter_params[:kind].blank? ? "person" : "organization"
 
     respond_to do |format|
-
       if @supporter.save
-        format.html { redirect_to @supporter, notice: 'Badge was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Благодарим Ви, че подкрепихте каузата!' }
         format.json { render :show, status: :created, location: @supporter }
       else
         format.html { render "home/index" }
@@ -19,6 +18,6 @@ class SupporterController < ApplicationController
   private
 
   def supporter_params
-    params.permit(:first_name, :last_name, :email, :sphere, :organization, :supporter_kind)
+    params.require(:supporter).permit(:first_name, :last_name, :email, :area, :organization, :kind)
   end
 end

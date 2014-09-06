@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
     @type = "administration"
-    @supporter = Supporter.new
+    @supporter = Supporter.new(area: @type)
   end
 end
