@@ -249,5 +249,10 @@
         @extend %section-header-override;
       }
     }
+    section#support {
+      header {
+        @extend %section-header-override;
+      }
+    }
   }
 }

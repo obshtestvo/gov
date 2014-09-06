@@ -179,6 +179,7 @@ nav {
     > li.solution a:before { content: "2" }
     > li.myths a:before { content: "3" }
     > li.experience a:before { content: "4" }
+    > li.support a:before { content: "5" }
     > li {
       display: inline-block;
       vertical-align: top;
@@ -335,36 +336,6 @@ nav {
         right:auto;
         left:-1px;
       }
-    }
-  }
-  .act {
-    margin-top: 2em;
-    text-align: center;
-    .button {
-      width: 10em;
-      font-size: 1.6em;
-      margin: 0.5em 0 1.5em 0;
-      padding: 0.3em;
-    }
-    form {
-      input {
-        width: 15em;
-        margin: 0.2em;
-      }
-      input#supporter_is_organization, {
-        width: 0.6em;
-      }
-    }
-    p {
-      max-width: 16em;
-      text-align: left;
-      font-size: 0.9em;
-      margin: 0 auto 1em auto;
-    }
-    div.field_with_errors {
-      display: inline;
-      padding: 0.3em;
-      background: $colorMain;
     }
   }
 }
@@ -954,6 +925,54 @@ nav {
     padding-right: 5%;
   }
 }
+
+.argumentation > section#support {
+  padding-top: 4em;
+
+  header {
+    @extend %section-header;
+  }
+  h2 {
+    white-space: nowrap;
+    line-height: 0.7em;
+    padding-top: 0.6em;
+    height: $headinerCircleSize - 0.6em;
+  }
+  h2:before {
+    content: "5";
+  }
+  .act {
+    margin-top: 2em;
+    text-align: center;
+    .button {
+      width: 10em;
+      font-size: 1.6em;
+      margin: 0.5em 0 1.5em 0;
+      padding: 0.3em;
+    }
+    form {
+      input {
+        width: 15em;
+        margin: 0.2em;
+      }
+      input#supporter_is_organization, {
+        width: 0.6em;
+      }
+    }
+    p {
+      max-width: 16em;
+      text-align: left;
+      font-size: 0.9em;
+      margin: 0 auto 1em auto;
+    }
+    div.field_with_errors {
+      display: inline;
+      padding: 0.3em;
+      background: $colorMain;
+    }
+  }
+}
+
 
 section#created-by {
   margin-top: 6em;

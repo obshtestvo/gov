@@ -19,6 +19,7 @@
       <li class="solution"><a href="#solution"><span class="va">Решение <span class="sub">с конкретни стъпки</span></span></a></li>
       <li class="myths"><a href="#myths"><span class="va">Митове <span class="sub">какво е отворен код <br/> и гъвкава разработка</span></span></a></li>
       <li class="experience"><a href="#experience"><span class="va">Опитът на другите <span class="sub">с примери</span></span></a></li>
+      <li class="support"><a href="#support"><span class="va">Подкрепи</span></a></li>
     </ul>
 </nav>
 <div class="argumentation">
@@ -179,31 +180,37 @@
 
   </section>
 
-  <div class="act" id="sign">
+  <section id="support">
+    <header>
+      <h2 class="number">Подкрепи</h2>
+    </header>
 
-  <%= form_for :supporter do |f| %>
+    <div class="act" id="sign">
 
-  <% if @supporter.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-      <% @supporter.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <%= form_for :supporter do |f| %>
+
+      <% if @supporter.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+          <% @supporter.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
+
+        <%= f.hidden_field :area %>
+        <%= f.text_field :first_name, placeholder: "Име" %><br />
+        <%= f.text_field :last_name, placeholder: "Фамилия" %><br />
+        <%= f.email_field :email, placeholder: "Имейл" %><br />
+        <%= f.text_field :organization, placeholder: "Организация/фирма" %><br />
+        <%= f.check_box :is_organization %>
+        <%= f.label :is_organization, "Подкрепи като организация" %><br>
+        <%= f.submit "Подкрепи", class: "button standart blue" %>
+      <% end %>
+
     </div>
-  <% end %>
-
-    <%= f.hidden_field :area %>
-    <%= f.text_field :first_name, placeholder: "Име" %><br />
-    <%= f.text_field :last_name, placeholder: "Фамилия" %><br />
-    <%= f.email_field :email, placeholder: "Имейл" %><br />
-    <%= f.text_field :organization, placeholder: "Организация/фирма" %><br />
-    <%= f.check_box :is_organization %>
-    <%= f.label :is_organization, "Подкрепи като организация" %><br>
-    <%= f.submit "Подпиши", class: "button standart blue" %>
-  <% end %>
-
-  </div>
+  </section>
 
 </div>
 
