@@ -995,6 +995,22 @@ nav {
   }
 }
 
+header.main {
+  section {
+    max-width: 42em;
+    margin: 0 auto;
+  }
+  background-color: #2f4d51;
+  padding: 0.8em 1.6em;
+  margin: 0;
+  overflow: hidden;
+  h1 {
+    float: left;
+    a { color: #FFF; text-decoration: none; font-size: 1.8em; }
+  }
+  .button { float: right; }
+}
+
 footer {
   background-color: #cdcfc6;
   padding: 5em 0;

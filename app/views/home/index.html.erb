@@ -183,34 +183,11 @@
 
     <div class="act" id="sign">
 
-      <%= simple_form_for @supporter, url: url_for(anchor: 'support') do |f| %>
-        <%= f.hidden_field :area %>
-        <%= f.input :first_name, placeholder: 'Весела' %>
-        <%= f.input :last_name, placeholder: 'Радостинова' %>
-        <%= f.input :email, placeholder: 'vesela@radostinova.com' %>
-        <%= f.input :organization, placeholder: 'Вашата организация' %>
-        <%= f.input :is_organization %>
-        <%= f.button :submit, 'Подкрепи', class: 'button standart green' %>
-      <% end %>
+      <%= render 'supporters/form' %>
 
     </div>
   </section>
 
 </div>
 
-<footer>
-  <p>
-    Кампанията е дело на екип доброволци, част от <%= link_to 'фондация Общество.бг', 'https://obshtestvo.bg/' %>.<br>
-    Този сайт е с <%= link_to 'отворен код, който може да намерите в GitHub', 'https://github.com/obshtestvo/gov' %>.<br>
-    Може да <%= mail_to 'info@obshtestvo.bg', 'ни пишете по всяко време с коментари', subject: 'Относно gov.obshtestvo.bg' %>.
-  </p>
-  <div class="obshtestvo">
-    <p>
-      <%= link_to "https://obshtestvo.bg/" do %>
-        <%= image_tag 'obshtestvo_logo.png', size: '293x46' %>
-      <% end %>
-    </p>
-    <p>Независими създатели на електронни инструменти<br /> за бърза и удобна връзка
-     държава ⇄ гражданин</p>
-  </div>
-</footer>
+<%= render 'shared/footer' %>
