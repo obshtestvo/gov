@@ -15,6 +15,7 @@ gem 'modernizr-rails'
 gem 'compass-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'simple_form'
 
 group :development do
   gem 'spring'
