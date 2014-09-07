@@ -88,23 +88,11 @@ h1, h2, h3, h4, h5, h6 {
   color: $colorMain;
 }
 
-section.intro {
-  text-align: center;
-  padding: 100px 0 100px 0;
-  max-width: 600px;
-  margin:0 auto;
-
-  h2 {
-    font-size: 2em;
-    color: lighten($colorMainText, 10);
-    font-weight: normal;
-  }
-}
-
 nav {
   @extend .basic-transition-mid;
   height: $navHeight;
   position: relative;
+  margin-top: 8em;
 
   .handle {
     @extend .basic-transition-mid;
