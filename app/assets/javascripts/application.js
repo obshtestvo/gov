@@ -80,6 +80,30 @@ $(function() {
     return false;
   });
 
+  // Sign form
+  var updateSignFormState = function (animate) {
+    var $form           = $('#sign-form');
+    var $organization   = $form.find('.supporter_organization');
+    var $isOrganization = $form.find('#supporter_is_organization');
+
+    if ($isOrganization.is(':checked')) {
+      if (animate) {
+        $organization.slideDown();
+      } else {
+        $organization.show();
+      }
+    } else {
+      if (animate) {
+        $organization.slideUp();
+      } else {
+        $organization.hide();
+      }
+    }
+  };
+  $(document).on('change', '#supporter_is_organization', function () { updateSignFormState('animate') });
+  $(document).on('ajax:updated', '#sign-form', function () { updateSignFormState(); });
+  updateSignFormState();
+
   var $openSourceBrowserAlert = $('.open-browser');
   var $browserName = $openSourceBrowserAlert.find('.browser');
   if (bowser.firefox || bowser.chrome) {
