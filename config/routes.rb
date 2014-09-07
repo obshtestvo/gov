@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  post "/", to: "supporter#create"
+  resource :supporters
   root 'home#index'
 end
