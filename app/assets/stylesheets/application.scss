@@ -974,10 +974,22 @@ nav {
 }
 
 
-section#created-by {
-  margin-top: 6em;
-  margin-bottom: 6em;
+footer {
+  background-color: #cdcfc6;
+  padding: 5em 0;
   text-align: center;
+  p {
+    margin: 1em 0;
+    padding: 0;
+    line-height: 1.4em;
+  }
+  a {
+    color: #3f5341;
+  }
+  .obshtestvo {
+    margin: 2.5em;
+    color: #888985;
+  }
 }
 
 @import "responsive";
