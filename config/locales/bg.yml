@@ -5,3 +5,13 @@ bg:
   citizens:
     scope: "Граждани"
 
+  activerecord:
+    models:
+      supporter: 'Подкрепа'
+    attributes:
+      supporter:
+        first_name: 'Име'
+        last_name: 'Фамилия'
+        email: 'Имейл адрес'
+        organization: 'Име на организация'
+        is_organization: 'Подкрепа от името на организация'
