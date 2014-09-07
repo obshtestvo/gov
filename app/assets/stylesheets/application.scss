@@ -931,15 +931,15 @@ nav {
 
   header {
     @extend %section-header;
-  }
-  h2 {
-    white-space: nowrap;
-    line-height: 0.7em;
-    padding-top: 0.6em;
-    height: $headinerCircleSize - 0.6em;
-  }
-  h2:before {
-    content: "5";
+    h2 {
+      white-space: nowrap;
+      line-height: 0.7em;
+      padding-top: 1.1em;
+      height: $headinerCircleSize - 0.6em;
+    }
+    h2:before {
+      content: "5";
+    }
   }
   .act {
     margin-top: 2em;
