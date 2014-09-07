@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.5'
 gem 'pg'
-#gem 'puma'
+gem 'puma'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -16,7 +16,7 @@ gem 'compass-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'simple_form'
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+#gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 group :development do
   gem 'spring'
@@ -25,6 +25,6 @@ group :development do
   gem "binding_of_caller"
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
-  #gem 'capistrano3-puma'
+  gem 'capistrano3-puma'
   gem 'letter_opener'
 end
