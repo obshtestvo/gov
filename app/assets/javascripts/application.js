@@ -68,6 +68,17 @@ $(function() {
     $fixedNav.toggleClass('active')
   })
 
+  // Show a loader overlay over ajaxified forms
+  $(document).on('ajax:send', 'form', function () {
+    $(this).find('.loading').show();
+  });
+
+  // Provide a close link on "success" overlay messages for ajaxified forms
+  $(document).on('click', 'a[data-close]', function () {
+    var $link = $(this);
+    $link.closest($link.data('close')).fadeOut('slow');
+    return false;
+  });
 
   var $openSourceBrowserAlert = $('.open-browser');
   var $browserName = $openSourceBrowserAlert.find('.browser');

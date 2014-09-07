@@ -6,13 +6,17 @@ class SupportersController < ApplicationController
   end
 
   def create
-    @supporter = Supporter.create(supporter_params)
+    supporter = Supporter.new(supporter_params)
 
-    if @supporter.valid? and !request.xhr?
-      flash[:notice] = 'Благодарим Ви, че подкрепихте каузата!'
+    if supporter.save
+      @success       = true
+      @supporter     = Supporter.new
+      flash[:notice] = 'Благодарим Ви, че подкрепихте каузата!' unless request.xhr?
+    else
+      @supporter     = supporter
     end
 
-    respond_with @supporter, location: root_path
+    respond_with supporter, location: root_path
   end
 
   private

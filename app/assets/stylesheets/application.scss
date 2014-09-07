@@ -943,14 +943,38 @@ nav {
       margin-bottom: 3em;
       padding: 0.5em;
     }
+  }
+}
+
+.overlay-container {
+  position: relative;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.1em;
+  z-index: 200;
+  &.loading {
+    background: rgba(255, 255, 255, 0.7) image-url('spinner.gif') 50% 50% no-repeat;
+  }
+  &.success {
+    background: rgba(14, 121, 2, 0.9);
+    padding: 5em 2em;
     p {
-      max-width: 16em;
-      text-align: left;
-      font-size: 0.9em;
-      margin: 0 auto 1em auto;
+      color: #fff;
+      text-align: center;
+      font-size: 1.4em;
+      margin: 1em 0;
+      small { font-size: 0.6em; }
+      a { color: #1CC2E2; }
     }
   }
 }
+
 
 // Flash alerts
 .flash-message {
