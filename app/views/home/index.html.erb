@@ -183,26 +183,14 @@
 
     <div class="act" id="sign">
 
-      <%= form_for :supporter do |f| %>
-
-      <% if @supporter.errors.any? %>
-        <div id="error_explanation">
-          <ul>
-          <% @supporter.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-
+      <%= simple_form_for @supporter, url: url_for(anchor: 'support') do |f| %>
         <%= f.hidden_field :area %>
-        <%= f.text_field :first_name, placeholder: "Име" %><br />
-        <%= f.text_field :last_name, placeholder: "Фамилия" %><br />
-        <%= f.email_field :email, placeholder: "Имейл" %><br />
-        <%= f.text_field :organization, placeholder: "Организация/фирма" %><br />
-        <%= f.check_box :is_organization %>
-        <%= f.label :is_organization, "Подкрепи като организация" %><br>
-        <%= f.submit "Подкрепи", class: "button standart green" %>
+        <%= f.input :first_name, placeholder: 'Весела' %><br>
+        <%= f.input :last_name, placeholder: 'Радостинова' %><br>
+        <%= f.input :email, placeholder: 'vesela@radostinova.com' %><br>
+        <%= f.input :organization, placeholder: 'Вашата организация' %><br>
+        <%= f.input :is_organization %><br>
+        <%= f.button :submit, 'Подкрепи', class: 'button standart green' %>
       <% end %>
 
     </div>

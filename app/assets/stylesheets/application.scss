@@ -939,13 +939,7 @@ nav {
       padding: 0.3em;
     }
     form {
-      input {
-        width: 15em;
-        margin: 0.2em;
-      }
-      input#supporter_is_organization, {
-        width: 0.6em;
-      }
+      text-align: left;
     }
     p {
       max-width: 16em;
@@ -961,6 +955,26 @@ nav {
   }
 }
 
+// Simple form styles
+.simple_form {
+  label {
+    display: block;
+  }
+  input.string {
+    width: 99%;
+    margin: 0.2em 0;
+    padding: 0.2em 0.5em;
+  }
+  .boolean {
+    input {
+      margin-right: 0.3em;
+      vertical-align: middle;
+    }
+    label {
+      display: inline;
+    }
+  }
+}
 
 footer {
   background-color: #cdcfc6;
