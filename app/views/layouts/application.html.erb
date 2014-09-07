@@ -13,9 +13,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <!-- TODO: style these -->
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <%= render 'shared/flash_messages' %>
 
   <div class="container">
     <%= yield %>

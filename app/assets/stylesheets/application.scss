@@ -955,6 +955,20 @@ nav {
   }
 }
 
+// Flash alerts
+.flash-message {
+  padding: 0.8em 1.6em;
+  margin: 0;
+  &.notice {
+    background-color: #7bb773;
+    color: #21361f;
+  }
+  &.alert {
+    background-color: #ddb4a2;
+    color: #602328;
+  }
+}
+
 // Simple form styles
 .simple_form {
   label {
