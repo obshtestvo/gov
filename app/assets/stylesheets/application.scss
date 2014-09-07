@@ -947,11 +947,6 @@ nav {
       font-size: 0.9em;
       margin: 0 auto 1em auto;
     }
-    div.field_with_errors {
-      display: inline;
-      padding: 0.3em;
-      background: $colorMain;
-    }
   }
 }
 
@@ -971,6 +966,9 @@ nav {
 
 // Simple form styles
 .simple_form {
+  .input {
+    margin-bottom: 0.8em;
+  }
   label {
     display: block;
   }
@@ -986,6 +984,13 @@ nav {
     }
     label {
       display: inline;
+    }
+  }
+  .field_with_errors {
+    color: #cb0015;
+    input {
+      border-color: #ff1a2c;
+      border-style: solid;
     }
   }
 }

@@ -185,11 +185,11 @@
 
       <%= simple_form_for @supporter, url: url_for(anchor: 'support') do |f| %>
         <%= f.hidden_field :area %>
-        <%= f.input :first_name, placeholder: 'Весела' %><br>
-        <%= f.input :last_name, placeholder: 'Радостинова' %><br>
-        <%= f.input :email, placeholder: 'vesela@radostinova.com' %><br>
-        <%= f.input :organization, placeholder: 'Вашата организация' %><br>
-        <%= f.input :is_organization %><br>
+        <%= f.input :first_name, placeholder: 'Весела' %>
+        <%= f.input :last_name, placeholder: 'Радостинова' %>
+        <%= f.input :email, placeholder: 'vesela@radostinova.com' %>
+        <%= f.input :organization, placeholder: 'Вашата организация' %>
+        <%= f.input :is_organization %>
         <%= f.button :submit, 'Подкрепи', class: 'button standart green' %>
       <% end %>
 
