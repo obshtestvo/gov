@@ -940,6 +940,8 @@ nav {
     }
     form {
       text-align: left;
+      margin-bottom: 3em;
+      padding: 0.5em;
     }
     p {
       max-width: 16em;
@@ -973,9 +975,10 @@ nav {
     display: block;
   }
   input.string {
-    width: 99%;
+    width: 100%;
     margin: 0.2em 0;
     padding: 0.2em 0.5em;
+    box-sizing: border-box;
   }
   .boolean {
     input {
