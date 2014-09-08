@@ -9,6 +9,7 @@ class SupportersController < ApplicationController
     supporter = Supporter.new(supporter_params)
 
     if supporter.save
+      ApplicationMailer.verify_email(supporter).deliver
       @success       = true
       @supporter     = Supporter.new
       flash[:notice] = 'Благодарим Ви, че подкрепихте каузата!' unless request.xhr?
