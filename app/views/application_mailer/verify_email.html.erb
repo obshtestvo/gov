@@ -8,6 +8,8 @@
     <p>Здравейте, <%= @supporter.first_name %></p>
     <p>За да потвърдите вашият имейл, натиснете тази връзка:</p>
 
+    <%= link_to "http://gov.obshtestvo.bg/verify/" + @token, "http://gov.obshtestvo.bg/verify/" + @token %>
+
     <p>Благодарим!</p>
   </body>
 </html>
