@@ -5,7 +5,7 @@ class ApplicationMailer < ActionMailer::Base
     skb = Rails.application.secrets.secret_key_base
     verifier = ActiveSupport::MessageVerifier.new(skb)
     @token = verifier.generate(@supporter.id)
-    mail(to: @supporter.email, subject: "Моля потвърдете подкрепата си за кампанията.")
+    mail(to: @supporter.email, subject: "Потвърждение на подкрепата за кампания „Отворен код в държавата“")
   end
 
 end
