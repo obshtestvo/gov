@@ -29,7 +29,7 @@ class SupportersController < ApplicationController
       id = verifier.verify(verification_code)
     rescue ActiveSupport::MessageVerifier::InvalidSignature
       flash[:alert] = "Невалиден персонален код."
-      redirect_to root_path
+      return redirect_to root_path
     end
 
     s = Supporter.find(id)
