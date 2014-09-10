@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :supporters
   get '/verify/:code', to: 'supporters#verify', as: :verify_supporter
   get ':area' => 'home#index', constraints: { area: /administration|people|it/ }, as: :home
-  root 'home#index'
+  root 'home#index', :defaults => { :area => "administration" }
 end
