@@ -243,6 +243,21 @@ nav {
   a.orange {
     font-size: 2em;
   }
+  div.area-links {
+    text-align: center;
+    .button {
+      background: #108eba;
+      color: white;
+      text-decoration: none;
+      font-size: 1.5em;
+      padding: 1em;
+      &.active {
+        background: white;
+        color: #607d89;
+        padding: 1.1em;
+      }
+    }
+  }
 }
 
 .campaign-bar {

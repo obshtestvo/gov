@@ -1,6 +1,12 @@
 class HomeController < ApplicationController
   def index
-    @type = "administration"
-    @supporter = Supporter.new(area: @type)
+    @area = home_params[:area]
+    @supporter = Supporter.new(area: @area)
+  end
+
+  private
+
+  def home_params
+    params.slice(:area)
   end
 end
