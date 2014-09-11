@@ -158,8 +158,6 @@ GEM
     rails-i18n (4.0.2)
       i18n (~> 0.6)
       rails (>= 4.0)
-    rails_config (0.4.2)
-      activesupport (>= 3.0)
     railties (4.1.5)
       actionpack (= 4.1.5)
       activesupport (= 4.1.5)
@@ -240,7 +238,6 @@ DEPENDENCIES
   puma
   rails (= 4.1.5)
   rails-i18n
-  rails_config
   sass-rails (~> 4.0.3)
   simple_form
   spinjs-rails

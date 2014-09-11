@@ -16,7 +16,6 @@ gem 'compass-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'simple_form'
-gem 'rails_config'
 #gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 group :development do
