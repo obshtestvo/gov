@@ -16,8 +16,10 @@
    `config/database.yml.example`.
 4. Създайте `config/secrets.yml` файл. Може да използвате примерния в
    `config/secrets.yml.example`.
-5. Изпълнете `bundle exec rake db:setup`.
-6. Стартирайте приложението с `bin/rails server`.
+5. Създайте `config/settings.yml` файл. Може да използвате примерния в
+   `config/settings.yml.example`.
+6. Изпълнете `bundle exec rake db:setup`.
+7. Стартирайте приложението с `bin/rails server`.
 
 Трябва да имате работещо копие на [localhost:3000](http://localhost:3000/).
 

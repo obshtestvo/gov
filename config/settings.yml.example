@@ -1,0 +1,35 @@
+development:
+  action_mailer:
+    delivery_method: :letter_opener
+    default_options:
+      from: admin@example.com
+    default_url_options:
+      host: localhost:3000
+      protocol: :http
+
+production:
+  action_mailer:
+    delivery_method: :smtp
+    default_options:
+      from: admin@example.com
+    default_url_options:
+      host: example.com
+      protocol: :https
+    smtp_settings:
+      address: example.com
+      port: 587
+      domain: example.com
+      user_name: awesomeuser
+      password: secretpass
+      authentication: login
+      enable_starttls_auto: true
+
+test:
+  action_mailer:
+    delivery_method: :letter_opener
+    default_options:
+      from: admin@example.com
+    default_url_options:
+      host: localhost:3000
+      protocol: :http
+
