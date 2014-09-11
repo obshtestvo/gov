@@ -9,7 +9,7 @@ require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
 
-
+Settings = YAML.load(File.read(File.expand_path('config/settings.yml')))[Rails.env].deep_symbolize_keys
 
 module Gov
   class Application < Rails::Application
@@ -17,5 +17,9 @@ module Gov
     config.site_domain = 'gov.obshtestvo.bg'
     config.i18n.available_locales = [:bg]
     config.i18n.default_locale = :bg
+
+    config.action_mailer.default_url_options = Settings[:action_mailer][:default_url_options]
+    config.action_mailer.default_options = Settings[:action_mailer][:default_options]
+    config.action_mailer.delivery_method = Settings[:action_mailer][:delivery_method]
   end
 end
