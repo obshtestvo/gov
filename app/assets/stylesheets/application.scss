@@ -848,20 +848,21 @@ nav {
   .myth {
     @include box-sizing(border-box);
     @include border-radius(0.5em);
-    font-weight: bold;
     font-size: 1.5em;
     width: 80%;
     padding: 3%;
     margin-top: 2em;
     margin-bottom: 0.5em;
-    background: $colorMain;
-    color:$colorContrastToMain;
+    background: lighten($colorMain, 45%);
+    color: darken($colorContrastToMain, 75%);
     position: relative;
     &:before {
       @extend %handle;
       left:-0.5em;
       background: image-url("bubble-left.svg") no-repeat right top;
       background-size: 100%;
+      z-index: -1;
+      opacity: 0.22;
     }
   }
   .answer {
@@ -872,8 +873,8 @@ nav {
     width:80%;
     margin-left: 20%;
     padding: 3%;
-    background: $colorSecondary;
-    color:$colorContrastToMain;
+    background-color: #b5f1b2;
+    color: #21361f;
     position: relative;
     &:after {
       @extend %handle;
@@ -881,12 +882,8 @@ nav {
       right:-0.5em;
       background: image-url("bubble-right.svg") no-repeat right top;
       background-size: 100%;
-    }
-  }
-  .answer + .answer {
-    &:after {
-      display: none;
-      margin-bottom: 1.2em;
+      z-index: -1;
+      opacity: 0.4;
     }
   }
   hr.separator {
