@@ -225,6 +225,25 @@
         &:before, &:after, .connect, .point:after {
           display: none;
         }
+        .cover {
+          float: none;
+          text-align: center;
+          margin-bottom: 1em;
+          .img {
+            position: static;
+            img {
+              display: none;
+            }
+            .point {
+              position: static;
+            }
+          }
+        }
+        .content {
+          margin: 0 auto;
+          padding: 0;
+          max-width: 95%;
+        }
       }
       h3 {
         display: none;
