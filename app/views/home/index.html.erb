@@ -6,10 +6,6 @@
   </header>
 
   <div class="area-links">
-    <%= link_to home_path(area: :administration), class: "button #{"active" if @area == "administration"}" do %>
-      Администрация
-    <% end %>
-
     <%= link_to home_path(area: :people), class: "button #{"active" if @area == "people"}" do %>
       Граждани
     <% end %>
@@ -17,6 +13,11 @@
     <%= link_to home_path(area: :it), class: "button #{"active" if @area == "it"}" do %>
       IT и бизнес
     <% end %>
+
+    <%= link_to home_path(area: :administration), class: "button #{"active" if @area == "administration"}" do %>
+      Администрация
+    <% end %>
+
   </div>
 </div>
 <nav role="navigation" class="main">
