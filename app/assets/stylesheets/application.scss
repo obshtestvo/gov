@@ -980,6 +980,11 @@ nav {
   }
 }
 
+abbr {
+  border-bottom: 1px dashed #5b6159;
+  cursor: help;
+}
+
 header.main {
   section {
     max-width: 42em;
