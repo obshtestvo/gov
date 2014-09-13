@@ -28,16 +28,16 @@ class SupportersController < ApplicationController
     begin
       id = verifier.verify(verification_code)
     rescue ActiveSupport::MessageVerifier::InvalidSignature
-      flash[:alert] = "Невалиден персонален код."
+      flash[:alert] = 'Невалиден персонален код.'
       return redirect_to root_path
     end
 
     s = Supporter.find(id)
 
     if s.email_confirmed?
-      flash[:notice] = "Вие вече подкрепихте инициативата."
+      flash[:notice] = 'Вие вече сте потвърдили имейла си и подкрепяте инициативата.'
     else
-      flash[:notice] = "Благодарим Ви, че потвърдихте вашият имейл. Вие вече подкрепяте инициативата."
+      flash[:notice] = 'Благодарим Ви, че потвърдихте вашия имейл. Вашата подкрепа е официално регистрирана.'
       s.email_confirmed = true
       s.save
     end
