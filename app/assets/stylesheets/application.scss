@@ -591,34 +591,6 @@ nav {
       margin: 0 auto;
       position: relative;
     }
-    .quick-info {
-      white-space: nowrap;
-      position: absolute;
-      top:0;
-      right: 70%;
-      width:40%;
-      font-size: 0.7em;
-      text-align: right;
-      padding-right: 4em;
-      h4 {
-        font-size: 0.8em;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: lighten(desaturate($colorMain, 70), 15%);
-      }
-      &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top:0.2em;
-        right:0;
-        background: image-url('info4.svg') no-repeat 0 0;
-        $diameter: 3em;
-        width:$diameter;
-        height:$diameter;
-        background-size: $diameter;
-      }
-    }
     .essence {
       position: relative;
       text-align: left;
