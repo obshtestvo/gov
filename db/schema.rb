@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140906105008) do
+ActiveRecord::Schema.define(version: 20140917204937) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -47,8 +50,6 @@ ActiveRecord::Schema.define(version: 20140906105008) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "supporters", force: true do |t|
-    t.string   "first_name",                      null: false
-    t.string   "last_name",                       null: false
     t.string   "organization"
     t.string   "area",                            null: false
     t.string   "email",                           null: false
@@ -57,6 +58,7 @@ ActiveRecord::Schema.define(version: 20140906105008) do
     t.datetime "updated_at"
     t.boolean  "email_confirmed", default: false, null: false
     t.boolean  "is_organization"
+    t.string   "name"
   end
 
 end
