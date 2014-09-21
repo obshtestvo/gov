@@ -39,7 +39,7 @@ $(function() {
     });
 
     $section.waypoint(function(dir) {
-      $item.toggleClass('active', dir === 'up');
+      $item.toggleClass('active', dir === 'up').next().toggleClass('active', false);
     }, {
       offset: function() {
         return -$(this).height() + menuOffset;
@@ -47,11 +47,11 @@ $(function() {
     })
 
     $section.waypoint(function(dir) {
-      $item.toggleClass('active', dir === 'down');
+      $item.toggleClass('active', dir === 'down').prev().toggleClass('active', false);
     }, {
       offset: menuOffset
     })
-  })
+  });
 
   $nav.waypoint(function(dir) {
     if (dir=='up') {
