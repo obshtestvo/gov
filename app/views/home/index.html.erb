@@ -71,14 +71,10 @@
 
       <ul class="points">
         <li class="requirements">
-          <div class="cover">
-            <div class="img">
-              <%= image_tag "doc.png" %>
-              <span class="point">1</span>
-            </div>
-            <span class="connect"></span>
-          </div>
+          <span class="point"><span>1</span></span>
+          <span class="connect"></span>
           <div class="content">
+            <%= image_tag 'doc.png', class: 'img' %>
             <div class="essence">
               <p>Поставяне на изискване софтуерът, изработван по поръчка за държавата, да бъде с <%= definition_of :open_source, 'отворен код' %> и
                 със <%= definition_of :open_license, 'свободен лиценз' %>, позволяващ преизползване, усъвършенстване и надграждане от други учреждения, от бизнеса и от гражданите.</p>
@@ -86,14 +82,10 @@
           </div>
         </li>
         <li class="process">
-          <div class="cover">
-            <div class="img">
-              <%= image_tag "agile.png" %>
-              <span class="point">2</span>
-            </div>
-            <span class="connect"></span>
-          </div>
+          <span class="point"><span>2</span></span>
+          <span class="connect"></span>
           <div class="content">
+            <%= image_tag 'agile.png', class: 'img' %>
             <div class="essence">
               <p>Използване на т. нар. <%= definition_of(:agile, '„гъвкави“ методологии') %>, с предпочитане на кратки, двуседмични итерации, <strong>внимание към обратната връзка </strong>от крайните потребители и фокусиране върху тяхното удобство и продуктивност.</p>
               <p>Избягване на предварително изготвени подробни спецификации.
@@ -101,14 +93,10 @@
           </div>
         </li>
         <li class="data">
-          <div class="cover">
-            <div class="img">
-              <%= image_tag "data.png" %>
-              <span class="point">3</span>
-            </div>
-            <span class="connect"></span>
-          </div>
+          <span class="point"><span>3</span></span>
+          <span class="connect"></span>
           <div class="content">
+            <%= image_tag 'data.png', class: 'img' %>
             <div class="essence">
               <p>Спазване принципите на отворени данни и залагане на възможност за достъп до машинно-четим формат на публичните данни, с които софтуерната система ще работи.</p>
             </div>

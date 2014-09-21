@@ -621,116 +621,95 @@ nav {
     padding: 0 0 3em 0;
     margin: 0;
     clear: left;
-    .content {
-      position: relative;
-      margin-left: 320px;
-      max-width: 19em;
-      padding-top: 4.5em;
-      font-size: 0.8em;
-    }
-    .essence {
-      position: relative;
-      text-align: left;
-    }
-    &:before, &:after {
-      @extend %line;
-    }
-    &:after {
-      @extend %line3;
-    }
-    .line1 {
-      @extend %line1;
+    $points-font-size: 1.1em;
+    $points-diameter: 2.5em;
+    $content-left-spacing: 320px;
+    $text-block-max-width: 16em;
+
+    .point {
+      display: block;
+      margin-left: $content-left-spacing;
+      text-align: center;
+      // offset to the left a bit to compensate for text left alignn
+      max-width: $text-block-max-width - 1;
+      span {
+        position: relative;
+        display: block;
+        height: $points-diameter;
+        width: $points-diameter;
+        font-weight: bold;
+        font-size: $points-font-size;
+        line-height: $points-diameter;
+        z-index: 3;
+        color: $colorContrastToMain;
+        background: $colorSecondary;
+        margin: 0 auto;
+        @include border-radius(50%);
+      }
     }
     .connect {
       display: block;
+      position: absolute;
+      top: $points-diameter / 2;
+      left: 60%;
+      font-size: $points-font-size;
       z-index: 1;
       content: '';
-      bottom: 101.7%;
-      position: absolute;
-      padding-bottom: 2px;
-      width: 175%;
 
       &:after {
         position: relative;
-        top: 1.575em;
-        height: 3.15em;
         content: "";
         display: block;
         border: 1px solid $colorSecondaryThinPixel;
         border-top: 0;
         border-left: 0;
+        height: 3em;
+        margin-top: -3em;
         @include border-bottom-right-radius(1em);
-        //      padding-top: 0.7375em;
-        //      padding-bottom: 1px;
       }
     }
-    .cover {
+
+    .content {
       position: relative;
-      margin-bottom: 2em;
-      float: left;
-    }
-    .img {
-      display: inline-block;
-      z-index: 2;
-      position: relative;
-      img {
-        width: 100%;;
+      padding-top: 1.5em;
+
+      .img {
+        display: block;
+        float: left;
         max-width: 250px;
+        img {
+          width: 100%;;
+          opacity: 0.85;
+        }
+      }
+
+      .essence {
+        max-width: $text-block-max-width;
         display: block;
-        position: relative;
-        z-index: 1;
-        opacity: 0.85;
-        padding-top: 40%;
+        margin-left: $content-left-spacing;
+        p {
+          font-size: 0.8em;
+          text-align: left;
+        }
       }
     }
-    .point {
-      display: block;
-      z-index: 1;
-      right: -53%;
-      color: $colorContrastToMain;
-      font-weight: bold;
-      background: $colorSecondary;
-      top: -1%;
-      position: absolute;
-      font-size: 1.4em;
-      height: 1.5em;
-      width: 1.5em;
-      line-height: 1.5em;
-      border: 0.3em solid $white;
-      @include border-radius(50%);
-      &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0.65em;
-        right: -0.3em;
-        height: 1px;
-        border-bottom: 1px solid $colorSecondaryThinPixel;
-        width: 0.3em;
-      }
-    }
-    $baseLineWidth: -213%;
-    $spacingBetweenLines: 3.75%;
+
+    &:before,
+    &:after { @extend %line; }
+    &:after { @extend %line3; }
+    .line1 { @extend %line1; }
+
     &.requirements {
-      .connect {
-        right: $baseLineWidth;
-      }
+      .connect { right: 13%; }
     }
     &.process {
-      .connect {
-        right: $baseLineWidth - $spacingBetweenLines;
-      }
-      &:before {
-        display: none;
-      }
+      .connect { right: 12%; }
+      &:before { display: none; }
     }
     &.data {
-      .connect {
-        right: $baseLineWidth - 2 * $spacingBetweenLines;
-      }
-      &:before, &:after {
-        display: none;
-      }
+      .connect { right: 11%; }
+      &:before,
+      &:after { display: none; }
     }
   }
 }
