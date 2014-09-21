@@ -265,6 +265,7 @@
     }
     section#myths {
       padding-top: 0;
+      max-width: 90%;
       header {
         @extend %section-header-override;
       }
