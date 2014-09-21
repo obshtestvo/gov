@@ -12,9 +12,13 @@ bg:
       supporter:
         first_name: 'Име'
         last_name: 'Фамилия'
+        full_name: 'Име и фамилия'
         email: 'Имейл адрес'
         organization: 'Име на организация'
         is_organization: 'Подкрепа от името на организация'
+    errors:
+      messages:
+        requires_at_least_two_names: 'трябва да съдържа име и фамилия'
 
   definitions:
     open_source: |
