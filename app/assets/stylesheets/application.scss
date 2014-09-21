@@ -1005,20 +1005,34 @@ header.main {
 }
 
 footer {
-  background-color: #cdcfc6;
-  padding: 5em 0;
+  background-color: #171819;
+  padding: 3em 0;
   text-align: center;
+  color: #5d5f5e;
   p {
     margin: 1em 0;
     padding: 0;
     line-height: 1.4em;
   }
   a {
-    color: #3f5341;
+    color: #a5a3ab;
+    text-decoration: none;
+    &:hover {
+      color: #72b53f;
+    }
   }
   .obshtestvo {
     margin: 2.5em;
-    color: #888985;
+    color: #48484a;
+    img {
+      @include filter(grayscale(100%));
+      @include opacity(0.5);
+      @extend .basic-transition-2x;
+      &:hover {
+        @include filter(grayscale(0%));
+        @include opacity(1);
+      }
+    }
   }
 }
 
