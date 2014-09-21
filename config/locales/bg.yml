@@ -10,7 +10,8 @@ bg:
       supporter: 'Подкрепа'
     attributes:
       supporter:
-        name: 'Пълно име'
+        first_name: 'Име'
+        last_name: 'Фамилия'
         email: 'Имейл адрес'
         organization: 'Име на организация'
         is_organization: 'Подкрепа от името на организация'

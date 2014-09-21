@@ -1,4 +1,4 @@
 ActiveAdmin.register Supporter do
-  permit_params :name, :organization, :is_organization,
+  permit_params :first_name, :last_name, :organization, :is_organization,
                 :area, :email, :email_confirmed, :approved
 end
