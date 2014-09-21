@@ -32,6 +32,12 @@ $(function() {
     var selector = $a.attr('href');
     var $section = $(selector);
 
+    $a.on('click', function () {
+      setTimeout(function () {
+        $fixedNav.removeClass('active');
+      }, 300);
+    });
+
     $section.waypoint(function(dir) {
       $item.toggleClass('active', dir === 'up');
     }, {
