@@ -891,12 +891,15 @@ nav {
     margin-top: 2em;
     text-align: center;
     .button {
-      width: 10em;
+      display: block;
+      width: 100%;
       font-size: 1.6em;
-      margin: 0.5em 0 1.5em 0;
-      padding: 0.3em;
+      margin: 1em 0 1.5em 0;
+      padding: 0.3em 0;
     }
     form {
+      max-width: 550px;
+      margin: 0 auto;
       text-align: left;
       margin-bottom: 3em;
       padding: 0.5em;
@@ -921,7 +924,7 @@ nav {
   }
   &.success {
     background: rgba(14, 121, 2, 0.9);
-    padding: 5em 2em;
+    padding: 3em 2em;
     p {
       color: #fff;
       text-align: center;
