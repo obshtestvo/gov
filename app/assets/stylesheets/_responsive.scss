@@ -221,7 +221,8 @@
           display: none;
         }
       }
-      ul.points > li{
+      ul.points > li {
+        padding-bottom: 1.7em;
         &:before, &:after, .connect, .point:after {
           display: none;
         }
@@ -229,19 +230,16 @@
           float: none;
           text-align: center;
           margin-bottom: 1em;
-          .img {
-            position: static;
-            img {
-              display: none;
-            }
-            .point {
-              position: static;
-            }
-          }
         }
         .content {
-          margin: 0 auto;
-          padding: 0;
+          .img { display: none; }
+          .essence { margin: 0 auto; }
+        }
+        .content,
+        .point {
+          position: static;
+          padding: 1em 0 0 0;
+          margin-left: 0;
           max-width: 95%;
         }
       }
