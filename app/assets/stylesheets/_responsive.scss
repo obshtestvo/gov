@@ -43,6 +43,23 @@
     }
   }
 }
+
+@media only screen and (max-width: 750px) {
+  .banner {
+    section.secondary {
+      ul {
+        li {
+          width: 100%;
+          float: none;
+          border-right: none;
+          padding-right: none;
+          margin-right: none;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 850px) {
   nav.main {
     height: auto;

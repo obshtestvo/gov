@@ -222,10 +222,9 @@ nav {
 .banner {
   min-height: 300px;
   background-color: #2f4d51;
-  @include background-size(cover);
   header {
     text-align: center;
-    padding: 7% 5%;
+    padding: 8% 5% 10% 5%;
     margin: 0 auto;
   }
   h1 {
@@ -256,32 +255,72 @@ nav {
       @include animation(bounce-arrow 1s infinite alternate ease-in-out);
     }
   }
-  div.area-links {
-    text-align: center;
-    .help {
-      display: block;
-      margin: 1em 0;
-      font-size: 1.4em;
-    }
-    .button {
-      position: relative;
-      background: #108eba;
-      color: white;
-      text-decoration: none;
-      font-size: 1.5em;
-      padding: 1em;
-      &:hover {
-        border-top: 3px solid #ff7e00;
-        background: #f7f2fc;
-        color: #4f6671;
+
+  section.secondary {
+    background-color: #191b19;
+    padding: 7% 4% 3% 4%;
+    ul {
+      line-height: 1.5em;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+      li {
+        float: left;
+        width: 30%;
+        margin: 0 2.4% 1% 0;
+        padding: 0 2.4% 1% 0;
+        border-right: 1px solid #272927;
+        &:last-child {
+          padding-right: 0;
+          margin-right: 0;
+          border-right: none;
+        }
+        h2 {
+          margin: 0 0 0.9em 0;
+          color: #388892;
+        }
+        p {
+          color: #4A5455;
+          margin: 0.8em 0;
+        }
       }
-      &.active {
-        background: white;
-        color: #607d89;
-        padding: 1.1em;
+    }
+  }
+
+  .area-links-wrapper {
+    background-color: #191b19;
+    padding-top: 1%;
+    .area-links {
+      text-align: center;
+      .help {
+        display: block;
+        margin: 1em 0;
+        font-size: 1.4em;
+        color: #697069;
+      }
+      .button {
+        position: relative;
+        background: #108eba;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+        padding: 1em;
+        border-top: 3px solid transparent;
         &:hover {
-          border-top: none;
-          cursor: default;
+          border-top-color: #ff7e00;
+          background: #f7f2fc;
+          color: #4f6671;
+        }
+        &.active {
+          background: white;
+          color: #607d89;
+          padding: 1.1em;
+          border-radius: 3px 3px 0 0;
+          &:hover {
+            border-top-color: white;
+            cursor: default;
+          }
         }
       }
     }

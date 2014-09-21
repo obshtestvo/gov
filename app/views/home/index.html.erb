@@ -8,23 +8,49 @@
     </a>
   </header>
 
-  <div class="area-links">
-    <p class="help">Научете повече от гледната точка на:</p>
+  <section class="secondary">
+    <ul>
+      <li>
+        <h2>Решението е бързо и струва точно нула лева и нула стотинки</h2>
+        <p>Необходима е единствено промяна в нормативната уредба за обществени поръчки за държавен софтуер, с изискването софтуерът, поръчван за изработка за държавата, да бъде с отворен код и да е публична собственост.</p>
+        <p>Може да се въведе веднага и да не струва нищо на данъкоплатеца. Необходимо и достатъчно е единствено да се вземе решението.</p>
+      </li>
 
-    <%= link_to home_path(area: :people), class: "button #{"active" if @area == "people"}" do %>
-      Граждани
-    <% end %>
+      <li>
+        <h2>Губещи ще са монополистите и фирми, неспособни да работят в пазарни условия</h2>
+        <p>Губещи от това решение ще са само фирмите, които досега са изнудвали държавата с нереално високи, непазарни цени за изработка и поддръжка на софтуер. Губещи ще са и компаниите, които не могат да създават качествени софтуерни продукти в пазарни условия.</p>
+        <p>Печелят всички останали – гражданите, бизнесът, държавата.</p>
+      </li>
 
-    <%= link_to home_path(area: :it), class: "button #{"active" if @area == "it"}" do %>
-      IT и бизнес
-    <% end %>
+      <li>
+        <h2>Не предлагаме замяна на Windows с Linux и Microsoft Office с друго</h2>
+        <p>Тази кампания не е за замяна на Microsoft Windows с Linux, или Microsoft Office с друг, безплатен продукт. Това е тема на друг дебат.
+        </p>
+        <p>Предлагаме специализиран софтуер, който се поръчва за изработка от държавата, да бъде с отворен код и публична собственост. В началото, това ще важи само за бъдещи поръчки.</p>
+      </li>
+    </ul>
+  </section>
 
-    <%= link_to home_path(area: :administration), class: "button #{"active" if @area == "administration"}" do %>
-      Администрация
-    <% end %>
+  <div class="area-links-wrapper">
+    <div class="area-links">
+      <p class="help">Научете повече от гледната точка на:</p>
 
+      <%= link_to home_path(area: :people), class: "button #{"active" if @area == "people"}" do %>
+        Граждани
+      <% end %>
+
+      <%= link_to home_path(area: :it), class: "button #{"active" if @area == "it"}" do %>
+        IT и бизнес
+      <% end %>
+
+      <%= link_to home_path(area: :administration), class: "button #{"active" if @area == "administration"}" do %>
+        Администрация
+      <% end %>
+
+    </div>
   </div>
 </div>
+
 <nav role="navigation" class="main">
   <div class="handle">
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Capa_1" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><path d="M12.5 7h-9C3.224 7 3 7.224 3 7.5S3.224 8 3.5 8h9C12.775 8 13 7.776 13 7.5S12.775 7 12.5 7z"/><path d="M3.5 5h9C12.775 5 13 4.776 13 4.5S12.775 4 12.5 4h-9C3.224 4 3 4.224 3 4.5S3.224 5 3.5 5z"/><path d="M12.5 10h-9C3.224 10 3 10.225 3 10.5S3.224 11 3.5 11h9c0.275 0 0.5-0.225 0.5-0.5S12.775 10 12.5 10z"/></svg>
