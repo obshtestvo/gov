@@ -226,7 +226,7 @@ nav {
   @include background-size(cover);
   header {
     text-align: center;
-    padding: 10% 5%;
+    padding: 7% 5%;
   }
   h1 {
     color: $colorContrastToMain;
@@ -245,6 +245,11 @@ nav {
   }
   div.area-links {
     text-align: center;
+    .help {
+      display: block;
+      margin: 1em 0;
+      font-size: 1.4em;
+    }
     .button {
       background: #108eba;
       color: white;
