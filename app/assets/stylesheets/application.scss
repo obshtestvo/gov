@@ -224,8 +224,10 @@ nav {
   background-color: #2f4d51;
   header {
     text-align: center;
-    padding: 8% 5% 10% 5%;
     margin: 0 auto;
+    .content {
+      padding: 8% 5% 10% 5%;
+    }
   }
   h1 {
     color: $colorContrastToMain;

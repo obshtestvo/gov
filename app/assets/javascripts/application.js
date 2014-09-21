@@ -21,6 +21,19 @@
 $(function() {
   var $nav = $('nav')
   var $fixedNav = $nav.clone()
+  var $header = $('.banner header');
+
+  var makeBannerHeaderFulHeight = function () {
+    var height = $(window).height();
+    var width  = $(window).width();
+    if (width > height * 1.2) {
+      $header.height(height);
+    } else {
+      $header.height('auto');
+    }
+  };
+  // $(window).resize(makeBannerHeaderFulHeight);
+  // makeBannerHeaderFulHeight();
 
   $fixedNav.removeClass('main').addClass('fixed').insertAfter($nav);
 
