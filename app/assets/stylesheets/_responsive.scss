@@ -162,10 +162,17 @@
   %section-header-override {
     padding-left: 0;
     h2 {
-      margin-left: 10%;
-      padding-left: 3.4em;
+      margin: 0;
+      padding: 0;
       &:before {
-        left:0;
+        position: static;
+        margin-right: 0.4em;
+        background: none;
+        line-height: 1.5em;
+        height: auto;
+        width: auto;
+        font-size: 1.5em;
+        color: darken($colorSecondary, 30%);
       }
     }
   }
@@ -180,6 +187,9 @@
       &.conditions:after, &.conclusion:before {
         display: none;
       }
+    }
+    section {
+      padding-top: 0;
     }
     section#pains {
       header {
@@ -254,6 +264,7 @@
       }
     }
     section#myths {
+      padding-top: 0;
       header {
         @extend %section-header-override;
       }
@@ -262,11 +273,13 @@
       }
     }
     section#experience {
+      padding-top: 0;
       header {
         @extend %section-header-override;
       }
     }
     section#support {
+      padding-top: 0;
       header {
         @extend %section-header-override;
       }

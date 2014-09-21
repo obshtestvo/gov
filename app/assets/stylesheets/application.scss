@@ -13,6 +13,7 @@
 @import "mixins";
 
 $navHeight: 3.75em;
+$headinerCircleSize: 3em;
 
 body {
   font-family: "obshtestvobg", "Myriad Pro", "Verdana", sans-serif;
@@ -54,32 +55,30 @@ strong {
   font-weight: normal;
 }
 
-$headinerCircleSize: 3em;
 %section-header {
-  padding-left:50%;
   z-index: 2;
   h2 {
     position: relative;
-    padding-left: $headinerCircleSize*0.7;
     text-transform: lowercase;
     letter-spacing: -0.03em;
-    text-align: left;
-    color:$colorSecondary;
-    height: $headinerCircleSize;
-    line-height: $headinerCircleSize*0.9;
+    text-align: center;
+    color: $colorSecondary;
+    line-height: 1.4em;
     font-size: 2em;
+    margin: 2em 0 0em 0;
     &:before {
-      width:$headinerCircleSize;
-      height:$headinerCircleSize;
+      width: $headinerCircleSize;
+      height: $headinerCircleSize;
       line-height: $headinerCircleSize;
       text-align: center;
       content: "1";
       background: $colorSecondary;
-      color:$colorContrastToMain;
+      color: $colorContrastToMain;
       font-weight: bold;
       position: absolute;
-      top:0;
-      left:-$headinerCircleSize/2;
+      top: -$headinerCircleSize;
+      left: 50%;
+      margin-left: -$headinerCircleSize/2;
       @include border-radius(50%);
     }
   }
@@ -398,6 +397,13 @@ nav {
   position: relative;
   header {
     @extend %section-header;
+    h2 {
+      margin: 0 0 $headinerCircleSize 0;
+      &:before {
+        top: 1.8em;
+        z-index: 4;
+      }
+    }
   }
   ul {
     @extend %arrow-list;
@@ -426,7 +432,7 @@ nav {
     h2:before {
       content:"2";
     }
-    padding-bottom: 4em;
+    padding-bottom: 3em;
   }
   > .requirements {
     @include box-sizing(border-box);
@@ -747,7 +753,7 @@ nav {
     h2:before {
       content: "3";
     }
-    padding-bottom: 3em;
+    padding-bottom: 2.5em;
   }
   h2.heading {
     @extend %big-message;
@@ -859,16 +865,10 @@ nav {
 
   header {
     @extend %section-header;
-    h2 {
-      white-space: nowrap;
-      line-height: 0.7em;
-      padding-top: 0.6em;
-      height: $headinerCircleSize - 0.6em;
-    }
     h2:before {
       content: "4";
     }
-    padding-bottom: 3em;
+    padding-bottom: 2.5em;
   }
   ul {
     @extend %arrow-list;
@@ -886,16 +886,10 @@ nav {
 }
 
 .argumentation > section#support {
-  padding-top: 4em;
+  padding-top: 5em;
 
   header {
     @extend %section-header;
-    h2 {
-      white-space: nowrap;
-      line-height: 0.7em;
-      padding-top: 1.1em;
-      height: $headinerCircleSize - 0.6em;
-    }
     h2:before {
       content: "5";
     }
