@@ -256,10 +256,19 @@ nav {
       text-decoration: none;
       font-size: 1.5em;
       padding: 1em;
+      &:hover {
+        border-bottom: 3px solid #ff7e00;
+        background: #f7f2fc;
+        color: #4f6671;
+      }
       &.active {
         background: white;
         color: #607d89;
         padding: 1.1em;
+        &:hover {
+          border-bottom: none;
+          cursor: default;
+        }
       }
     }
   }
