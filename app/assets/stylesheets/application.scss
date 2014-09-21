@@ -818,8 +818,8 @@ nav {
     padding: 3%;
     margin-top: 2em;
     margin-bottom: 0.5em;
-    background: lighten($colorMain, 45%);
-    color: darken($colorContrastToMain, 75%);
+    background: #B7DDEA;
+    color: #404040;
     position: relative;
     &:before {
       @extend %handle;
@@ -827,7 +827,7 @@ nav {
       background: image-url("bubble-left.svg") no-repeat right top;
       background-size: 100%;
       z-index: -1;
-      opacity: 0.22;
+      opacity: 0.28;
     }
   }
   .answer {
@@ -838,8 +838,8 @@ nav {
     width:80%;
     margin-left: 20%;
     padding: 3%;
-    background-color: #b5f1b2;
-    color: #21361f;
+    background-color: #D6ECC5;
+    color: #0F4B0A;
     position: relative;
     &:after {
       @extend %handle;
@@ -848,7 +848,7 @@ nav {
       background: image-url("bubble-right.svg") no-repeat right top;
       background-size: 100%;
       z-index: -1;
-      opacity: 0.4;
+      opacity: 0.3;
     }
   }
   hr.separator {
