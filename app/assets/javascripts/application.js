@@ -80,6 +80,15 @@ $(function() {
     return false;
   });
 
+  var hideScrollDownHint = function () {
+    $(window).off('scroll', hideScrollDownHint);
+    setTimeout(function () {
+      var $hint = $('.scroll-down-hint');
+      $hint.fadeOut('fast', function () { $hint.remove(); })
+    }, 3000);
+  };
+  $(window).on('scroll', hideScrollDownHint);
+
   // Sign form
   var updateSignFormState = function (animate) {
     var $form           = $('#sign-form');
