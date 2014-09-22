@@ -33,19 +33,19 @@
     </ul>
   </section>
 
-  <div class="area-links-wrapper">
+  <div class="area-links-wrapper" id="learn-more">
     <div class="area-links">
       <p class="help">Научете повече от гледната точка на:</p>
 
-      <%= link_to home_path(area: :people), class: "button #{"active" if @area == "people"}" do %>
+      <%= link_to home_path(area: :people, anchor: 'learn-more'), class: "button #{"active" if @area == "people"}" do %>
         Граждани
       <% end %>
 
-      <%= link_to home_path(area: :it), class: "button #{"active" if @area == "it"}" do %>
+      <%= link_to home_path(area: :it, anchor: 'learn-more'), class: "button #{"active" if @area == "it"}" do %>
         IT и бизнес
       <% end %>
 
-      <%= link_to home_path(area: :administration), class: "button #{"active" if @area == "administration"}" do %>
+      <%= link_to home_path(area: :administration, anchor: 'learn-more'), class: "button #{"active" if @area == "administration"}" do %>
         Администрация
       <% end %>
 
