@@ -66,6 +66,10 @@
 					}
 				}
 
+				if (tp.left < 0) {
+					tp.left = 0;
+				}
+
 				$tip.css(tp).addClass('tipsy-' + gravity);
 				$tip.find('.tipsy-arrow')[0].className = 'tipsy-arrow tipsy-arrow-' + gravity.charAt(0);
 				if (this.options.className) {
