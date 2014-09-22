@@ -152,17 +152,4 @@ $(function() {
       $openSourceBrowserAlert.find('.chrome').removeClass('hidden');
     }
   }
-
-  $(document).on('click', '.area-links a.button', function (e) {
-    e.preventDefault();
-    var $link = $(this);
-    var url = $link.attr('href');
-    $('.area-links-wrapper').find('.loading').show();
-    $('.container').load(url + ' .container > *', function (content) {
-      if (history.pushState) {
-        history.replaceState({}, null, url);
-      }
-    });
-    return false;
-  });
 });
