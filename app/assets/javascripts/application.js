@@ -15,6 +15,7 @@
 //= require jquery.spin
 //= require jquery.waypoints
 //= require jquery.waypoints.sticky
+//= require jquery.tipsy
 //= require bowser
 //= require_tree .
 
@@ -131,6 +132,9 @@ $(function() {
   $(document).on('change', '#supporter_is_organization', function () { updateSignFormState('animate') });
   $(document).on('ajax:updated', '#sign-form', function () { updateSignFormState(); });
   updateSignFormState();
+
+  // Custom tooltips plugin
+  $('[title]').tipsy();
 
   var $openSourceBrowserAlert = $('.open-browser');
   var $browserName = $openSourceBrowserAlert.find('.browser');

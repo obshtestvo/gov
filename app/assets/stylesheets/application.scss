@@ -1,4 +1,5 @@
 //= require normalize-rails
+//= require jquery.tipsy
 //= require_self
 
 @import "fonts";
@@ -1086,10 +1087,14 @@ footer {
   }
 }
 
+.tipsy {
+  font-size: 14px;
+}
+.tipsy-inner {
+  padding: 0.6em 0.8em;
+  text-align: left;
+}
+
 @import "responsive";
 @import "html5boilerplate/optional";
 @import "html5boilerplate/print";
-
-@media print {
-
-}
