@@ -68,6 +68,22 @@
         font-size: 3em;
       }
     }
+
+    .area-links-wrapper {
+      .area-links {
+        .help {
+          font-size: 1.3em;
+        }
+        .button {
+          font-size: 1em;
+          padding: 0.7em 0.6em;
+          &.active {
+            padding: 0.8em 0.6em;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 850px) {
