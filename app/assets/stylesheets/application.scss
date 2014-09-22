@@ -106,6 +106,7 @@ nav {
     height: $navHeight;
     z-index: 9;
     svg {
+      display: block;
       fill: $white;
       width:100%;
       position: relative;
