@@ -29,63 +29,6 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
-  .banner {
-    font-size: 0.8em;
-    header {
-      max-width: 80%;
-    }
-    header h1{
-      padding: 0.1em 0 0 0;
-    }
-    header h2{
-      padding: 0 0 2em 0;
-    }
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .banner {
-    section.secondary {
-      ul {
-        li {
-          width: 100%;
-          float: none;
-          border-right: none;
-          padding-right: none;
-          margin-right: none;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .banner {
-    header {
-      max-width: 100%;
-      h1 {
-        font-size: 3em;
-      }
-    }
-
-    .area-links-wrapper {
-      .area-links {
-        .help {
-          font-size: 1.3em;
-        }
-        .button {
-          font-size: 1em;
-          padding: 0.7em 0.6em;
-          &.active {
-            padding: 0.8em 0.6em;
-          }
-        }
-      }
-    }
-  }
-}
-
 @media only screen and (max-width: 850px) {
   nav.main {
     height: auto;
@@ -326,6 +269,73 @@
       padding-top: 0;
       header {
         @extend %section-header-override;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .banner {
+    font-size: 0.8em;
+    header {
+      max-width: 80%;
+    }
+    header h1{
+      padding: 0.1em 0 0 0;
+    }
+    header h2{
+      padding: 0 0 2em 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .banner {
+    section.secondary {
+      ul {
+        li {
+          width: 100%;
+          float: none;
+          border-right: none;
+          padding-right: none;
+          margin-right: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .banner {
+    header {
+      max-width: 100%;
+      h1 {
+        font-size: 3em;
+      }
+    }
+
+    .area-links-wrapper {
+      .area-links {
+        .help {
+          font-size: 1.3em;
+        }
+        .button {
+          font-size: 1em;
+          padding: 0.7em 0.6em;
+          &.active {
+            padding: 0.8em 0.6em;
+          }
+        }
+      }
+    }
+  }
+
+  nav.main {
+    margin-top: 2em;
+    ul {
+      margin-left: 4%;
+      > li {
+        margin-bottom: 1em;
       }
     }
   }
