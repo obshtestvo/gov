@@ -66,20 +66,18 @@
   </ul>
 </nav>
 <div class="argumentation">
-    <section id="pains">
-      <header>
-        <h2 class="number">Проблем</h2>
-      </header>
-        <div class="half conditions">
-          <h2 class="heading">Ако за Вас е вярно дори едно от следните неща:</h2>
-          <%= render "home/#{@area}/problems" %>
-        </div><div class="half conclusion">
-        <p>То вие <strong>страдате от проблеми</strong>, в следствие на непрозрачния и остарял подход за поръчка и изработка на
-                софтуерни системи за държавата и администрациите.</p>
-
-                <p>Проблеми, които <strong class="solved">отдавна са решени</strong> в софтуерната индустрия.</p></div>
-
-            </section>
+  <section id="pains">
+    <header>
+      <h2 class="number">Проблем</h2>
+    </header>
+    <div class="half conditions">
+      <h2 class="heading">Ако за Вас е вярно дори едно от следните неща:</h2>
+      <%= render "home/#{@area}/problems" %>
+    </div><div class="half conclusion">
+    <p>То вие <strong>страдате от проблеми</strong>, в следствие на непрозрачния и остарял подход за поръчка и изработка на
+    софтуерни системи за държавата и администрациите.</p>
+    <p>Проблеми, които <strong class="solved">отдавна са решени</strong> в софтуерната индустрия.</p></div>
+  </section>
 
   <section id="solution">
     <header>
@@ -172,7 +170,6 @@
 
     </div>
   </section>
-
 </div>
 
 <%= render 'shared/footer' %>
