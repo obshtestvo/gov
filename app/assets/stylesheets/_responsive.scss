@@ -374,12 +374,40 @@
       }
     }
 
+    &#pains {
+      ul {
+        padding-left: 0;
+        li {
+          padding-left: 2.2em;
+          margin-left: -2.2em;
+        }
+      }
+    }
+
     &#solution {
+      $left-spacing: 50px;
       span.checklist {
         display: none;
       }
       header {
         padding-bottom: 1.5em;
+      }
+      > .requirements {
+        width: auto;
+        margin: 0 5% 4% 0;
+        padding: 0 0 0 $left-spacing;
+        left: 0;
+      }
+      > ul {
+        margin: 0 5% 0 0;
+        li {
+          background: none;
+          padding-right: 0;
+          padding-left: $left-spacing;
+          .check {
+            left: 3%;
+          }
+        }
       }
     }
 
