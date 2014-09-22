@@ -60,6 +60,16 @@
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .banner {
+    header {
+      max-width: 100%;
+      h1 {
+        font-size: 3em;
+      }
+    }
+}
+
 @media only screen and (max-width: 850px) {
   nav.main {
     height: auto;
