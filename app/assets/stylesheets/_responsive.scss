@@ -438,5 +438,18 @@
         }
       }
     }
+
+    &#support {
+      .act {
+        margin-top: 1em;
+        form {
+          margin-bottom: 1.5em;
+        }
+        .button {
+          font-weight: normal;
+          margin: 1em 0;
+        }
+      }
+    }
   }
 }
