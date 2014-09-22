@@ -135,6 +135,10 @@ $(function() {
 
   // Custom tooltips plugin
   $('[title]').tipsy();
+  $('body > *').on('click', function () {
+    // This is an empty handler to allow click events on Mobile Safari. More info:
+    // http://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
+  });
 
   var $openSourceBrowserAlert = $('.open-browser');
   var $browserName = $openSourceBrowserAlert.find('.browser');
