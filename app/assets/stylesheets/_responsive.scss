@@ -417,6 +417,13 @@
         font-size: 1.2em;
         margin: 0 4%;
       }
+      ul.points > li {
+        padding-bottom: 0.5em;
+        margin: 0 4%;
+        .point {
+          padding-top: 0.5em;
+        }
+      }
     }
   }
 }
