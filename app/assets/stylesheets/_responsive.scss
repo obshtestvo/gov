@@ -148,16 +148,16 @@
   %section-header-override {
     padding-left: 0;
     h2 {
-      margin: 0;
+      margin: 0 0 0 1.5em;
       padding: 0;
       &:before {
         position: static;
-        margin-right: 0.4em;
+        margin-right: 0.2em;
         background: none;
-        line-height: 1.5em;
+        line-height: 1.4em;
         height: auto;
         width: auto;
-        font-size: 1.5em;
+        font-size: 1.4em;
         color: darken($colorSecondary, 30%);
       }
     }
@@ -336,6 +336,58 @@
       margin-left: 4%;
       > li {
         margin-bottom: 1em;
+      }
+    }
+  }
+
+  .argumentation > section {
+    .half {
+      padding-top: 1.5em;
+      &.conclusion p {
+        font-size: 1.1em;
+        &:first-child {
+          font-size: 1.2em;
+        }
+      }
+    }
+    .heading {
+      font-size: 1.4em;
+      font-weight: normal;
+      margin-bottom: 0.8em;
+    }
+    &#pains,
+    &#solution {
+      padding-top: 2em;
+    }
+
+    &#pains,
+    &#solution,
+    &#steps,
+    &#myths,
+    &#experience,
+    &#support {
+      header {
+        h2 {
+          font-size: 1.5em;
+          line-height: 1em;
+        }
+      }
+    }
+
+    &#solution {
+      span.checklist {
+        display: none;
+      }
+      header {
+        padding-bottom: 1.5em;
+      }
+    }
+
+    #steps {
+      margin-top: 2em;
+      .subtitle {
+        font-size: 1.2em;
+        margin: 0 4%;
       }
     }
   }
