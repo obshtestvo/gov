@@ -35,11 +35,19 @@ $(function() {
   var hideScrollDownHint = function () {
     $(window).off('scroll', hideScrollDownHint);
     setTimeout(function () {
-      var $hint = $('.scroll-down-hint');
-      $hint.fadeOut('fast', function () { $hint.remove(); })
+      $('.scroll-down-hint').addClass('invisible');
     }, 3000);
   };
   $(window).on('scroll', hideScrollDownHint);
+
+  $(document).on('click', '.scroll-down-hint', function (e) {
+    e.preventDefault();
+    var targetSelector = $(this).attr('href');
+    var $target = $(targetSelector);
+    $('html,body').animate({
+      scrollTop: $target.offset().top
+    }, 1000);
+  });
 
   // Sign form
   var updateSignFormState = function (animate) {
