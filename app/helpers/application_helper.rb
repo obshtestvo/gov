@@ -20,4 +20,13 @@ module ApplicationHelper
 
     content_tag :svg, path, options
   end
+
+  def set_page_meta(options = {})
+    @page_meta = options.with_indifferent_access
+  end
+
+  def page_meta(key)
+    return unless @page_meta
+    @page_meta[key]
+  end
 end
