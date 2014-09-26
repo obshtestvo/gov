@@ -40,7 +40,7 @@ $(function() {
   };
   $(window).on('scroll', hideScrollDownHint);
 
-  $(document).on('click', '.scroll-down-hint', function (e) {
+  $(document).on('click', '.smooth-scroll', function (e) {
     e.preventDefault();
     var targetSelector = $(this).attr('href');
     var $target = $(targetSelector);
