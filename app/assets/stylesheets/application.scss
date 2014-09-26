@@ -15,6 +15,7 @@
 
 $navHeight: 3.75em;
 $headinerCircleSize: 3em;
+$tabsBackgroundColor: #2d3432;
 
 body {
   font-family: "obshtestvobg", "Myriad Pro", "Verdana", sans-serif;
@@ -246,6 +247,19 @@ nav {
   a.orange {
     font-size: 2em;
   }
+  p, ul, ol {
+    a {
+      color: #38CEF3;
+      text-decoration: none;
+      &:hover {
+        color: #B9E1EB;
+      }
+    }
+  }
+  p.doubts {
+    margin: 1em;
+    font-size: 1.3em;
+  }
   .scroll-down-hint {
     position: relative;
     top: 0;
@@ -254,7 +268,7 @@ nav {
     text-decoration: none;
     color: #FFF;
     opacity: 0.15;
-    font-size: 5em;
+    font-size: 4em;
     font-weight: bold;
     margin-top: 0.4em;
     @include animation(bounce-arrow 1s infinite alternate ease-in-out);
@@ -298,8 +312,44 @@ nav {
     }
   }
 
+  section.doubts {
+    $headerColor: #D7DCE2;
+    background-color: $tabsBackgroundColor;
+    padding: 5% 4% 3% 4%;
+    margin: 0;
+    font-size: 1.1em;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1.2em;
+      color: $headerColor;
+    }
+    h3 {
+      margin: 1.4em 0 1.1em 0;
+      font-size: 1.2em;
+      color: $headerColor;
+    }
+    p, ol {
+      color: #828890;
+      margin: 0.8em 0;
+      line-height: 1.4em;
+    }
+    a {
+      color: #bde5f2;
+      &:hover {
+        color: #38CEF3;
+      }
+    }
+    ol {
+      list-style-type: decimal;
+      margin-left: 1.8em;
+      li {
+        margin: 0.2em 0;
+      }
+    }
+  }
+
   .area-links-wrapper {
-    background-color: #191b19;
+    background-color: $tabsBackgroundColor;
     padding-top: 1%;
     position: relative;
     .overlay-content.loading {
